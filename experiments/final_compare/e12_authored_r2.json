@@ -1,0 +1,122 @@
+{
+  "predictions": [
+    {
+      "run_id": "city-temps__glm",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure uses the wrong colors for the cities: Aluna is shown in tab:orange instead of tab:blue, Brinport in tab:blue instead of tab:orange, and so on, violating the specified color assignments."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The legend is placed outside the plotting area to the right, but the legend entry for \"Brinport\" is shown with an orange line, which violates the instruction to use \"tab:orange\" for Brinport; the actual color used is a different shade of orange, not the specified \"tab:orange\"."
+        }
+      ]
+    },
+    {
+      "run_id": "city-temps__ministral",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure uses incorrect colors for the cities: Aluna is shown in blue (tab:blue) but Brinport is shown in orange (tab:orange) instead of tab:orange, and the color for Farrow is brown (tab:brown) but it is shown as a different shade. The task specifies exact colors for each city, and the plot uses a different color for Brinport (orange) instead of tab:orange, which is incorrect."
+        }
+      ]
+    },
+    {
+      "run_id": "city-temps__qwen",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure uses the wrong data: the plotted lines correspond to cities named Aluna, Brinport, Calder, Dunmore, Eastwick, and Farrow, but the colors are incorrect (e.g., Aluna is blue instead of tab:blue, and Brinport is orange instead of tab:orange), and the legend shows the wrong city names (e.g., \"Aluna\" instead of \"Aluna\" with correct color mapping). The actual plotted data values also do not match the requested values for each city."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The legend is placed inside the plotting area in the upper left, overlapping the data lines for Aluna, Brinport, and Calder, which makes those lines partially obscured."
+        }
+      ]
+    },
+    {
+      "run_id": "fine-totals__glm",
+      "errors": []
+    },
+    {
+      "run_id": "fine-totals__ministral",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The branches are not ordered in descending order of collected totals; the observed order (Eastside, Northgate, Harborview, Central) is ascending, violating the instruction to order them descending with the largest total leftmost."
+        }
+      ]
+    },
+    {
+      "run_id": "fine-totals__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "run_id": "sensor-share__glm",
+      "errors": []
+    },
+    {
+      "run_id": "sensor-share__ministral",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The sites are not ordered alphabetically from top to bottom as required; the observed order is Dogwood, Cedar, Birch, Alder, but the expected order is Alder, Birch, Cedar, Dogwood."
+        }
+      ]
+    },
+    {
+      "run_id": "sensor-share__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "run_id": "stage-attendance__glm",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The x tick labels are truncated (e.g., \"Whispering Pines Amphitheater\" appears as \"Whispering Pines Amphi...\"), violating the requirement to use the full stage names exactly as written and to keep all text completely visible."
+        }
+      ]
+    },
+    {
+      "run_id": "stage-attendance__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "stage-attendance__qwen",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The x tick labels are missing entirely, so the figure does not show the requested stage names as labels, violating the requirement to use each stage's full name exactly as written."
+        }
+      ]
+    },
+    {
+      "run_id": "weighted-latency__glm",
+      "errors": []
+    },
+    {
+      "run_id": "weighted-latency__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "weighted-latency__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    }
+  ]
+}

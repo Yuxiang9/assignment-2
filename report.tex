@@ -39,7 +39,7 @@ validator & seed macro-MCC & authored macro-MCC \\
 \midrule
 released baseline & 0.0268 & --- \\
 Part 2 & 0.4475 & 0.1047 \\
-\textbf{shipped (Part 4)} & \textbf{0.4931} & \textbf{0.7313} \\
+\textbf{shipped (Part 4)} & \textbf{0.5002} & \textbf{0.6210} \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -550,7 +550,9 @@ remove destructive colour filter; arbiter may not invent verdicts & 0.269 & adop
 checklist \texttt{wrong\_chart} prompting & 0.370 & adopt \\
 readability prompt alone & 0.379 & adopt only with edge check \\
 deterministic mapping replaces model arbiter & 0.432 & adopt \\
-composed + edge verification + fact layer (shipped) & \textbf{0.610} & champion \\
+composed + edge verification + fact layer & \textbf{0.610} & champion \\
+\quad + dual-filing dedup (post-champion) & replay & adopt \\
+\quad + code-literal contrast check (post-champion) & audit & adopt \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -600,6 +602,27 @@ composed + edge verification + fact layer (shipped) & \textbf{0.610} & champion 
   figure-writing command (fires on exactly one run, 077's re-ordered
   series; sorting requests suppress the order rule). Both audited
   offline to zero false positives before inclusion.
+\item \textbf{Dual-filing dedup.} One real defect reported by two family
+  questions at once costs a guaranteed false positive in one of them
+  (``sd instead of sem'' filed as both \texttt{wrong\_data} and
+  \texttt{wrong\_chart}). Near-duplicate cross-family errors --- a
+  similarity gate calibrated on 75 real evidence pairs, with genuinely
+  distinct coexisting defects sitting safely below it --- collapse toward
+  the family their combined language names.
+\item \textbf{Code-literal contrast check.} Several
+  \texttt{hard\_to\_read} truths share one mechanism: an element drawn
+  in a colour too close to the background, with the colour sitting in the
+  agent's code as a literal. Colour kwargs from every successful command
+  (excluding edge colours, legend-proxy handles, unlabeled reference
+  lines, translucent fills, masking patches, and dark-canvas runs) are
+  compared against the rendered corner background; a WCAG-style contrast
+  ratio below 2.5:1 files \texttt{hard\_to\_read}. After three audit
+  iterations it fires on 8 runs across all 125 development runs --- every
+  one a \texttt{hard\_to\_read} truth --- with zero false positives.
+  Replaying both of these last two components over the three fixed seed
+  sweeps of the pre-revision champion raised macro-MCC by a consistent
+  $+0.045$ to $+0.055$ (about twice the repeat-noise floor), with
+  \texttt{hard\_to\_read} moving from $0.08$ to $0.26$--$0.29$.
 \end{enumerate}
 
 \subsection{Final Evaluation on Seed and New Tasks}
@@ -613,17 +636,20 @@ version's designated sweeps:
 Family & Part 2 & Final & Part 2 & Final \\
 \midrule
 \texttt{execution\_failure} & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
-\texttt{wrong\_data} & 0.3372 & \textbf{0.4411} & $-0.3162$ & \textbf{0.6325} \\
-\texttt{wrong\_chart} & 0.1387 & \textbf{0.4536} & $-0.1741$ & \textbf{0.2928} \\
-\texttt{hard\_to\_read} & 0.3142 & 0.0779 & $-0.0909$ & \textbf{1.0000} \\
+\texttt{wrong\_data} & 0.3372 & \textbf{0.3553} & $-0.3162$ & \textbf{0.0756} \\
+\texttt{wrong\_chart} & 0.1387 & \textbf{0.3061} & $-0.1741$ & \textbf{0.4082} \\
+\texttt{hard\_to\_read} & 0.3142 & \textbf{0.3395} & $-0.0909$ & \textbf{1.0000} \\
 \midrule
-macro-MCC & 0.4475 & \textbf{0.4931} & 0.1047 & \textbf{0.7313} \\
+macro-MCC & 0.4475 & \textbf{0.5002} & 0.1047 & \textbf{0.6210} \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-Seed \texttt{wrong\_chart} recall rose from 23/71 to 49/71 true
-positives. Repeat variation is reported in full rather than summarized
+Seed \texttt{wrong\_chart} recall rose from 23/71 to 50/71 true
+positives, and \texttt{hard\_to\_read} --- the family Part 4's first
+revision traded away --- recovered to 0.3395 (14/39 true positives, 5
+false positives) once the code-literal contrast check joined the
+deterministic layer. Repeat variation is reported in full rather than summarized
 away: before selection, finalist and incumbent were each run twice more,
 fresh and interleaved under matched serving:
 
@@ -634,50 +660,66 @@ macro-MCC & \multicolumn{2}{c}{seed} & \multicolumn{2}{c}{authored} \\
  & r1 & r2 & r1 & r2 \\
 \midrule
 Part 2 incumbent & 0.4389 & 0.4700 & 0.3552 & 0.2808 \\
-final validator & \textbf{0.4800} & \textbf{0.4939} & \textbf{0.6787} & \textbf{0.6529} \\
+pre-revision champion & \textbf{0.4800} & \textbf{0.4939} & \textbf{0.6787} & \textbf{0.6529} \\
+shipped (designated / repeat) & 0.5002 & 0.5093 & 0.6210 & 0.6416 \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-On seed, the final validator's worse repeat beats the incumbent's better
-one; the designated numbers above sit inside these bands.
+On seed, the champion's worse repeat beats the incumbent's better one.
+The two final deterministic components (dedup, contrast) were
+additionally measured by exact replay over the three fixed pre-revision
+seed sweeps --- $0.4800/0.4931/0.4939 \to 0.5338/0.5367/0.5411$, a
+consistent $+0.045$ to $+0.055$ --- which isolates their effect from the
+fresh-sweep variance of the model-judged families.
 
-Two results are reported against ourselves. First, seed
-\texttt{hard\_to\_read} falls from 0.3142 to 0.0779. We investigated
-every lost true positive across the comparison sweeps: all twelve were
-fabricated clipping claims that happened to land on runs whose real
-defect is a different mechanism (overlapping tick labels, an invisible
-series, upside-down text, a legend covering tick labels). The
-edge-verifier removes exactly that unsound credit; what remains is a
-genuine, still-open recall gap on non-clipping legibility mechanisms (33
-misses on seed, e.g.\ 008's near-white value labels and 009's
-overlapping tick labels). Second, before tuning we built and reserved a
-fresh 26-run validation suite (12 correct/faulty pairs across the three
-content families plus two execution failures; constructed and visually
-verified by us, not human-reviewed course labels; provenance and scores
-in \texttt{experiments/}) and evaluated it exactly once after selecting
-the champion: incumbent macro $+0.7248$, champion $+0.7108$ ---
-statistically a tie inside the noise floor, with the champion perfect on
-readability (4/4, no false positives) and more false-positive-prone on
-clean charts elsewhere. The development-set gains therefore do
-\emph{not} demonstrate private-set superiority; the defensible claim is
-comparable-or-better classification with substantially sounder evidence,
-at one model call less per positive run. Our engineering stretch target
-of 0.60 seed macro-MCC was not reached (best repeat 0.4939); the subset
-result (0.6104) shows the pipeline can get there on hard cases, and the
-open \texttt{hard\_to\_read} recall gap is the identified remainder.
+Two results are reported against ourselves. First, the
+\texttt{hard\_to\_read} story is a deliberate two-step trade. The
+edge-verification stage initially dropped the family to 0.08: we
+investigated every lost true positive across the comparison sweeps, and
+all twelve were fabricated clipping claims that happened to land on runs
+whose real defect is a different mechanism (overlapping tick labels, an
+invisible series, upside-down text, a legend covering tick labels) ---
+unsound credit, removed on purpose. The code-literal contrast check then
+rebuilt recall on verifiable evidence (008's \texttt{\#f4f4f4} labels,
+200's white scatter series), landing at 0.3395 --- above the Part 2
+version's 0.3142, now with every clipping or contrast claim physically
+checked. The remaining 25 misses are non-clipping mechanisms the judge
+still overlooks (e.g.\ 009's overlapping tick labels). Second, before
+tuning we built and reserved a fresh 26-run validation suite (12
+correct/faulty pairs plus two execution failures; constructed and
+visually verified by us, not human-reviewed course labels; provenance
+and scores in \texttt{experiments/}) and evaluated it exactly once
+after selecting the champion: incumbent macro $+0.7248$, champion
+$+0.7108$ --- statistically a tie inside the noise floor, with the
+champion perfect on readability (4/4, no false positives) and more
+false-positive-prone on clean charts elsewhere. The dedup component was
+subsequently designed partly from that suite's observed errors, so it is
+now development data and \emph{no untouched holdout remains}; the
+development-set gains do not demonstrate private-set superiority, and
+the defensible claim stays: comparable-or-better classification with
+substantially sounder evidence, at one model call less per positive run.
+Our engineering stretch target of 0.60 seed macro-MCC was not reached
+(designated 0.5002; replay band 0.534--0.541); the subset result
+(0.610) shows the pipeline can get there on hard cases, and the open
+\texttt{hard\_to\_read} and \texttt{wrong\_chart} recall gaps are
+the identified remainder.
 
 \subsection{Qualitative Analysis of Self-Authored Tasks}
-On the designated authored sweep the champion scores 0.7313, catching
-\texttt{city-temps\_\_qwen} exactly (\texttt{wrong\_chart} +
-\texttt{hard\_to\_read}, the legend-over-lines mechanism named
-correctly), both \texttt{sensor-share} order inversions as
-\texttt{wrong\_data}, and \texttt{stage-attendance\_\_qwen}'s missing
-stage names.
+On the designated authored sweep the shipped validator scores 0.6210,
+catching \texttt{city-temps\_\_qwen} exactly (\texttt{wrong\_chart}
++ \texttt{hard\_to\_read}, the legend-over-lines mechanism named
+correctly), \texttt{sensor-share\_\_ministral}'s order inversion as
+\texttt{wrong\_data}, and \texttt{stage-attendance\_\_qwen}'s
+missing stage names; the twin inversion on
+\texttt{sensor-share\_\_glm} was caught in the previous designated
+sweep but missed in this one --- the run-to-run instability of that
+detection, noted below, cuts both ways.
 
 \textbf{A false positive.} \texttt{city-temps\_\_ministral} (a correct
-run) is again flagged \texttt{wrong\_chart}: ``Brinport is orange
-(should be tab:orange), Calder is green (should be \ldots)''. The
+run) is again flagged, this sweep as \texttt{wrong\_data}: ``Brinport
+is shown in orange instead of tab:orange (which is correct), but the
+main [violation]\ldots'' --- evidence that concedes its own claim. The
 trajectory contains \texttt{'Brinport': 'tab:orange',} and the drawn
 lines match it; the claim asserts a difference no pixels can show.
 This is the known cost of removing the colour filter: that filter was
@@ -715,10 +757,14 @@ per valid-figure run (plus at most one bounded truncation re-ask each;
 no arbitration call), and 0 calls for missing-figure runs; the full
 110-run seed sweep completes in roughly 35--45 minutes on the course
 deployment. Known open limitations, measured and not patched around:
-dual-filing (one real defect credited in two families, which the removed
-arbiter used to collapse), re-derivation and misbinding hallucinations
-on correct charts, the non-clipping \texttt{hard\_to\_read} recall gap,
-and tiny-but-unclipped text, which evades the deterministic verifier and
+residual dual-filing (the dedup stage collapses the pattern only above
+its calibrated similarity gate; a sub-gate pair survives in the
+holdout's scatter-styled run), re-derivation and misbinding
+hallucinations on correct charts (now the dominant false-positive
+channel --- e.g.\ the fine-totals order re-derivations in the
+designated sweep), the non-clipping \texttt{hard\_to\_read} recall
+gap (25 seed misses, e.g.\ 009's overlapping tick labels), and
+tiny-but-unclipped text, which evades the deterministic verifier and
 both VLM validators alike. The natural next candidate --- targeted crop
 verification for proposed legibility defects --- is specified in the
 ledger but was not pursued after the campaign's stopping review.

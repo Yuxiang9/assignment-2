@@ -336,3 +336,38 @@ row. Stretch target (engineering, not a course requirement): seed macro-MCC
   Not tuned on: the suite is spent; recorded as limitations.
 - CHAMPION CONFIRMED: e09 (selection rested on the pre-registered
   comparison-sweep rule; holdout is validation only).
+
+## e10 + e11 — user-approved continuation (2026-09-28)
+
+- **e10 dual-filing dedup**: near-duplicate cross-family errors collapse
+  toward the family their combined language names (similarity gate ratio
+  >= 0.45, or >= 0.35 with token-Jaccard >= 0.25, calibrated on 75 real
+  cross-family pairs; legitimate dual-family cases sit <= 0.38 and
+  survive). 8 unit cases incl. the hourly-ticks keep-case.
+- **e11 contrast check**: colour literals from drawing-call kwargs across
+  all successful commands (excluding edgecolor, legend proxies, unlabeled
+  reference lines, translucent fills, masking patches, and dark-canvas
+  runs) vs the rendered corner background; WCAG-style ratio < 2.5:1 fires
+  hard_to_read. Iterated three times against the audit (edgecolor and
+  donut-hole idioms, dark-axes Hinton case); final: fires on 8 runs, all
+  hard_to_read truths (008, 026, 052, 069, 129, 141, 200, 205), 0 FPs
+  across all 125 dev runs.
+- Offline replay on all six existing e09 sweeps: seed macro
+  0.4800/0.4931/0.4939 -> 0.5338/0.5367/0.5411 (+0.045-0.055, ~2x noise
+  floor, consistent); hr 0.078 -> 0.26-0.29; authored unchanged.
+- NOTE: e10 was motivated partly by reserved-holdout observations, so the
+  holdout is development data for this revision; no untouched suite
+  remains.
+- Integrated into validator/solution.py (sha f9e9e2cb...); mocked-validate
+  smoke caught one port bug (messages->run.messages) before any GPU use.
+- Fresh designated sweeps with the revised shipped code follow.
+
+## Shipped revision (e09 + e10 + e11) — final numbers (2026-09-28)
+
+- Designated sweeps: seed macro 0.5002 (exec 1.0, wd 0.3553, wc 0.3061,
+  hr 0.3395), authored 0.6210 (hr 1.0). Fresh repeat: seed 0.5093
+  (hr 0.4223), authored 0.6416. Shipped band seed 0.500-0.509: the worse
+  shipped sweep beats the pre-revision champion's best repeat (0.4939).
+- hard_to_read recovered from the 0.08 evidence-soundness trough to
+  0.34-0.42 on physically verified evidence; seed wrong_chart TP 50/71.
+- Stretch target 0.60 seed: still not reached; recorded plainly.

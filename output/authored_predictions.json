@@ -4,8 +4,12 @@
       "run_id": "city-temps__glm",
       "errors": [
         {
+          "family": "wrong_data",
+          "evidence": "The figure uses the wrong colors for the cities: Aluna is shown in tab:orange instead of tab:blue, Brinport in tab:blue instead of tab:orange, and so on, violating the specified color assignments."
+        },
+        {
           "family": "wrong_chart",
-          "evidence": "The figure uses the wrong colors for the cities: Aluna is shown in blue (tab:blue) but Brinport is also shown in blue, and the color for Brinport should be tab:orange. The legend shows Brinport with an orange line, but the plotted line for Brinport is blue, indicating a mismatch between the requested color and the drawn data."
+          "evidence": "The legend is placed outside the plotting area to the right, but the legend entry for \"Brinport\" is shown with an orange line, which violates the instruction to use \"tab:orange\" for Brinport; the actual color used is a different shade of orange, not the specified \"tab:orange\"."
         }
       ]
     },
@@ -13,8 +17,8 @@
       "run_id": "city-temps__ministral",
       "errors": [
         {
-          "family": "wrong_chart",
-          "evidence": "The chart uses the wrong line colours: Aluna is shown as blue (correct), but Brinport is orange (should be tab:orange), Calder is green (should be tab:green), Dunmore is red (should be tab:red), Eastwick is purple (should be tab:purple), and Farrow is brown (should be tab:brown). The instructions explicitly required specific tab: colours for each city, and the figure uses a different palette."
+          "family": "wrong_data",
+          "evidence": "The figure uses wrong colors for the cities: Brinport is shown in orange instead of tab:orange (which is correct), but the main violation is that the colors for Aluna, Calder, Dunmore, Eastwick, and Farrow are incorrect (e.g., Aluna is blue instead of tab:blue, Calder is green instead of tab:green, etc.). The task explicitly requires specific tab: colors for each city, and the figure does not match these."
         }
       ]
     },
@@ -23,24 +27,29 @@
       "errors": [
         {
           "family": "wrong_chart",
-          "evidence": "The legend shows six cities, but the plotted lines use incorrect colors: Aluna is blue (correct), Brinport is orange (correct), Calder is green (correct), Dunmore is red (correct), Eastwick is purple (correct), but Farrow is brown (correct). However, the plotted data includes an extra city \"Dunmore\" with a red line, but the task only requested six cities. The figure shows a seventh city \"Dunmore\" with a red line, but the task only requested six cities. Wait, rechecking: the task lists six cities: Aluna, Brinport, Calder, Dunmore, Eastwick, Farrow. The figure has six lines, each with a city nam"
+          "evidence": "The figure shows seven cities (Aluna, Brinport, Calder, Dunmore, Eastwick, Farrow, and an extra \"Dunmore\" with a different color), but the task requested only six cities. The agent included an extra series (Brinport) with a wrong color (orange instead of tab:orange) and the legend shows a duplicate \"Dunmore\" line, indicating a wrong selection of data."
         },
         {
           "family": "hard_to_read",
-          "evidence": "The legend is placed inside the plotting area in the upper left, covering parts of the data lines for Aluna, Brinport, and Calder."
+          "evidence": "The legend is placed inside the plotting area in the upper left, overlapping the data lines for Aluna, Brinport, and Calder, making those lines partially obscured."
         }
       ]
     },
     {
       "run_id": "fine-totals__glm",
-      "errors": []
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure shows the branches in the order Eastside, Northgate, Harborview, Central, but the task requires them to be in descending order of collected totals (Eastside, Northgate, Harborview, Central). The computed totals are correct, but the bar chart displays them in ascending order of branch name, not descending by total."
+        }
+      ]
     },
     {
       "run_id": "fine-totals__ministral",
       "errors": [
         {
           "family": "wrong_data",
-          "evidence": "The branches are not ordered in descending order of collected total; the observed order (Eastside, Northgate, Harborview, Central) is incorrect."
+          "evidence": "The branches are not ordered in descending order of collected total; the observed order (Eastside, Northgate, Harborview, Central) is ascending by value, violating the requirement to order from largest to smallest."
         }
       ]
     },
@@ -55,12 +64,7 @@
     },
     {
       "run_id": "sensor-share__glm",
-      "errors": [
-        {
-          "family": "wrong_data",
-          "evidence": "The sites are not ordered alphabetically as requested; the figure shows Dogwood, Cedar, Birch, Alder (top to bottom), but the correct order should be Alder, Birch, Cedar, Dogwood."
-        }
-      ]
+      "errors": []
     },
     {
       "run_id": "sensor-share__ministral",
@@ -82,27 +86,23 @@
     },
     {
       "run_id": "stage-attendance__glm",
-      "errors": []
-    },
-    {
-      "run_id": "stage-attendance__ministral",
       "errors": [
         {
           "family": "wrong_chart",
-          "evidence": "The x tick labels are truncated (e.g., \"Whispering Pines Amphi...\" instead of the full name) and the full labels are not completely visible, violating the requirement to use the full stage names exactly as written and to have all text fully visible inside the image."
+          "evidence": "The x tick labels are truncated (e.g., \"Whispering Pines Amphitheater\" appears as \"Whispering Pines Amphi...\"), violating the requirement to use the full stage names exactly as written and to keep all text completely visible."
         }
       ]
+    },
+    {
+      "run_id": "stage-attendance__ministral",
+      "errors": []
     },
     {
       "run_id": "stage-attendance__qwen",
       "errors": [
         {
-          "family": "wrong_data",
-          "evidence": "The x tick labels are missing entirely, so the stages are not labeled with their full names as required. Additionally, the bars are plotted in the wrong order: the tallest bar (8900) is at index 4, which corresponds to \"Starlight Terrace\" in the requested order, but in the figure it appears at position 4 (fifth bar), while the first bar (index 0) shows 4200, which is correct for \"Whispering Pines Amphitheater\". However, the labels are not shown, so the order cannot be verified visually, but the code uses the correct values in the correct order. The key violation is that the x tick labels are m"
-        },
-        {
           "family": "wrong_chart",
-          "evidence": "The x tick labels are missing entirely, violating the requirement to use each stage's full name as the x tick label. Additionally, the title, axis labels, and tick labels are cut off at the edges of the image, violating the requirement that all text must be completely visible."
+          "evidence": "The x tick labels are missing entirely, so the requested stage names are not drawn, violating the requirement to use each stage's full name as the x tick label."
         }
       ]
     },
