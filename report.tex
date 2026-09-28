@@ -3,6 +3,8 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{booktabs}
 \usepackage{hyperref}
+\usepackage{url}
+\urlstyle{tt}
 
 % Prefer slightly looser interword spacing over text running past the
 % margin; many lines here end in long unbreakable \texttt{} identifiers.
@@ -14,6 +16,38 @@
 
 \begin{document}
 \maketitle
+
+\paragraph*{Overview.} This report follows one design thread: \emph{every
+decision that has a mechanical answer is taken away from the judge model
+and made deterministic; the model is kept only for perception and
+language understanding, and even there its claims are verified against
+the pixels where physics allows.} Part 1 shows the released baseline is
+uninformative (macro-MCC 0.027) and diagnoses two mechanisms. Part 2
+fixes them --- a deterministic execution check and rubric-scoped,
+structurally parsed questions --- reaching 0.448. Part 3 stress-tests
+that validator with five adversarial self-authored tasks (0.105 there),
+packages them as deterministic Harbor verifiers, and measures the exact
+boundary where deterministic verification stops. Part 4 turns those
+findings into a measured improvement campaign (frozen baselines, a
+repeat-noise floor, pre-registered candidates, audits of every changed
+prediction) whose product is the shipped validator:
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+validator & seed macro-MCC & authored macro-MCC \\
+\midrule
+released baseline & 0.0268 & --- \\
+Part 2 & 0.4475 & 0.1047 \\
+\textbf{shipped (Part 4)} & \textbf{0.4931} & \textbf{0.7313} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Throughout, negative results are reported alongside positive ones: the
+one family that trades score for evidence soundness, the components that
+measurement rejected, and a reserved holdout on which the final
+validator does \emph{not} beat its predecessor.
 
 \section{Part 1: Examine Seed Agent Runs}
 
@@ -474,74 +508,99 @@ expected chart from the task text, data, trajectory, and image at run time
 \section{Part 4: Iterate on Your Design}
 
 \subsection{Additional Improvements Motivated by Part 3}
-Part 3 exposed three failure patterns (colour hallucinations, missed order
-inversions, cross-family mis-filing), and our first response was a
-composite change --- deterministic colour filters plus a model arbitration
-pass. A subsequent review found both components defective: the colour
-filter deleted valid findings (a genuine ``the requested tab:blue series
-is red'' loses its sentence to word co-occurrence; a mixed
-``title is missing and the line colour is incorrect'' sentence loses the
-title defect too), and the arbitration parser could silently erase
-findings for families a truncated reply never answered. Rather than patch
-by intuition, we re-ran Part 4 as a measured campaign.
 
-\emph{Method.} We froze the incumbent (predictions, scores, source
+\paragraph{Why a campaign rather than one change.} Part 3 exposed three
+failure patterns: colour hallucinations, missed order inversions, and
+cross-family mis-filing. Our first response was a composite change ---
+deterministic colour filters plus a model arbitration pass --- but a
+subsequent review found both components defective: the colour filter
+deleted valid findings (a genuine ``the requested tab:blue series is
+red'' loses its sentence to word co-occurrence; ``the title is missing
+and the line colour is incorrect'' loses the title defect too), and the
+arbitration parser could silently erase findings for families a
+truncated reply never answered. Patching by intuition had produced
+plausible-looking components that measurement rejected, so we re-ran
+Part 4 as a measured campaign instead.
+
+\paragraph{Method.} We froze the incumbent (predictions, scores, source
 hashes, a manifest of run/input hashes), added optional per-call
-diagnostics (disabled by default; reads no labels; changes no decisions),
-built a fixed 39-run diagnostic subset enriched with hard cases from both
-released and authored runs, and measured the incumbent twice on it and
-twice on the authored set to establish a repeat-noise floor of about
-$\pm$0.02--0.03 macro-MCC. Every candidate was pre-registered
-(hypothesis and plausible regression written before running), gated on
-local regression tests, evaluated on the subset, and audited finding by
-finding before promotion; the full ledger ships in
-\texttt{experiments/LEDGER.md}. The diagnostics answered the first
-question directly: of $\sim$38 content-family misses on the subset,
-34--35 were never detected by the first-stage questions --- recall was
-bounded by detection, not by filtering or arbitration.
+diagnostics (disabled by default; reads no labels; changes no
+decisions), built a fixed 39-run diagnostic subset enriched with hard
+cases from both released and authored runs, and measured the incumbent
+twice on it and twice on the authored set, giving a repeat-noise floor
+of about $\pm$0.02--0.03 macro-MCC that every promotion is judged
+against. Each candidate was pre-registered (hypothesis and plausible
+regression written before running), gated on local regression tests,
+evaluated on the subset, and audited finding by finding; the full ledger
+ships in \texttt{experiments/LEDGER.md}. The diagnostics answered the
+first question directly: of $\sim$38 content-family misses on the
+subset, 34--35 were never detected by the first-stage questions ---
+recall was bounded by \emph{detection}, not by filtering or arbitration
+--- which set the candidate order below.
 
-\emph{Adopted changes, in pipeline order.}
-(1)~\textbf{Correctness repairs}: the colour filter was disconnected
-(four of five required-preservation regression cases fail against it) and
-the arbiter lost the ability to emit a verdict for a family no reviewer
-proposed with fabricated ``confirmed by arbitration'' evidence.
-(2)~\textbf{Checklist \texttt{wrong\_chart} prompting}: the broad
-``check each requirement'' instruction became an enumerated checklist
-(at most 12 items: quote, expected, observed, source image/code, status
-pass/fail/unknown) with an explicit image-over-code rule --- a property
-set in code but absent from the saved image is absent. Subset
-\texttt{wrong\_chart} went from $-0.045$ to $+0.279$ (TP 5$\to$15),
-recovering legend, axis-label, orientation, axis-limit, and colorbar
-defects, including \texttt{sensor-share\_\_ministral}'s off-canvas
-label mechanism.
-(3)~\textbf{Readability-specific prompting with deterministic edge
-verification}: \texttt{hard\_to\_read} no longer answers under the
-``explicit requirement'' confidence gate (legibility defects are rarely
-explicit clauses); it walks element groups with CHECK lines and must name
-the element, location, and visible mechanism. Alone this recovered real
-occlusion/overlap/invisibility defects but amplified ``partially cut
-off'' fabrications (11 new false alarms); an edge-ink audit showed only
-one clipping claim in the entire subset run was physically real, so a
-deterministic verifier now strikes any clipping claim whose named image
-edge holds no ink. Replayed on the same run: \texttt{hard\_to\_read}
-$+0.107 \to +0.444$ with false positives 16$\to$1.
-(4)~\textbf{Deterministic family mapping replaces model arbitration}: an
-ablation replaying identical recorded findings under three configurations
-scored direct $+0.378$, deterministically re-filed $+0.436$, and
-model-arbitrated $+0.370$ --- the arbiter erased more true positives than
-it repaired --- so findings are now re-filed by rule (drawn order
-$\to$ \texttt{wrong\_data}; missing/wrong title, label, legend, colormap,
-scale $\to$ \texttt{wrong\_chart}; partial clipping $\to$
-\texttt{hard\_to\_read}) and the arbitration model call is gone.
-(5)~\textbf{A deterministic fact layer}: an explicit DPI request is
-compared against the PNG's own metadata (fires on exactly the three true
-violations across all 125 development runs, silent on the twelve
-compliant DPI-mentioning runs), and literal number series in the
-instructions are compared against literal lists in the last successful
-figure-writing command (fires on exactly one run, 077's re-ordered
-series; sorting requests suppress the order rule). Both audited offline
-to zero false positives before inclusion. The composed validator scored
-0.6104 on the diagnostic subset against the incumbent's 0.2675--0.2891.
+\paragraph{Candidates and decisions.} (Subset macro-MCC; incumbent
+repeats 0.268/0.289.)
+
+\begin{center}
+\begin{tabular}{p{8.2cm}rl}
+\toprule
+candidate (one component each) & subset & decision \\
+\midrule
+remove destructive colour filter; arbiter may not invent verdicts & 0.269 & adopt (correctness) \\
+checklist \texttt{wrong\_chart} prompting & 0.370 & adopt \\
+readability prompt alone & 0.379 & adopt only with edge check \\
+deterministic mapping replaces model arbiter & 0.432 & adopt \\
+composed + edge verification + fact layer (shipped) & \textbf{0.610} & champion \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Adopted changes, in pipeline order.}
+\begin{enumerate}
+\item \textbf{Correctness repairs.} The colour filter is disconnected
+  (four of five required-preservation regression cases fail against it),
+  and the arbiter can no longer emit a verdict for a family no reviewer
+  proposed with fabricated ``confirmed by arbitration'' evidence. Subset
+  score unchanged within noise --- kept because verified correctness
+  repairs are not traded for score.
+\item \textbf{Checklist \texttt{wrong\_chart} prompting.} The broad
+  ``check each requirement'' instruction becomes an enumerated checklist
+  (at most 12 items: quote, expected, observed, source image/code,
+  status pass/fail/unknown) with an explicit image-over-code rule --- a
+  property set in code but absent from the saved image is absent. Subset
+  \texttt{wrong\_chart} $-0.045 \to +0.279$ (TP 5$\to$15), recovering
+  legend, axis-label, orientation, axis-limit, and colorbar defects,
+  including \texttt{sensor-share\_\_ministral}'s off-canvas label.
+\item \textbf{Readability prompting with deterministic edge
+  verification.} \texttt{hard\_to\_read} no longer answers under the
+  ``explicit requirement'' confidence gate (legibility defects are
+  rarely explicit clauses); it walks element groups with CHECK lines and
+  must name the element, its location, and a visible mechanism. Alone
+  this recovered real occlusion/overlap/invisibility defects but
+  amplified ``partially cut off'' fabrications (11 new false alarms); an
+  edge-ink audit showed only one clipping claim in the whole subset run
+  was physically real. A deterministic verifier therefore strikes any
+  clipping claim whose named image edge holds no ink. Replayed on the
+  same run: \texttt{hard\_to\_read} $+0.107 \to +0.444$, false positives
+  16$\to$1.
+\item \textbf{Deterministic family mapping replaces model arbitration.}
+  An ablation replaying \emph{identical} recorded findings under three
+  configurations scored: direct $+0.378$; deterministically re-filed
+  $+0.436$; model-arbitrated $+0.370$. The arbiter erased more true
+  positives than it repaired, so findings are re-filed by rule (drawn
+  order $\to$ \texttt{wrong\_data}; missing/wrong title, label, legend,
+  colormap, scale $\to$ \texttt{wrong\_chart}; partial clipping $\to$
+  \texttt{hard\_to\_read}) and the arbitration call is gone --- one
+  model call per positive run saved.
+\item \textbf{Deterministic fact layer.} An explicit DPI request is
+  compared with the PNG's own metadata (fires on exactly the three true
+  violations across all 125 development runs; silent on the twelve
+  compliant DPI-mentioning runs), and literal number series in the
+  instructions are compared with literal lists in the last successful
+  figure-writing command (fires on exactly one run, 077's re-ordered
+  series; sorting requests suppress the order rule). Both audited
+  offline to zero false positives before inclusion.
+\end{enumerate}
 
 \subsection{Final Evaluation on Seed and New Tasks}
 The designated final sweeps of the shipped validator, against the Part 2
@@ -565,12 +624,23 @@ macro-MCC & 0.4475 & \textbf{0.4931} & 0.1047 & \textbf{0.7313} \\
 
 Seed \texttt{wrong\_chart} recall rose from 23/71 to 49/71 true
 positives. Repeat variation is reported in full rather than summarized
-away: two fresh comparison sweeps each gave the final validator
-0.4800/0.4939 on seed and 0.6787/0.6529 on authored, against
-0.4389/0.4700 and 0.3552/0.2808 for the incumbent under interleaved,
-matched serving --- on seed, the final validator's worse repeat beats the
-incumbent's better one; the designated numbers above sit inside those
-bands.
+away: before selection, finalist and incumbent were each run twice more,
+fresh and interleaved under matched serving:
+
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+macro-MCC & \multicolumn{2}{c}{seed} & \multicolumn{2}{c}{authored} \\
+ & r1 & r2 & r1 & r2 \\
+\midrule
+Part 2 incumbent & 0.4389 & 0.4700 & 0.3552 & 0.2808 \\
+final validator & \textbf{0.4800} & \textbf{0.4939} & \textbf{0.6787} & \textbf{0.6529} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+On seed, the final validator's worse repeat beats the incumbent's better
+one; the designated numbers above sit inside these bands.
 
 Two results are reported against ourselves. First, seed
 \texttt{hard\_to\_read} falls from 0.3142 to 0.0779. We investigated
@@ -652,5 +722,28 @@ and tiny-but-unclipped text, which evades the deterministic verifier and
 both VLM validators alike. The natural next candidate --- targeted crop
 verification for proposed legibility defects --- is specified in the
 ledger but was not pursued after the campaign's stopping review.
+
+\subsection{Reproducibility}
+\sloppy
+Every number in this report regenerates from the submission. The Part 1
+table: run \texttt{validator.baseline} through \texttt{validator.runner}
+on \texttt{artifacts/} and score against \texttt{seed\_labels.json}. The
+Part 2 tables: the frozen module \path{validator/solution_part2.py},
+selected with the runner's \texttt{--solution} flag; its designated
+predictions are \path{output/pre_iteration_*.json}. Parts 3--4: the
+shipped \path{validator/solution.py}; designated predictions are
+\path{output/final_seed_predictions.json} and
+\path{output/authored_predictions.json}, scored with
+\texttt{workflow score} (against \path{labels.json} for authored
+runs). Harbor rewards: \texttt{workflow check-submission} re-runs every
+oracle and both mutants. The experiment ledger --- per-candidate
+hypotheses, frozen sources with SHA-256s, subset scores, the arbitration
+ablation, and the reserved-suite builder and labels --- is under
+\path{experiments/}; local gates run offline via
+\path{experiments/regression_tests.py} and
+\path{experiments/arbitration_ablation.py}. Judged sweeps are
+nondeterministic at the margin (batched serving), so comparisons should
+use the reported repeat bands rather than single sweeps.
+\par\fussy
 
 \end{document}
