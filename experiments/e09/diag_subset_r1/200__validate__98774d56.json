@@ -1,0 +1,21 @@
+{
+ "run_id": "200",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The legend in the top-left corner overlaps the data points of Group 1, partially covering the blue dots in the beeswarm plot."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The legend in the top-left corner overlaps the data points of Group 1, partially covering the blue dots in the beeswarm plot."
+  ]
+ ],
+ "final": [
+  [
+   "hard_to_read",
+   "The legend in the top-left corner overlaps the data points of Group 1, partially covering the blue dots in the beeswarm plot."
+  ]
+ ]
+}

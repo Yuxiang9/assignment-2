@@ -1,0 +1,30 @@
+{
+ "run_id": "069",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "bf588ce986d08eb7",
+ "prompt_chars": 18309,
+ "image": {
+  "present": true,
+  "bytes": 177881,
+  "size": [
+   1000,
+   1000
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 204,
+  "prompt_tokens": 6866,
+  "total_tokens": 7070,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The main title \"Global Food Security Index, 2020\" and the subtitle \"Overall score 0-100, 100 = best environment\" are fully visible at the top of the figure.\nCHECK axis labels: ok -- There are no traditional axes, so no axis labels to check.\nCHECK tick labels: ok -- There are no tick labels on axes.\nCHECK legend: problem -- The legend at the bottom is partially cut off at the image edge, with the rightmost part of the \"Africa\" label and its color swatch missing.\nCHECK annotations: ok -- The title and subtitle are clear and fully visible.\nCHECK data series: ok -- All segments are visible and distinguishable by color and size.\n\nVERDICT: YES\nEVIDENCE: The legend at the bottom of the figure is partially cut off at the right edge of the image, making the rightmost part of the \"Africa\" label and its color swatch unreadable.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The legend at the bottom of the figure is partially cut off at the right edge of the image, making the rightmost part of the \"Africa\" label and its color swatch unreadable.",
+ "elapsed_s": 5.85
+}

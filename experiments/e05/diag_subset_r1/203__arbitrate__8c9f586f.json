@@ -1,0 +1,42 @@
+{
+ "run_id": "203",
+ "findings_in": [
+  [
+   "hard_to_read",
+   "The colorbar is partially cut off at the right edge of the image."
+  ]
+ ],
+ "context_shed": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "29360c33fa0d6295",
+ "image": {
+  "present": true,
+  "bytes": 122141,
+  "size": [
+   700,
+   700
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 63,
+  "prompt_tokens": 2089,
+  "total_tokens": 2152,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "WRONG_DATA: NO  \nWRONG_DATA_EVIDENCE: none  \nWRONG_CHART: NO  \nWRONG_CHART_EVIDENCE: none  \nHARD_TO_READ: YES  \nHARD_TO_READ_EVIDENCE: The colorbar is partially cut off at the right edge of the image.",
+ "parsed_verdicts": {
+  "wrong_data": "NO",
+  "wrong_chart": "NO",
+  "hard_to_read": "YES"
+ },
+ "findings_out": [
+  [
+   "hard_to_read",
+   "The colorbar is partially cut off at the right edge of the image."
+  ]
+ ],
+ "elapsed_s": 1.08
+}

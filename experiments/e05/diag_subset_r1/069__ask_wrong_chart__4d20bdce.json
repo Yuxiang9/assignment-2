@@ -1,0 +1,30 @@
+{
+ "run_id": "069",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "88d621f9619a8918",
+ "prompt_chars": 18134,
+ "image": {
+  "present": true,
+  "bytes": 177881,
+  "size": [
+   1000,
+   1000
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 76,
+  "prompt_tokens": 6809,
+  "total_tokens": 6885,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES\nEVIDENCE: The chart uses a sunburst design but the legend shows two entries for \"Africa\" (one green, one light green) and the color for \"Oceania\" is purple, which matches the instruction, but the legend incorrectly lists \"Africa\" twice with different colors, violating the requested legend for the five major areas.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The chart uses a sunburst design but the legend shows two entries for \"Africa\" (one green, one light green) and the color for \"Oceania\" is purple, which matches the instruction, but the legend incorrectly lists \"Africa\" twice with different colors, violating the requested legend for the five major areas.",
+ "elapsed_s": 2.17
+}

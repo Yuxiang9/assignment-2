@@ -1,0 +1,182 @@
+{
+  "labels": [
+    {
+      "run_id": "ho-quarterly-revenue__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-quarterly-revenue__bad",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Alpha's Q2 and Q3 values are swapped: the chart shows Q2=9 and Q3=15 where the task specifies Q2=15 and Q3=9"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-sem-errorbars__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-sem-errorbars__bad",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "the error bars show the raw standard deviation (e.g. 20 for batch C) instead of the requested standard error of the mean (sd/sqrt(n): 3, 2, 4, 5)"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-cumulative-rainfall__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-cumulative-rainfall__bad",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "the line plots the raw monthly values (ending at 10 mm in June) instead of the requested running total (ending at 310 mm)"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-top-films__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-top-films__bad",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "the five films shown are the five most recent by year (Noon Eclipse, Gullwing, Midnight Freight, Iron Harvest, Paper Lanterns), not the five highest-grossing (The Long Thaw 478 and Starfall 412 are missing), and the bars are ordered by year rather than by descending gross"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-log-decay__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-log-decay__bad",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "the y axis is linear although the task requires a logarithmic scale; the curve hugs zero after t=40 instead of falling as a straight line"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-subplot-pair__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-subplot-pair__bad",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "the panels are stacked vertically (a 2x1 grid) although the task requires two side-by-side panels in a 1x2 grid"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-scatter-styled__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-scatter-styled__bad",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "the markers are the default round blue points although the task requires square red markers"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-hist-bins__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-hist-bins__bad",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "the title reads \"Quality scores\" although the task requires the exact text \"Distribution of quality scores\""
+        }
+      ]
+    },
+    {
+      "run_id": "ho-hourly-ticks__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-hourly-ticks__bad",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "the task explicitly requires the hour labels rotated, but they are drawn horizontal"
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "the 24 horizontal hour labels collide on the narrow canvas and merge into an unreadable strip along the x axis"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-annotated-peak__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-annotated-peak__bad",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "the annotation text \"Launch week\" is drawn directly on top of the rising segment of the line, covering the data between weeks 4 and 6"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-contrast-series__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-contrast-series__bad",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "the Beta series is drawn in a near-white colour (#fdfdf0) on the white background and is effectively invisible"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-clipped-xlabel__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-clipped-xlabel__bad",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "the x axis label \"Material category\" is cut in half by the bottom edge of the image"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-crash-syntax",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "no figure.png was produced; the trajectory ends with LimitsExceeded after repeated failing commands"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-crash-badimport",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "no figure.png was produced; the trajectory ends with LimitsExceeded after repeated failing commands"
+        }
+      ]
+    }
+  ]
+}

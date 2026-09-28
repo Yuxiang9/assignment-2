@@ -1,0 +1,30 @@
+{
+ "run_id": "030",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "3ee9f4549fa4835a",
+ "prompt_chars": 8197,
+ "image": {
+  "present": true,
+  "bytes": 46210,
+  "size": [
+   800,
+   800
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 41,
+  "prompt_tokens": 3219,
+  "total_tokens": 3260,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES\nEVIDENCE: The figure title \"Shared axes\" is clipped at the top edge, with the top portion of the letters cut off, making it difficult to read.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The figure title \"Shared axes\" is clipped at the top edge, with the top portion of the letters cut off, making it difficult to read.",
+ "elapsed_s": 1.09
+}

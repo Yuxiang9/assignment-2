@@ -1,0 +1,45 @@
+{
+ "run_id": "stage-attendance__qwen",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The x tick labels are missing entirely, so the stages are not labeled with their full names as required. Additionally, the bars are plotted in the wrong order: the tallest bar (8900) is at index 4, which corresponds to \"Thundering Falls Main Stage\", but in the requested order it should be the fifth bar (index 4), which is correct, but the labels are missing and the order of the stages is not visible. However, the most critical violation is that the x tick labels are not present at all, so the data is not drawn with the required labels."
+  ],
+  [
+   "wrong_chart",
+   "The x tick labels are missing entirely, violating the requirement to use each stage's full name as the x tick label. Additionally, the title, axis labels, and tick labels are cut off at the edges of the image, violating the requirement that all text must be completely visible."
+  ],
+  [
+   "hard_to_read",
+   "The x tick labels are clipped at the bottom of the image, as the full stage names are cut off by the image edge."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The x tick labels are missing entirely, so the stages are not labeled with their full names as required. Additionally, the bars are plotted in the wrong order: the tallest bar (8900) is at index 4, which corresponds to \"Thundering Falls Main Stage\", but in the requested order it should be the fifth bar (index 4), which is correct, but the labels are missing and the order of the stages is not visible. However, the most critical violation is that the x tick labels are not present at all, so the data is not drawn with the required labels."
+  ],
+  [
+   "wrong_chart",
+   "The x tick labels are missing entirely, violating the requirement to use each stage's full name as the x tick label. Additionally, the title, axis labels, and tick labels are cut off at the edges of the image, violating the requirement that all text must be completely visible."
+  ],
+  [
+   "hard_to_read",
+   "The x tick labels are clipped at the bottom of the image, as the full stage names are cut off by the image edge."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_data",
+   "The x tick labels are missing entirely, so the stages are not labeled with their full names as required. Additionally, the bars are plotted in the wrong order: the tallest bar (8900) is at index 4, which corresponds to \"Thundering Falls Main Stage\", but in the requested order it should be the fifth bar (index 4), which is correct, but the labels are missing and the order of the stages is not visible. However, the most critical violation is that the x tick labels are not present at all, so the data is not drawn with the required labels."
+  ],
+  [
+   "wrong_chart",
+   "The x tick labels are missing entirely, violating the requirement to use each stage's full name as the x tick label. Additionally, the title, axis labels, and tick labels are cut off at the edges of the image, violating the requirement that all text must be completely visible."
+  ],
+  [
+   "hard_to_read",
+   "The x tick labels are clipped at the bottom of the image, as the full stage names are cut off by the image edge."
+  ]
+ ]
+}

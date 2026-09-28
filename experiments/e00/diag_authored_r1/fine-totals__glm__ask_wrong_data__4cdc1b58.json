@@ -1,0 +1,30 @@
+{
+ "run_id": "fine-totals__glm",
+ "family": "wrong_data",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "fb9a1a22bcd5b888",
+ "prompt_chars": 8312,
+ "image": {
+  "present": true,
+  "bytes": 20499,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 91,
+  "prompt_tokens": 2916,
+  "total_tokens": 3007,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES\nEVIDENCE: The figure shows the branches in the order Eastside, Northgate, Harborview, Central, but the task requires them to be in descending order of collected totals, which is Eastside (53.5), Northgate (49.0), Harborview (42.5), Central (37.5). The figure incorrectly places Central before Harborview, violating the required order.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The figure shows the branches in the order Eastside, Northgate, Harborview, Central, but the task requires them to be in descending order of collected totals, which is Eastside (53.5), Northgate (49.0), Harborview (42.5), Central (37.5). The figure incorrectly places Central before Harborview, violating the required order.",
+ "elapsed_s": 1.68
+}

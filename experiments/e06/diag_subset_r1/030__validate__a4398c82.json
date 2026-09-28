@@ -1,0 +1,37 @@
+{
+ "run_id": "030",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The figure title is \"Shared axes\" instead of the required \"Sharing x per column, y per row\", and the data plotted does not match the requested transformations (e.g., the first subplot shows z vs w but the x-axis is labeled w, and the data is not correctly transformed as specified)."
+  ],
+  [
+   "wrong_chart",
+   "The figure's title is \"Shared axes\" instead of the required \"Sharing x per column, y per row\". Additionally, the x-axis label \"w\" appears in all subplots, but only the outermost subplots should be labeled."
+  ],
+  [
+   "hard_to_read",
+   "The figure title \"Shared axes\" is clipped at the top edge, with the top portion of the letters cut off, making it difficult to read."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_chart",
+   "The figure title is \"Shared axes\" instead of the required \"Sharing x per column, y per row\", and the data plotted does not match the requested transformations (e.g., the first subplot shows z vs w but the x-axis is labeled w, and the data is not correctly transformed as specified)."
+  ],
+  [
+   "hard_to_read",
+   "The figure title \"Shared axes\" is clipped at the top edge, with the top portion of the letters cut off, making it difficult to read."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The figure title is \"Shared axes\" instead of the required \"Sharing x per column, y per row\", and the data plotted does not match the requested transformations (e.g., the first subplot shows z vs w but the x-axis is labeled w, and the data is not correctly transformed as specified)."
+  ],
+  [
+   "hard_to_read",
+   "The figure title \"Shared axes\" is clipped at the top edge, with the top portion of the letters cut off, making it difficult to read."
+  ]
+ ]
+}

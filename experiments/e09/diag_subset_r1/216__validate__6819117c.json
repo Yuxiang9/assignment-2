@@ -1,0 +1,41 @@
+{
+ "run_id": "216",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The figure shows the bars for \"AI Coding Tools\" and \"Open Floor Plans\" in the wrong order compared to the requested left-to-right sequence of topics; the correct order should be Remote Work, Four-Day Week, AI Coding Tools, Open Floor Plans, but the figure displays them as Remote Work, Four-Day Week, Open Floor Plans, AI Coding Tools."
+  ],
+  [
+   "wrong_chart",
+   "The legend entries are incorrect: the instructions require the legend to have entries \"Agree\", \"Neutral\", \"Disagree\", but the figure shows \"Agree\", \"Neutral\", \"Disagree\" with the wrong colors (the colors are swapped: the blue bar is labeled \"Agree\" but is actually the \"Agree\" data, but the legend shows blue as \"Agree\", orange as \"Neutral\", green as \"Disagree\", which matches the data, but the color order in the legend is not the same as the bar order in the chart, and the legend labels are not in the correct order. However, the main violation is that the legend entries are not in the correct or"
+  ],
+  [
+   "hard_to_read",
+   "The title, legend, and annotation are all partially cut off at the top edge of the image."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The figure shows the bars for \"AI Coding Tools\" and \"Open Floor Plans\" in the wrong order compared to the requested left-to-right sequence of topics; the correct order should be Remote Work, Four-Day Week, AI Coding Tools, Open Floor Plans, but the figure displays them as Remote Work, Four-Day Week, Open Floor Plans, AI Coding Tools."
+  ],
+  [
+   "wrong_chart",
+   "The legend entries are incorrect: the instructions require the legend to have entries \"Agree\", \"Neutral\", \"Disagree\", but the figure shows \"Agree\", \"Neutral\", \"Disagree\" with the wrong colors (the colors are swapped: the blue bar is labeled \"Agree\" but is actually the \"Agree\" data, but the legend shows blue as \"Agree\", orange as \"Neutral\", green as \"Disagree\", which matches the data, but the color order in the legend is not the same as the bar order in the chart, and the legend labels are not in the correct order. However, the main violation is that the legend entries are not in the correct or"
+  ],
+  [
+   "hard_to_read",
+   "The title, legend, and annotation are all partially cut off at the top edge of the image."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_data",
+   "The figure shows the bars for \"AI Coding Tools\" and \"Open Floor Plans\" in the wrong order compared to the requested left-to-right sequence of topics; the correct order should be Remote Work, Four-Day Week, AI Coding Tools, Open Floor Plans, but the figure displays them as Remote Work, Four-Day Week, Open Floor Plans, AI Coding Tools."
+  ],
+  [
+   "wrong_chart",
+   "The legend entries are incorrect: the instructions require the legend to have entries \"Agree\", \"Neutral\", \"Disagree\", but the figure shows \"Agree\", \"Neutral\", \"Disagree\" with the wrong colors (the colors are swapped: the blue bar is labeled \"Agree\" but is actually the \"Agree\" data, but the legend shows blue as \"Agree\", orange as \"Neutral\", green as \"Disagree\", which matches the data, but the color order in the legend is not the same as the bar order in the chart, and the legend labels are not in the correct order. However, the main violation is that the legend entries are not in the correct or"
+  ]
+ ]
+}

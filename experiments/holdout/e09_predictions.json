@@ -1,0 +1,239 @@
+{
+  "predictions": [
+    {
+      "run_id": "ho-annotated-peak__bad",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The annotation \"Launch week\" overlaps the data line at the peak point, partially covering the line and the marker."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-annotated-peak__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-clipped-xlabel__bad",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The x-axis label \"Material category\" is partially cut off at the bottom of the image, violating the requirement that all text must be fully visible."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The x-axis label \"Material category\" is partially cut off at the bottom edge of the image."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-clipped-xlabel__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-contrast-series__bad",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The data for Beta is drawn in a very light color (#fdfdf0) that is nearly indistinguishable from the white background, violating the requirement for a clearly distinguishable color."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The Beta series line is drawn in a very light color (#fdfdf0) that blends with the white background, violating the requirement that each series be clearly distinguishable from the white background."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The Beta data series is nearly invisible due to low contrast against the white background."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-contrast-series__ok",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The series for Alpha is drawn in red and Beta in blue, which violates the requested colour assignment (Alpha should be tab:blue, Beta tab:red)."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The y-axis label is \"Visitors (thousands)\" but the y-axis title is missing; the title is \"Monthly visitors\" but the y-axis label is \"Visitors (thousands)\" which is correct, but the y-axis label is missing. The y-axis label is missing, which violates the instruction to have \"y axis from 0 labeled 'Visitors (thousands)'\". The y-axis label is missing, which violates the instruction to have \"y axis from 0 labeled 'Visitors (thousands)'\". The y-axis label is missing, which violates the instruction to have \"y axis from 0 labeled 'Visitors (thousands)'\". The y-axis label is missing, which violates th"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-crash-badimport",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-crash-syntax",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-cumulative-rainfall__bad",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The task requests a line chart of cumulative rainfall (running total), but the plot shows the raw monthly rainfall values (80, 65, 90, 40, 25, 10) instead of the cumulative values (80, 145, 235, 275, 300, 310). The data plotted is incorrect."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure plots the raw monthly rainfall values"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-cumulative-rainfall__ok",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The y-axis values are incorrect; the cumulative rainfall for Jan should be 80, but the plot shows approximately 80, 145, 235, 275, 300, 310, yet the first point is at ~80, second at ~145, third at ~235, fourth at ~275, fifth at ~300, sixth at ~310. However, the y-axis scale is incorrect: the y-axis goes up to 340, but the plot shows the first point at ~80, second at ~145, third at ~235, fourth at ~275, fifth at ~300, sixth at ~310. The values are correct, but the y-axis is not labeled correctly. Wait, the y-axis is labeled \"Cumulative rainfall (mm)\" and the values are correct. The plot shows t"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-hist-bins__bad",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The title is \"Quality scores\" but should be \"Distribution of quality scores\" as specified."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-hist-bins__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-hourly-ticks__bad",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The x-axis labels are not rotated and overlap, violating the requirement that they be rotated so neighboring labels do not overlap and are readable."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The x-axis tick labels are overlapping due to horizontal alignment and insufficient spacing, making them difficult to read."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-hourly-ticks__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-log-decay__bad",
+      "errors": []
+    },
+    {
+      "run_id": "ho-log-decay__ok",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The y-axis scale is not logarithmic as required; the y-axis labels show a linear scale instead of a logarithmic one."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-quarterly-revenue__bad",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The task requests Alpha revenue as [12, 15, 9, 18] for Q1–Q4, but the code uses [12, 9, 15, 18], swapping Q2 and Q3 values, resulting in incorrect data being plotted."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-quarterly-revenue__ok",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure shows Beta as the blue bar and Alpha as the orange bar, which is the wrong color assignment; the task does not specify colors, but the legend labels must match the plotted series, and the code assigns Alpha to blue and Beta to orange, so the legend and bars are mismatched."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-scatter-styled__bad",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The markers are not red squares as requested; they are blue circles (default scatter style)."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure uses round blue markers instead of the required square red markers."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-scatter-styled__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-sem-errorbars__bad",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The error bars use standard deviation (sds) instead of the standard error of the mean (SEM = sd / sqrt(n)), which is required by the task."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The error bars use standard deviation instead of the standard error of the mean (SEM), violating the requirement to show SEM (standard deviation divided by the square root of the sample count)."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-sem-errorbars__ok",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The error bars are wrong: the agent computed standard error as standard deviation divided by the sample size (e.g., 12/4 for batch A), but it should be divided by the square root of the sample size (12/sqrt(16) = 12/4 = 3, which happens to be correct for A, but 8/4=2 vs 8/sqrt(16)=2, 20/5=4 vs 20/sqrt(25)=4, 10/2=5 vs 10/sqrt(4)=5). Wait, all are correct? Let's recheck: - Batch A: sd=12, n=16 → SEM = 12/sqrt(16) = 12/4 = 3 → agent used 12/4 = 3 → correct - Batch B: 8/sqrt(16) = 8/4 = 2 → agent used 8/4 = 2 → correct - Batch C: 20/sqrt(25) = 20/5 = 4 → agent used 20/5 = 4 → correct - Batch D: 1"
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The error bars are not calculated as the standard error of the mean (SEM); the code uses standard deviation divided by the square root of the sample size, but the values used are incorrect (e.g., 12/4=3, but n=16 so it"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-subplot-pair__bad",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure violates the requirement for a 1x2 grid (panels are stacked vertically, not side-by-side) and the requirement for a shared y axis (the y axes are not shared)."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-subplot-pair__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-top-films__bad",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The agent sorted the data by year instead of by gross, resulting in the wrong films being selected and ordered. The figure shows \"Noon Eclipse\", \"Gullwing\", \"Midnight Freight\", \"Iron Harvest\", and \"Paper Lanterns\", but the top five by gross should be \"Midnight Freight\", \"Starfall\", \"The Long Thaw\", \"Noon Eclipse\", and \"Iron Harvest\"."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-top-films__ok",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure includes \"The Long Thaw\" instead of \"Starfall\", which is the fifth highest-grossing film (412 million), and omits \"Starfall\" while including \"The Long Thaw\" (478 million), which is the fourth highest. The top five should be Midnight Freight (510), The Long Thaw (478), Noon Eclipse (443), Starfall (412), and Iron Harvest (388). The agent incorrectly selected the top five by gross but then used the wrong titles in the plot due to a sorting or filtering error."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+ "run_id": "008",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "7c47feee851dffda",
+ "prompt_chars": 17228,
+ "image": {
+  "present": true,
+  "bytes": 160555,
+  "size": [
+   1500,
+   1050
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 207,
+  "prompt_tokens": 6602,
+  "total_tokens": 6809,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"Sankey diagram of source to target flows\" is fully visible at the top center of the figure.\nCHECK axis labels: ok -- The labels \"Source\" and \"Target\" are fully visible at the top left and top right, respectively.\nCHECK tick labels: ok -- The labels for the source and target categories (e.g., \"apple (278)\", \"lime (260)\") are fully visible and not clipped.\nCHECK legend: problem -- The legend at the bottom is partially cut off at the bottom edge of the image, with the text \"apple\", \"banana\", \"blueberry\", \"lime\", \"orange\" being clipped.\nCHECK annotations: ok -- There are no annotations other than the labels and title, which are already checked.\nCHECK data series: ok -- The flows are clearly visible and distinguishable by color and width.\n\nVERDICT: YES\nEVIDENCE: The legend at the bottom of the figure is partially cut off by the image edge.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The legend at the bottom of the figure is partially cut off by the image edge.",
+ "elapsed_s": 5.72
+}

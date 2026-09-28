@@ -1,0 +1,30 @@
+{
+ "run_id": "021",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "24099ddefb9f6555",
+ "prompt_chars": 11813,
+ "image": {
+  "present": true,
+  "bytes": 105247,
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 159,
+  "prompt_tokens": 7676,
+  "total_tokens": 7835,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"Distribution of Request Latency Across Backend Services\" is fully visible at the top of the figure.\nCHECK y-axis label: ok -- The label \"Latency (ms)\" is fully visible along the left edge of the plot.\nCHECK x-axis labels: problem -- The label \"auth\" is partially cut off at the bottom-left edge of the image.\nCHECK data series: ok -- All box plots, whiskers, and outliers are fully visible and distinguishable.\nCHECK legend: unknown -- There is no legend present in the figure.\nCHECK annotations: ok -- There are no annotations present in the figure.\n\nVERDICT: YES\nEVIDENCE: The x-axis label \"auth\" is partially cut off at the bottom-left edge of the image.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The x-axis label \"auth\" is partially cut off at the bottom-left edge of the image.",
+ "elapsed_s": 3.99
+}

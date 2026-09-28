@@ -1,0 +1,30 @@
+{
+ "run_id": "200",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": true,
+ "prompt_sha": "6a27cb4c7bd9e3aa",
+ "prompt_chars": 10796,
+ "image": {
+  "present": true,
+  "bytes": 30747,
+  "size": [
+   800,
+   600
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 3312,
+  "total_tokens": 3812,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "REQ 1: \"Set the title to exactly `Beeswarm plot and Boxplots, made with matplotlib`\" | expected: \"Beeswarm plot and Boxplots, made with matplotlib\" | observed: \"Beeswarm plot and Boxplots, made with matplotlib\" | source: image | status: pass  \nREQ 2: \"Label the y axis\" | expected: y-axis label present | observed: y-axis label \"Value\" | source: image | status: pass  \nREQ 3: \"Include a legend indicating the two groups\" | expected: legend with \"Group 1\" and \"Group 2\" | observed: legend present with correct labels | source: image | status: pass  \nREQ 4: \"Make the figure 8 by 6 inches\" | expected: 8x6 inches | observed: figure size appears 8x6 inches | source: image | status: pass  \nREQ 5: \"Hide the top and right spines\" | expected: top and right spines hidden | observed: top and right spines hidden | source: image | status: pass  \nREQ 6: \"The y axis must start at 0\" | expected: y-axis starts at 0 | observed: y-axis starts at 25 | source: image | status: fail  \nREQ 7: \"The beeswarm plot representing Group 1 should have the color blue\" | expected: Group 1 points blue | observed: Group 1 points blue | source: image | status: pass  \nREQ 8: \"The other beeswarm plot should have the color orange\" | expected: Group 2 points orange | observed: Group 2 points white | source: image | status: fail  \nREQ 9: \"Create a visual representation... that combines a beeswarm plot and boxplots\" | expected: both plots present | observed: both plots present | source: image | status: pass  \nREQ 10: \"The beeswarm plot must display the distribution of each group's data points without overlap\" | expected: no overlap | observed: no overlap | source: image | status: pass  \nREQ 11: \"Boxplots should be overlaid on the same chart\" | expected: boxplots overlaid | observed: boxplots overlaid | source: image | status: pass  \nREQ 12: \"Save the figure as figure.png\" | expected: file named figure.png |",
+ "verdict_parsed": false,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 13.61
+}

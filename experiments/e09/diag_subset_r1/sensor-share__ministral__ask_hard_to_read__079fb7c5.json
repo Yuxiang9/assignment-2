@@ -1,0 +1,30 @@
+{
+ "run_id": "sensor-share__ministral",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "d63eea9b63f93570",
+ "prompt_chars": 6620,
+ "image": {
+  "present": true,
+  "bytes": 20474,
+  "size": [
+   640,
+   480
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 160,
+  "prompt_tokens": 1943,
+  "total_tokens": 2103,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"Share of readings by site\" is fully visible at the top of the chart.\nCHECK x-axis label: ok -- The label \"Share of total readings (%)\" is fully visible at the bottom of the chart.\nCHECK y-axis label: ok -- The label \"Site\" is fully visible on the left side of the chart.\nCHECK tick labels: ok -- The percentage values at the end of each bar are fully visible and readable.\nCHECK legend: unknown -- There is no legend in the figure.\nCHECK data series: ok -- The four horizontal bars are clearly visible, each with a distinct label and percentage value.\nCHECK annotations: ok -- The percentage annotations are clearly visible at the end of each bar.\n\nVERDICT: NO\nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 2.9
+}

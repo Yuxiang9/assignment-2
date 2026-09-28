@@ -1,0 +1,30 @@
+{
+ "run_id": "fine-totals__ministral",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "eb605e9625cf17a3",
+ "prompt_chars": 7166,
+ "image": {
+  "present": true,
+  "bytes": 20401,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 404,
+  "prompt_tokens": 2378,
+  "total_tokens": 2782,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "REQ 1: \"draw a vertical bar chart\" | expected: vertical bar chart | observed: vertical bar chart | source: image | status: pass  \nREQ 2: \"one vertical bar per branch on a single set of axes\" | expected: single subplot, one bar per branch | observed: single subplot, one bar per branch | source: image | status: pass  \nREQ 3: \"branches ordered from left to right in DESCENDING order of their collected total\" | expected: descending order (largest leftmost) | observed: Eastside, Northgate, Harborview, Central (ascending order) | source: image | status: fail  \nREQ 4: \"y axis must start at zero\" | expected: y-axis starts at 0 | observed: y-axis starts at 0 | source: image | status: pass  \nREQ 5: \"Set the title to exactly 'Collected fines by branch'\" | expected: title = \"Collected fines by branch\" | observed: title = \"Collected fines by branch\" | source: image | status: pass  \nREQ 6: \"label the x axis 'Branch'\" | expected: x-axis label = \"Branch\" | observed: x-axis label = \"Branch\" | source: image | status: pass  \nREQ 7: \"label the y axis 'Fines collected (USD)'\" | expected: y-axis label = \"Fines collected (USD)\" | observed: y-axis label = \"Fines collected (USD)\" | source: image | status: pass  \nREQ 8: \"Save the figure as figure.png\" | expected: file named figure.png | observed: file named figure.png | source: code | status: pass  \n\nVERDICT: YES  \nEVIDENCE: The branches are ordered in ascending order of collected fines (Eastside, Northgate, Harborview, Central), violating the requirement that they must be in descending order (largest total leftmost).",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The branches are ordered in ascending order of collected fines (Eastside, Northgate, Harborview, Central), violating the requirement that they must be in descending order (largest total leftmost).",
+ "elapsed_s": 5.77
+}

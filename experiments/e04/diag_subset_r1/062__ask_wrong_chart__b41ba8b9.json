@@ -1,0 +1,30 @@
+{
+ "run_id": "062",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "8aaa8d3dfdc2490b",
+ "prompt_chars": 6461,
+ "image": {
+  "present": true,
+  "bytes": 29782,
+  "size": [
+   800,
+   600
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 2240,
+  "total_tokens": 2740,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "REQ 1: \"draw a vertical violin plot\" | expected: vertical violin plot | observed: vertical violin plot | source: image | status: pass  \nREQ 2: \"One violin per mode at x positions 1, 2, 3, 4 in the order above\" | expected: four violins at positions 1,2,3,4 in order Bus, Bike, Car, Train | observed: four violins at positions 1,2,3,4 in that order | source: image | status: pass  \nREQ 3: \"x tick label\" | expected: labels 'Bus', 'Bike', 'Car', 'Train' | observed: labels 'Bus', 'Bike', 'Car', 'Train' | source: image | status: pass  \nREQ 4: \"showmedians=True\" | expected: medians shown | observed: medians shown as horizontal lines | source: image | status: pass  \nREQ 5: \"keep the default extrema bars\" | expected: min/max bars | observed: min/max bars present | source: image | status: pass  \nREQ 6: \"plot each group's median as a single circular marker\" | expected: one red circular marker per group | observed: one red circular marker per group | source: image | status: pass  \nREQ 7: \"marker='o'\" | expected: circular marker | observed: circular marker | source: image | status: pass  \nREQ 8: \"no connecting line\" | expected: no connecting line | observed: no connecting line | source: image | status: pass  \nREQ 9: \"Give the chart a title\" | expected: title present | observed: title \"Commute Times by Transport Mode\" | source: image | status: pass  \nREQ 10: \"label both axes\" | expected: x and y labels | observed: x label \"Transport Mode\", y label \"Minutes\" | source: image | status: pass  \nREQ 11: \"y axis is minutes\" | expected: y-axis labeled \"Minutes\" | observed: y-axis labeled \"Minutes\" | source: image | status: pass  \nREQ 12: \"exact title\" | expected: title \"Commute Times by Transport Mode\" | observed: title \"Commute Times by Transport Mode\" | source: image | status: pass  \n\nVERDICT: NO  \nEVIDENCE",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 6.83
+}

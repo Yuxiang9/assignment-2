@@ -1,0 +1,955 @@
+{
+  "predictions": [
+    {
+      "run_id": "001",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final tool message: {\n  \"returncode\": 0,\n  \"output\": \"\"\n}"
+        }
+      ]
+    },
+    {
+      "run_id": "004",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The fourth subplot uses a different x range (0 to 30) and a different number of points (100) than the requested range (0.02 to 25.0) and step (0.02), and the x-axis is linear instead of logarithmic as required."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "In the fourth subplot, the data points and error bars are squeezed into a sliver on the left side of the plot, making them difficult to read."
+        }
+      ]
+    },
+    {
+      "run_id": "008",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The task requires using data from 'data.csv', but the agent's code filters out rows where the source is 'orange' (df.query(\"source != 'orange'\")), which means the data used in the figure is not the full dataset requested."
+        }
+      ]
+    },
+    {
+      "run_id": "009",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure shows incorrect data: it includes versions like v1.4.1, v1.4.2, v1.4.3, v2.2.4, v3.0.3, and v3.0.2 that are not in the requested list, and omits several requested versions such as v2.1.2, v2.1.1, v2.1.0, v2.0.1, v2.0.2, v1.5.0, v1.5.1, v1.5.2, v1.5.3, v1.4.0, v1.4.1, v1.4.2, and v1.4.0. Additionally, the order of the versions is not consistent with the requested sequence."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The title is \"Matplotlib Release Dates\" (missing the 'p') instead of the required \"Matplotlib Release Dates\". The x tick labels are not rotated by 30 degrees; they are horizontal. The left spine is visible, but it should be hidden. The markers at the base of the stems are not circular (they are squares). The stem lines are red, but the instructions do not specify color, so this is not a violation. The y ticks and y tick labels are removed, and the top and right spines are hidden, which is correct. The annotations are present and offset, but the text is not exactly as requested. The figure is a"
+        }
+      ]
+    },
+    {
+      "run_id": "010",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "run_id": "013",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The task requires using the reversed plasma colormap, but the figure uses the rainbow colormap instead."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure uses the rainbow colormap instead of the required reversed plasma colormap, and the x-axis limits are -5 to 25 instead of 0 to 20."
+        }
+      ]
+    },
+    {
+      "run_id": "016",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure includes versions with shares below 0.5% (e.g., \"Chrome 69.0\" at 0.43%, \"IE 9.0\" at 0.44%), violating the requirement to drop versions with share below 0.5%."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The chart title is \"Browser Market Share\" as required, but the legend is missing. The instructions explicitly required a legend naming the browsers, but the figure does not include a legend."
+        }
+      ]
+    },
+    {
+      "run_id": "021",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The x-axis label is missing, violating the requirement to label both axes."
+        }
+      ]
+    },
+    {
+      "run_id": "022",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The right panel's title is \"Logarithmic Scale\" instead of containing the word \"log\" as required; the y-axis label in the right panel is \"Active Users\" but the scale is logarithmic, which is correct, but the title must contain \"log\" to meet the instruction."
+        }
+      ]
+    },
+    {
+      "run_id": "023",
+      "errors": []
+    },
+    {
+      "run_id": "025",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The task requests a sunburst chart structured by 'Major Area', 'Regions', and 'Country' with 'Overall score' values, but the figure shows a pie chart with countries as labels and no hierarchical structure, and the data is not grouped by the requested hierarchy."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure violates multiple explicit design requirements: it is a pie chart instead of a sunburst chart, lacks the required hierarchical structure, has no legend, uses a wrong color scheme (all gray instead of region-based colors), and the output image size is 3000x3000 pixels instead of 1000x1000."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The figure has no legend, the country labels are overlapping and unreadable, and the data series are indistinguishable due to being drawn in nearly identical gray shades."
+        }
+      ]
+    },
+    {
+      "run_id": "026",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure shows only Africa's data in the center, but the task requires a sunburst chart with all major areas (Europe, Asia, Americas, Oceania, Africa) as the top-level hierarchy. The agent's code incorrectly uses only Africa's data in the final visualization, violating the requirement to include all requested data."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The chart is not a sunburst chart as required; it is a simple concentric circle plot with no hierarchical segmentation by 'Major Area', 'Regions', and 'Country'. The center is not hollow, and the legend colors do not match the specified color mapping for regions."
+        }
+      ]
+    },
+    {
+      "run_id": "028",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure shows data from multiple years plotted as scattered points, but the task specifically requires only the highest temperature for each month (aggregated across all years) to be displayed, with a blue curve for 2015 data. The agent's code incorrectly plots all individual temperature readings from all years, violating the \"highest temperature\" aggregation requirement."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The title is incorrect; the image shows \"Monthly Highest Temperature in Amherst (2004-2015)\" but the instructions require the exact title \"Monthly Highest Temperature in Amherst (2004-2015).\" The blue curve for 2015 is present, but the legend is missing, which is required. The figure also shows multiple colored points for different years instead of just the 2015 data points connected by a blue curve, violating the requirement to emphasize 2015 data."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The legend is missing from the figure, which is a rendering problem that makes it difficult for a person to read what the different colored points represent."
+        }
+      ]
+    },
+    {
+      "run_id": "029",
+      "errors": []
+    },
+    {
+      "run_id": "030",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure title is \"Shared axes\" instead of the required \"Sharing x per column, y per row\", and the data plotted does not match the requested transformations (e.g., the first subplot shows z vs w but with incorrect scaling and no shared axes as specified)."
+        }
+      ]
+    },
+    {
+      "run_id": "031",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The bars for each topic are in the wrong order: the figure shows Agree, Neutral, Disagree from left to right within each group, but the task requires Agree, Neutral, Disagree to appear from left to right in the order specified, which is not the case here. The figure shows the order as Agree, Neutral, Disagree, but the task requires the same order, so this is not a violation. Wait, rechecking: the task requires the bars within each group to be in the order Agree, Neutral, Disagree from left to right. The figure shows this order correctly. The only issue is the legend colors: the legend shows Ag"
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The legend entries are incorrect; the instructions require the legend to have entries \"Agree, Neutral, Disagree\" but the figure shows \"Agree, Neutral, Disagree\" with the wrong colors (Agree is blue, Neutral is orange, Disagree is green), and the legend order does not match the bar order. Additionally, the y-axis label is \"Percent of Respondents\" instead of \"Percent of Respondents\" as required."
+        }
+      ]
+    },
+    {
+      "run_id": "034",
+      "errors": []
+    },
+    {
+      "run_id": "038",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The chart shows a split violin plot by day of the week, but the instructions required a split violin plot by day of the week comparing total bill amounts by smoker status, not by day. The x-axis labels are days of the week, but the plot is not split by smoker status as required. The title is also incorrect, as it does not match the requested title. The legend is present but the colors are not correctly assigned to the smoker and non-smoker categories. The figure size is correct, but the plot does not meet the required design specifications."
+        }
+      ]
+    },
+    {
+      "run_id": "039",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure plots a curved line instead of a straight line y=x, because the y-axis values are Mercator-scaled latitudes, violating the requirement for a straight line."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The y-axis label is \"Latitude (Mercator)\" instead of \"Latitude\", and the title is \"Mercator Projection\" instead of \"Mercator projection\"."
+        }
+      ]
+    },
+    {
+      "run_id": "046",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The title is clipped at the top edge, and the patch labels are overlapping and too small to read clearly, making the figure difficult to read."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions ask for 120 dpi, but figure.png's metadata records about 100 dpi"
+        }
+      ]
+    },
+    {
+      "run_id": "047",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure shows only one bar with a single segment labeled \"renewables,\" but the task requires a 100% stacked bar chart with three segments (Nuclear, Fossil, Renewables) for each of five countries in the specified order. The data is completely missing for all requested sources and countries except one, and the stacking order is incorrect."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure violates multiple"
+        }
+      ]
+    },
+    {
+      "run_id": "050",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The final flow value from Phase 5 to Hurray! is missing; the task requires 10% but the figure shows no value for this transition."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure violates the requirement for a Sankey diagram (REQ 1) and does not show the correct flow value for the last transition (REQ 3)."
+        }
+      ]
+    },
+    {
+      "run_id": "051",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The task requires the second streamplot to use the 'summer' colormap, but the figure shows a 'jet' colormap (rainbow colors) in the second panel. The task explicitly prohibits 'jet', 'rainbow', or 'hsv' colormaps, so this is a violation."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The legend in the \"Controlling Starting Points\" subplot is partially covered by the title text, which overlaps the legend area."
+        }
+      ]
+    },
+    {
+      "run_id": "052",
+      "errors": []
+    },
+    {
+      "run_id": "053",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: RepeatedFormatError"
+        }
+      ]
+    },
+    {
+      "run_id": "055",
+      "errors": []
+    },
+    {
+      "run_id": "059",
+      "errors": []
+    },
+    {
+      "run_id": "060",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions ask for 120 dpi, but figure.png's metadata records about 100 dpi"
+        }
+      ]
+    },
+    {
+      "run_id": "062",
+      "errors": []
+    },
+    {
+      "run_id": "065",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "run_id": "068",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure uses a solid line instead of a dotted line, the x-axis limits are -200 to 200 instead of -180 to 180, and the Mercator projection is not applied (y-axis is linear, not transformed)."
+        }
+      ]
+    },
+    {
+      "run_id": "069",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure shows two separate segments labeled \"Africa\" (one dark green, one light green) in the legend and chart, but the task specifies only one \"Africa\" region with green color. The plotting code incorrectly uses the same color for both the \"Africa\" major area and the \"Oceania\" major area, which is a wrong selection of data."
+        }
+      ]
+    },
+    {
+      "run_id": "070",
+      "errors": []
+    },
+    {
+      "run_id": "074",
+      "errors": []
+    },
+    {
+      "run_id": "075",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The instructions require the suptitle to be exactly \"A Story of 2 Subplots\", but the figure shows \"A Story of 2 Subplots\" with an extra \"2\" in the title, making it \"A Story of 2 Subplots\" (incorrectly formatted as \"A Story of 2 Subplots\" with a trailing \"2\"). The actual title in the image is \"A Story of 2 Subplots\", which is not exactly as specified."
+        }
+      ]
+    },
+    {
+      "run_id": "077",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "the instructions give the series [1842.3, 1889.7, 1961.4, 2054.8, 2178.2, 2310.6, 2402.9, 2551.3, 2698.7, 2814.1, 2946.5, 3057.8, 3188.2, 3271.6, 3346.9, 3421.4, 3452.7, 3418.5, 3352.1, 3260.4, 3147.8, 3021.6, 2896.3, 2758.9, 2617.2, 2483.5] in a fixed order, but the plotting code uses the same numbers re-ordered as [1842.3, 1889.7, 1961.4, 2054.8, 2178.2, 2310.6, 2402.9, 2551.3, 2698.7, 2814.1, 2946.5, 3057.8, 3188.2, 3271.6, 3346.9, 3421.4, 3452.7, 3418.5, 3352.1, 3260.4, 3147.8, 3021.6, 2896.3, 2758.9, 2483.5, 2617.2]"
+        }
+      ]
+    },
+    {
+      "run_id": "079",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure uses a colormap that is not CMRmap; the observed colormap has a yellow-to-purple gradient, while the instructions explicitly required the CMRmap colormap."
+        }
+      ]
+    },
+    {
+      "run_id": "080",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The requirement to \"Print each bar's checkout count above (or on) the bar as a plain integer with no thousands separator\" is violated because the bars lack value labels."
+        }
+      ]
+    },
+    {
+      "run_id": "081",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure shows a 2D heatmap with axes labeled 'r' and 'g', but the task requires a 3D voxel plot with axes labeled 'r', 'g', and 'b'. The data is not drawn as a 3D cube with RGB color channels; instead, it is a 2D slice or projection, violating the requirement for a 3D voxel plot."
+        }
+      ]
+    },
+    {
+      "run_id": "082",
+      "errors": []
+    },
+    {
+      "run_id": "083",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The second row of the figure shows event plots using gamma-distributed data, but the data arrays are 80x70, not 80x70 as requested. The first row uses random data of size 8x70, but the second row uses gamma-distributed data of size 80x70, which is incorrect. The task specifies that the second row should use gamma-distributed data with size 80x70, but the data size is not 80x70."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The second row plots use scatter-like dots instead of event lines as requested; the second row's horizontal plot shows \"Events\" on the x-axis and \"Categories\" on the y-axis, but the data is 80x70, so the y-axis should have 80 categories, not 80 events."
+        }
+      ]
+    },
+    {
+      "run_id": "086",
+      "errors": []
+    },
+    {
+      "run_id": "087",
+      "errors": []
+    },
+    {
+      "run_id": "089",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final tool message: {\n  \"returncode\": 0,\n  \"output\": \"\"\n}"
+        }
+      ]
+    },
+    {
+      "run_id": "090",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The x-axis label is missing, violating the requirement to label both"
+        }
+      ]
+    },
+    {
+      "run_id": "091",
+      "errors": []
+    },
+    {
+      "run_id": "096",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final tool message: {\n  \"returncode\": 0,\n  \"output\": \"-rw-r--r-- 1 root root 284K Sep  2 05:39 create figure.png\\n\"\n}"
+        }
+      ]
+    },
+    {
+      "run_id": "097",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The annotation \"Max: 1.000\" is partially covered by the data and colorbar, causing overlapping content that makes it difficult to read."
+        }
+      ]
+    },
+    {
+      "run_id": "098",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The instructions required two plots on the same axes with different left and right scales, but the figure uses a single y-axis with a shared scale, violating the dual-axis requirement."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The Data 2 series is squeezed into a sliver near the bottom of the plot, making it unreadable."
+        }
+      ]
+    },
+    {
+      "run_id": "099",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure violates the requirements to \"Remove the y ticks (the radial tick labels) entirely\" and to \"Keep the polar gridlines turned on.\" Both radial tick labels and gridlines are visible in the image."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The data series are indistinguishable because the bars are drawn with nearly the same color, making it impossible to tell them apart."
+        }
+      ]
+    },
+    {
+      "run_id": "103",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final tool message: {\n  \"returncode\": 0,\n  \"output\": \"\"\n}"
+        }
+      ]
+    },
+    {
+      "run_id": "104",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The annotation text reads \"Peak: 412 visits\" but the value at Thursday (x=3) is 412, which matches the data; however, the y-axis scale is incorrect because the y-axis does not start at zero (it starts at 0 but the tick marks begin at 100, and the plot does not show the full range from 0 to 412 with proper scaling). The task requires the y-axis to start at zero, which is not visually evident in the plot as the y-axis range is not properly scaled from 0 to at least 412. The plot shows a y-axis that starts at 0 but the visible range is from 0 to 450, but the tick marks start at 100, which is misl"
+        }
+      ]
+    },
+    {
+      "run_id": "105",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The x-axis label in both subplots is \"Four separate samples\", but the instructions explicitly required the x-axis label to be \"Four separate samples\" only for the plots, not as a separate label. However, the actual label in the image is \"Four separate samples\" for the x-axis, which matches the instruction. The issue is that the y-axis label is \"Measured values\" in both plots, which matches the instruction. The colors are correct: orange for y1, purple for y2, yellow for y3, and cyan for y4. The plots are arranged in one row and two columns, with the first being a standard box plot and the seco"
+        }
+      ]
+    },
+    {
+      "run_id": "106",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The task requires the use of the CMRmap colormap, but the plot uses the jet colormap instead. Additionally, the title is incorrect: it reads \"Filled 3D tricontour\" (missing the 'u') instead of the required \"Filled 3D tricontour\"."
+        }
+      ]
+    },
+    {
+      "run_id": "108",
+      "errors": []
+    },
+    {
+      "run_id": "111",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The data bars for y=0 and y=1 are covered by the y-axis label and tick labels, making them difficult to read."
+        }
+      ]
+    },
+    {
+      "run_id": "112",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The task requires ten outlier points on the upper part of the region, but the figure shows only the normal data points (no distinct outliers) and the upper panel is not clearly separated from the lower one with a broken axis. The data generation in the final code does not produce the required outlier pattern as described."
+        }
+      ]
+    },
+    {
+      "run_id": "115",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure violates the requirement to plot each group's median as a single circular marker on top of the violins. No such markers are present in the image, despite the instructions explicitly requiring them."
+        }
+      ]
+    },
+    {
+      "run_id": "117",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure violates the requirement to draw a 3D subplot (it is 2D) and to turn on the grid (it is off)."
+        }
+      ]
+    },
+    {
+      "run_id": "124",
+      "errors": []
+    },
+    {
+      "run_id": "125",
+      "errors": []
+    },
+    {
+      "run_id": "126",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The x-ticks at 3 and 10 are labeled \"a\""
+        }
+      ]
+    },
+    {
+      "run_id": "128",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The task requests that each color corresponds to a unique set of data for the y=k 'layer', but the figure shows multiple y-values (a range of layers) and the colors are not confined to a single layer, violating the \"y=k layer\" constraint."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The data series are indistinguishable due to overlapping bars and a colormap that merges values that should look different, making it difficult to tell apart the different colored bars."
+        }
+      ]
+    },
+    {
+      "run_id": "129",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure is a horizontal stacked bar chart, violating the requirement to draw the market shares as concentric doughnut (pie) rings. Additionally, the title is present but the legend is placed to the right instead of in the center of the doughnut, and the white sections for \"other\" operating systems are not aligned at the top of their respective rings."
+        }
+      ]
+    },
+    {
+      "run_id": "130",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions ask for 120 dpi, but figure.png's metadata records about 72 dpi"
+        }
+      ]
+    },
+    {
+      "run_id": "131",
+      "errors": []
+    },
+    {
+      "run_id": "135",
+      "errors": []
+    },
+    {
+      "run_id": "136",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The y-axis labels are reversed: the bar at y=10 (Bill) is labeled \"Jim\" and the bar at y=20 (Jim) is labeled \"Bill\", violating the requested order of y-tick labels ['Bill', 'Jim']."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The y-position of the first broken bar is incorrect (at y=20"
+        }
+      ]
+    },
+    {
+      "run_id": "141",
+      "errors": []
+    },
+    {
+      "run_id": "142",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The chart is vertical instead of horizontal as required."
+        }
+      ]
+    },
+    {
+      "run_id": "143",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The third subplot uses a linear x-axis instead of a base 3 logarithmic scale as requested, and the fourth subplot's y-axis includes negative values despite the requirement for a lower limit of 0.15."
+        }
+      ]
+    },
+    {
+      "run_id": "145",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final tool message: {\n  \"returncode\": 0,\n  \"output\": \"\"\n}"
+        }
+      ]
+    },
+    {
+      "run_id": "146",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The title of the figure is \"Fishbone Diagram: Potential Causes of Decreased Sales Performance\", but the instructions explicitly requested the title to be \"Fishbone Diagram: Potential Causes of Decreased Sales Performance\" with the main problem labeled as \"Problem\" at the head of the diagram. The figure incorrectly labels the main problem as \"Decreased Sales Performance\" instead of \"Problem\"."
+        }
+      ]
+    },
+    {
+      "run_id": "150",
+      "errors": []
+    },
+    {
+      "run_id": "153",
+      "errors": []
+    },
+    {
+      "run_id": "155",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The first plot shows a Mobius strip, but the task requested a surface plot of a function defined by p, q pairs with the formula sin(p) * cos(q * pi), which is not what is plotted. The second plot uses a different function and does not match the requested formula for radius and angle."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The first plot uses a colormap that ranges from dark blue to light yellow as requested, but the second plot uses a colormap that ranges from dark red to light blue, which is not what was requested. The instructions specified a colormap from dark red to light blue for the second plot, but the actual colormap used is not consistent with this requirement."
+        }
+      ]
+    },
+    {
+      "run_id": "156",
+      "errors": []
+    },
+    {
+      "run_id": "161",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The sin series is drawn as a solid line, violating the instruction to draw it as a dotted line."
+        }
+      ]
+    },
+    {
+      "run_id": "163",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The agent marked the point with maximum f(x,y) using np.argmax(Z) and np.argmin(Z), which incorrectly uses the index of the maximum value in the flattened array for x and the minimum for y, leading to a wrong location (specifically, the x-coordinate is the index of the max value in Z, not the corresponding x value). This results in a wrong data point being plotted."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The agent marked the point at (argmax(Z), argmin(Z)) instead of the point where f is largest, which is (argmax(Z), argmax(Z)) or (argmax(Z), y_index_of_max). This violates requirement 4."
+        }
+      ]
+    },
+    {
+      "run_id": "164",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The x-axis does not start at 0 as required; it starts at approximately 25. Additionally, the y-axis tick labels are in the wrong order: \"Bill\" is at the bottom and \"Jim\" is at the top, but the instructions specify the labels should be ['Bill', 'Jim'] corresponding to y-positions 10 and 20, respectively."
+        }
+      ]
+    },
+    {
+      "run_id": "165",
+      "errors": []
+    },
+    {
+      "run_id": "166",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure violates multiple explicit design requirements: it uses a rectangular (Cartesian) plot instead of a polar projection, has visible axes"
+        }
+      ]
+    },
+    {
+      "run_id": "167",
+      "errors": []
+    },
+    {
+      "run_id": "168",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final assistant message: Since the environment does not support Chrome or `kaleido`, I will use an alternative approach by saving the figure as an HTML and then using `plotly`'s `offline` mode to generate a static image. However, this is not directly possible without Chrome.\n\nAs a final workaround, I will use `plotly`'s `fi"
+        }
+      ]
+    },
+    {
+      "run_id": "169",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The x-axis of the scatter plot is not limited to -4 to 4 as requested; instead, it extends to 100, and the marginal histogram on the top shows a range up to 100, indicating the x-axis limits were not set correctly."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure lacks a suptitle, which violates the requirement to \"Give the whole figure a title (a suptitle).\""
+        }
+      ]
+    },
+    {
+      "run_id": "170",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The second row of the figure uses data of size 80x70 as requested, but the horizontal event plot (bottom-left) shows 80 events (y-axis) while the vertical event plot (bottom-right) shows 160 events (x-axis), indicating a mismatch in the data dimensions. The task specifies gamma-distributed data of size 80x70, but the plots suggest inconsistent data dimensions (80 vs 160), violating the expected data structure."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The data series in the bottom-left and bottom-right subplots are indistinguishable due to extreme overlap and density, rendering the plots unreadable."
+        }
+      ]
+    },
+    {
+      "run_id": "171",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final tool message: {\n  \"returncode\": 0,\n  \"output\": \"-rw-r--r-- 1 root root 241K Sep  2 05:39 create figure.png\\n\"\n}"
+        }
+      ]
+    },
+    {
+      "run_id": "173",
+      "errors": []
+    },
+    {
+      "run_id": "175",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The task requests that the y values be an array of 30 random numbers, but the figure shows multiple distinct y values (labeled y=0, y=1, y=2, y=3) with different random data for each layer, which contradicts the instruction to use a single array of 30 random numbers for y."
+        }
+      ]
+    },
+    {
+      "run_id": "177",
+      "errors": []
+    },
+    {
+      "run_id": "180",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The chart title is \"Filled 3D Tricountour Plot\\nRadii: 0.2 to 1.2, Full Circle\" instead of the requested \"Filled 3D Tricontour Plot\\nRadii: 0.2 to 1.2, Full Circle\", and the chart type is a 3D surface plot with contour lines rather than a filled 3D tricontour plot as specified."
+        }
+      ]
+    },
+    {
+      "run_id": "181",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "run_id": "183",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The task explicitly requires only Asia and Europe to be included, but the figure also shows Africa. The plotting code incorrectly includes Africa by filtering for [\"Africa\", \"Asia\", \"Europe\"] instead of just [\"Asia\", \"Europe\"]."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure includes countries from Africa, which violates the requirement to only include countries from Asia and Europe. Additionally, the title is \"Population sunburst coloured by life expectancy (2007)\" instead of the required title, and the colorbar label is \"Life expectancy (years)\" but the color scale is not centered at the weighted average lifespan as specified."
+        }
+      ]
+    },
+    {
+      "run_id": "191",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure shows a treemap, not a sunburst chart as requested, and the data is not structured hierarchically by 'Major Area', 'Regions', and 'Country' with 'Overall score' values; instead, it appears to be a flat, color-coded grid of countries without proper hierarchical segmentation."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure is a treemap, not a sunburst chart as explicitly requested. The center is not hollow, and the title and subtitle are incorrect (the subtitle is at the bottom instead of as a subtitle, and the title is missing the word \"Index\")."
+        }
+      ]
+    },
+    {
+      "run_id": "195",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The ZX plane projection shows \"Engine Displacement (cc)\" on the z-axis, but the task requested the projection to be colored blue, not use engine displacement as a third dimension. The color bar also shows engine displacement, but the task specified colors should vary from purple to yellow based on engine displacement, which is correct, but the ZX projection incorrectly uses engine displacement as a third axis instead of being a flat projection colored blue."
+        }
+      ]
+    },
+    {
+      "run_id": "196",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The color for Group 1 is blue and Group 2 is orange as requested, but the legend incorrectly labels the blue points as \"Group 1\" and the orange points as \"Group 2\", which is the opposite of the requested assignment. The beeswarm plot shows Group 1 (blue) on the left and Group 2 (orange) on the right, matching the order in the code, but the legend labels are swapped."
+        }
+      ]
+    },
+    {
+      "run_id": "199",
+      "errors": []
+    },
+    {
+      "run_id": "200",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The legend in the top-left corner overlaps the data points of Group 1, partially covering the blue dots in the beeswarm plot."
+        }
+      ]
+    },
+    {
+      "run_id": "202",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The x-axis label \"Four separate samples\" is missing from the right subplot (notched box plot), violating the requirement that both plots have this label."
+        }
+      ]
+    },
+    {
+      "run_id": "203",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": ":"
+        }
+      ]
+    },
+    {
+      "run_id": "204",
+      "errors": []
+    },
+    {
+      "run_id": "205",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The phases are in the wrong order, the flow values are incorrect, and the connections between phases are wrong."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The chart is not a Sankey diagram as requested; it is a flowchart with rectangular blocks and arrows, violating the \"Sankey diagram\" chart type requirement. Additionally, the final phase is labeled \"HurrayS!\" instead of \"Hurray!\", and the flow values are incorrect (100, 20, 20, 20, 20, 10) but the diagram shows 100 for Phase 1 and 20 for the others, with the final phase having no value shown."
+        }
+      ]
+    },
+    {
+      "run_id": "206",
+      "errors": []
+    },
+    {
+      "run_id": "208",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: RepeatedFormatError"
+        }
+      ]
+    },
+    {
+      "run_id": "209",
+      "errors": []
+    },
+    {
+      "run_id": "210",
+      "errors": []
+    },
+    {
+      "run_id": "212",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The chart title is \"Iris species with 95% confidence ellipsoids\" instead of the required \"3D Scatter Plot of Iris Flowers with 95% Confidence Ellipses\", and the x-axis label is \"Petal Length\" but the y-axis label is \"Petal Width\" instead of \"Petal Width(cm)\" as implied by the data column names, though the exact text \"Petal Width\" is present. However, the most critical violation is the title mismatch."
+        }
+      ]
+    },
+    {
+      "run_id": "213",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The task requests visualizing the \"Women's millions of dollars\" column, but the figure shows data from the \"Men's millions of dollars\" column, as evidenced by the min value of 498 and max of 1598, which match the men's data, not the women's data (which has a min of 1565 and max of 5019)."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure violates the requirement to \"Label the x axis of the histogram\" with the correct text; the x-axis label is \"Women's earnings (millions of dollars)\" instead of the required \"Value (millions of dollars)\". Additionally, the figure title is \"Distribution of women's earnings\" instead of the required \"Box Plot: Women's Millions of Dollars\", and the y-axis of the histogram does not start at 0 (it starts at 0 but the first bar is at 500, which is not the issue, but the axis scale is not explicitly checked). However, the most direct violation is the incorrect x-axis label."
+        }
+      ]
+    },
+    {
+      "run_id": "214",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The title is \"3D waterfall plot of the frequency time series\" instead of the required \"3D Waterfall Plot of Frequency Data\", and the y-axis labels are missing despite the instruction to remove y-axis ticks (which implies they should not be present)."
+        }
+      ]
+    },
+    {
+      "run_id": "216",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure shows the bars for \"AI Coding Tools\" and \"Open Floor Plans\" in the wrong order compared to the requested left-to-right sequence of topics; the correct order should be Remote Work, Four-Day Week, AI Coding Tools, Open Floor Plans, but the figure displays them as Remote Work, Four-Day Week, Open Floor Plans, AI Coding Tools."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The legend entries are incorrect: the instructions require the legend to have entries \"Agree\", \"Neutral\", \"Disagree\", but the figure shows \"Agree\", \"Neutral\", \"Disagree\" with the wrong colors (the colors are swapped: the blue bar is labeled \"Agree\" but is actually the \"Agree\" data, but the legend shows blue as \"Agree\", orange as \"Neutral\", green as \"Disagree\", which matches the data, but the color order in the legend is not the same as the bar order in the chart, and the legend labels are not in the correct order. However, the main violation is that the legend entries are not in the correct or"
+        }
+      ]
+    }
+  ]
+}

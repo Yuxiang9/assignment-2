@@ -1,0 +1,30 @@
+{
+ "run_id": "047",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "3752ece08978882f",
+ "prompt_chars": 7286,
+ "image": {
+  "present": true,
+  "bytes": 24594,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 56,
+  "prompt_tokens": 2500,
+  "total_tokens": 2556,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES  \nEVIDENCE: The x-axis label \"Country\" is clipped at the bottom edge of the image, with the text cut off. Additionally, the legend is partially cut off at the top right, and the y-axis label is missing entirely.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The x-axis label \"Country\" is clipped at the bottom edge of the image, with the text cut off. Additionally, the legend is partially cut off at the top right, and the y-axis label is missing entirely.",
+ "elapsed_s": 1.27
+}

@@ -1,0 +1,30 @@
+{
+ "run_id": "022",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "57efdf3d814928b7",
+ "prompt_chars": 6202,
+ "image": {
+  "present": true,
+  "bytes": 42528,
+  "size": [
+   1200,
+   500
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 484,
+  "prompt_tokens": 2146,
+  "total_tokens": 2630,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "REQ 1: \"two side-by-side panels (a 1x2 grid of subplots)\" | expected: 1x2 grid of subplots | observed: 1x2 grid of subplots | source: image | status: pass  \nREQ 2: \"show the same monthly active-user series twice\" | expected: same data in both panels | observed: same data in both panels | source: image | status: pass  \nREQ 3: \"plot it as a line in both panels\" | expected: line plot | observed: line plot | source: image | status: pass  \nREQ 4: \"against month number on the x axis\" | expected: x-axis labeled \"Month\" | observed: x-axis labeled \"Month\" | source: image | status: pass  \nREQ 5: \"left panel keeps the default linear y scale\" | expected: linear y scale | observed: linear y scale | source: image | status: pass  \nREQ 6: \"right panel must use a logarithmic y scale\" | expected: logarithmic y scale | observed: logarithmic y scale | source: image | status: pass  \nREQ 7: \"left panel title must contain the word 'linear'\" | expected: title contains \"linear\" | observed: title is \"Linear Scale\" | source: image | status: pass  \nREQ 8: \"right panel title must contain the word 'log'\" | expected: title contains \"log\" | observed: title is \"Logarithmic Scale\" | source: image | status: pass  \nREQ 9: \"label the x and y axis of both panels\" | expected: x and y labels present | observed: x and y labels present | source: image | status: pass  \nREQ 10: \"do not overlay two axes with `twinx()`\" | expected: two separate subplots | observed: two separate subplots | source: image | status: pass  \nREQ 11: \"x and y axis labels\" | expected: \"Month\" and \"Active Users\" | observed: \"Month\" and \"Active Users\" | source: image | status: pass  \nREQ 12: \"grid\" | expected: grid visible | observed: grid visible | source: image | status: pass  \n\nVERDICT: NO  \nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 6.79
+}

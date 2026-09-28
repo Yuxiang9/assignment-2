@@ -1,0 +1,30 @@
+{
+ "run_id": "196",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": true,
+ "prompt_sha": "b261939969a4ce8c",
+ "prompt_chars": 6582,
+ "image": {
+  "present": true,
+  "bytes": 121337,
+  "size": [
+   1182,
+   883
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 2665,
+  "total_tokens": 3165,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "REQ 1: \"Create a visual representation in Python that compares two groups of data, 'Group 1' and 'Group 2'\" | expected: two groups | observed: two groups | source: image | status: pass  \nREQ 2: \"Each group should consist of 100 random data points, following a normal distribution\" | expected: 100 points per group | observed: ~100 points per group | source: image | status: pass  \nREQ 3: \"Group 1 should have a mean of 100 and a standard deviation of 30\" | expected: mean ~100, sd ~30 | observed: mean ~100, sd ~30 | source: image | status: pass  \nREQ 4: \"Group 2 should have a mean of 130 and a standard deviation of 30\" | expected: mean ~130, sd ~30 | observed: mean ~130, sd ~30 | source: image | status: pass  \nREQ 5: \"The plot should uniquely combine a beeswarm plot and boxplots\" | expected: beeswarm + boxplot | observed: beeswarm + boxplot | source: image | status: pass  \nREQ 6: \"The beeswarm plot must display the distribution of each group's data points without overlap\" | expected: no overlap | observed: no overlap | source: image | status: pass  \nREQ 7: \"The boxplots should be overlaid on the same chart\" | expected: overlaid | observed: overlaid | source: image | status: pass  \nREQ 8: \"The beeswarm plot representing Group 1 should have the color blue\" | expected: Group 1 = blue | observed: Group 1 = blue | source: image | status: pass  \nREQ 9: \"The other beeswarm plot should have the color orange\" | expected: Group 2 = orange | observed: Group 2 = orange | source: image | status: pass  \nREQ 10: \"Include the title 'Beeswarm plot and Boxplots, made with matplotlib'\" | expected: title text | observed: title text | source: image | status: pass  \nREQ 11: \"Include a y-axis label\" | expected: y-axis label | observed: y-axis label | source: image | status: pass",
+ "verdict_parsed": false,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 12.82
+}

@@ -1,0 +1,21 @@
+{
+ "run_id": "069",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The figure shows two separate segments labeled \"Africa\" (one dark green, one light green) in the legend and chart, but the task specifies only one \"Africa\" category with green color. The plotting code incorrectly uses the same color for both the \"Africa\" major area and the \"Oceania\" major area, which is a wrong selection of data."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_chart",
+   "The figure shows two separate segments labeled \"Africa\" (one dark green, one light green) in the legend and chart, but the task specifies only one \"Africa\" category with green color. The plotting code incorrectly uses the same color for both the \"Africa\" major area and the \"Oceania\" major area, which is a wrong selection of data."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The figure shows two separate segments labeled \"Africa\" (one dark green, one light green) in the legend and chart, but the task specifies only one \"Africa\" category with green color. The plotting code incorrectly uses the same color for both the \"Africa\" major area and the \"Oceania\" major area, which is a wrong selection of data."
+  ]
+ ]
+}

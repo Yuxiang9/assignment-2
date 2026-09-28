@@ -1,0 +1,42 @@
+{
+ "run_id": "city-temps__ministral",
+ "findings_in": [
+  [
+   "wrong_chart",
+   "The legend is placed outside the plotting area to the right, but the legend entries are not in the requested order (Aluna, Brinport, Calder, Dunmore, Eastwick, Farrow) and the colors do not match the specified tab: palette (e.g., Aluna is blue but Brinport is orange instead of tab:orange, and Farrow is brown but the color is not tab:brown). Additionally, the legend is not completely visible as it extends beyond the image boundary."
+  ]
+ ],
+ "context_shed": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "c53c702a45c830e0",
+ "image": {
+  "present": true,
+  "bytes": 94694,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 149,
+  "prompt_tokens": 2678,
+  "total_tokens": 2827,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "WRONG_DATA: NO\nWRONG_DATA_EVIDENCE: none\nWRONG_CHART: YES\nWRONG_CHART_EVIDENCE: The legend is placed outside the plotting area to the right, but the legend entries are not in the requested order (Aluna, Brinport, Calder, Dunmore, Eastwick, Farrow) and the colors do not match the specified tab: palette (e.g., Aluna is blue but Brinport is orange instead of tab:orange, and Farrow is brown but the color is not tab:brown). Additionally, the legend is not completely visible as it extends beyond the image boundary.\nHARD_TO_READ: NO\nHARD_TO_READ_EVIDENCE: none",
+ "parsed_verdicts": {
+  "wrong_data": "NO",
+  "wrong_chart": "YES",
+  "hard_to_read": "NO"
+ },
+ "findings_out": [
+  [
+   "wrong_chart",
+   "The legend is placed outside the plotting area to the right, but the legend entries are not in the requested order (Aluna, Brinport, Calder, Dunmore, Eastwick, Farrow) and the colors do not match the specified tab: palette (e.g., Aluna is blue but Brinport is orange instead of tab:orange, and Farrow is brown but the color is not tab:brown). Additionally, the legend is not completely visible as it extends beyond the image boundary."
+  ]
+ ],
+ "elapsed_s": 2.16
+}

@@ -1,0 +1,30 @@
+{
+ "run_id": "111",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "6fc308b578fca5f8",
+ "prompt_chars": 6973,
+ "image": {
+  "present": true,
+  "bytes": 770947,
+  "size": [
+   1933,
+   2029
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 319,
+  "prompt_tokens": 5572,
+  "total_tokens": 5891,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"3D Bar Plot with Y=k Layers\" is fully visible at the top of the plot.\nCHECK x-axis label: ok -- The label \"X Values (0-29)\" is fully visible along the bottom x-axis.\nCHECK y-axis label: ok -- The label \"Y Layers (Discrete)\" is fully visible along the y-axis.\nCHECK z-axis label: ok -- The label \"Z Values (Random)\" is fully visible along the z-axis.\nCHECK x-axis tick labels: ok -- The numbers 0 through 29 are fully visible and readable along the x-axis.\nCHECK y-axis tick labels: ok -- The labels \"y=0\", \"y=1\", \"y=2\", \"y=3\" are fully visible and readable along the y-axis.\nCHECK z-axis tick labels: ok -- The labels 0.0, 0.2, 0.4, 0.6, 0.8, 1.0 are fully visible and readable along the z-axis.\nCHECK data bars: problem -- The bars for y=0 (purple) and y=1 (orange) are partially covered by the y-axis label \"Y Layers (Discrete)\" and the y-axis tick labels, making them difficult to read.\nCHECK legend: unknown -- There is no legend present in the figure.\n\nVERDICT: YES\nEVIDENCE: The data bars for y=0 and y=1 are covered by the y-axis label and tick labels, making them difficult to read.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The data bars for y=0 and y=1 are covered by the y-axis label and tick labels, making them difficult to read.",
+ "elapsed_s": 6.53
+}

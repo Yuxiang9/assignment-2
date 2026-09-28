@@ -1,0 +1,30 @@
+{
+ "run_id": "city-temps__qwen",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "a3515e5de203ad12",
+ "prompt_chars": 5734,
+ "image": {
+  "present": true,
+  "bytes": 101850,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 194,
+  "prompt_tokens": 2404,
+  "total_tokens": 2598,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"Monthly mean temperature by city\" is fully visible at the top center of the figure.\nCHECK x-axis labels: ok -- The month abbreviations are rotated 45 degrees and fully visible along the bottom.\nCHECK y-axis labels: ok -- The label \"Temperature (deg C)\" is fully visible on the left side.\nCHECK legend: problem -- The legend is placed inside the plotting area in the upper left, overlapping the data lines for Aluna, Brinport, and Calder, making those lines partially obscured.\nCHECK data series: ok -- All six lines are visible and distinguishable with different colors and markers; no data is squeezed or covered.\nCHECK annotations: ok -- There are no annotations present.\n\nVERDICT: YES\nEVIDENCE: The legend is placed inside the plotting area in the upper left, overlapping the data lines for Aluna, Brinport, and Calder, making those lines partially obscured.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The legend is placed inside the plotting area in the upper left, overlapping the data lines for Aluna, Brinport, and Calder, making those lines partially obscured.",
+ "elapsed_s": 3.14
+}

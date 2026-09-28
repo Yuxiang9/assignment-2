@@ -1,0 +1,30 @@
+{
+ "run_id": "087",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "ff7c15fbaa924cc7",
+ "prompt_chars": 12049,
+ "image": {
+  "present": true,
+  "bytes": 119499,
+  "size": [
+   800,
+   900
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 219,
+  "prompt_tokens": 4093,
+  "total_tokens": 4312,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The main title \"Cumulative Distribution Functions: Normal, Laplacian, and Cauchy\" is fully visible at the top of the figure.\nCHECK axis labels: ok -- The x-axis label \"x\" and y-axis label \"CDF\" are present and fully visible in all subplots.\nCHECK tick labels: ok -- All tick labels on the x and y axes are legible and not clipped or overlapping.\nCHECK legend: problem -- The legend in the top-left subplot is partially cut off at the right edge of the plot area, with the \"Cauchy\" label and its corresponding green line being clipped.\nCHECK annotations: ok -- There are no annotations other than the title and axis labels, which are handled above.\nCHECK data series: ok -- The three data series (Normal, Laplace, Cauchy) are distinguishable by color and line style, and are not squeezed or covered.\n\nVERDICT: YES\nEVIDENCE: The legend in the top-left subplot is partially cut off at the right edge of the plot area.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The legend in the top-left subplot is partially cut off at the right edge of the plot area.",
+ "elapsed_s": 3.38
+}

@@ -1,0 +1,21 @@
+{
+ "run_id": "164",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The annotation text \"race interrupted\" is partially clipped by the right edge of the image, making it difficult to read."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The annotation text \"race interrupted\" is partially clipped by the right edge of the image, making it difficult to read."
+  ]
+ ],
+ "final": [
+  [
+   "hard_to_read",
+   "The annotation text \"race interrupted\" is partially clipped by the right edge of the image, making it difficult to read."
+  ]
+ ]
+}

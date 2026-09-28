@@ -1,0 +1,42 @@
+{
+ "run_id": "city-temps__qwen",
+ "findings_in": [
+  [
+   "wrong_data",
+   "The legend shows seven cities (Aluna, Brinport, Calder, Dunmore, Eastwick, Farrow, and an extra \"Dunmore\" with a different color), but the task requested only six cities."
+  ]
+ ],
+ "context_shed": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "041524d41aae180d",
+ "image": {
+  "present": true,
+  "bytes": 101850,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 69,
+  "prompt_tokens": 2316,
+  "total_tokens": 2385,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "WRONG_DATA: NO  \nWRONG_DATA_EVIDENCE: none  \nWRONG_CHART: YES  \nWRONG_CHART_EVIDENCE: The legend is placed inside the plotting area in the upper left, not outside to the right as requested.  \nHARD_TO_READ: NO  \nHARD_TO_READ_EVIDENCE: none",
+ "parsed_verdicts": {
+  "wrong_data": "NO",
+  "wrong_chart": "YES",
+  "hard_to_read": "NO"
+ },
+ "findings_out": [
+  [
+   "wrong_chart",
+   "The legend is placed inside the plotting area in the upper left, not outside to the right as requested."
+  ]
+ ],
+ "elapsed_s": 1.13
+}

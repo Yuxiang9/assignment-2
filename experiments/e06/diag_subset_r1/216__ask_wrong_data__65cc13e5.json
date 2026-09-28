@@ -1,0 +1,30 @@
+{
+ "run_id": "216",
+ "family": "wrong_data",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "bad5355322803986",
+ "prompt_chars": 5644,
+ "image": {
+  "present": true,
+  "bytes": 32786,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 84,
+  "prompt_tokens": 2051,
+  "total_tokens": 2135,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES  \nEVIDENCE: The figure shows the bars for \"AI Coding Tools\" and \"Open Floor Plans\" in the wrong order compared to the requested left-to-right sequence of topics; the correct order should be Remote Work, Four-Day Week, AI Coding Tools, Open Floor Plans, but the figure displays them as Remote Work, Four-Day Week, Open Floor Plans, AI Coding Tools.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The figure shows the bars for \"AI Coding Tools\" and \"Open Floor Plans\" in the wrong order compared to the requested left-to-right sequence of topics; the correct order should be Remote Work, Four-Day Week, AI Coding Tools, Open Floor Plans, but the figure displays them as Remote Work, Four-Day Week, Open Floor Plans, AI Coding Tools.",
+ "elapsed_s": 1.6
+}

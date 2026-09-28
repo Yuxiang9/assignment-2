@@ -1,0 +1,46 @@
+{
+ "run_id": "069",
+ "findings_in": [
+  [
+   "wrong_data",
+   "The figure shows two separate segments labeled \"Africa\" (one dark green, one light green) in the legend and chart, but the task specifies only one \"Africa\" region with green color."
+  ],
+  [
+   "wrong_chart",
+   "The chart uses a polar projection (sunburst) but the title is incorrect: it shows \"Overall score 0-100, 100 = best environment\" as a subtitle below the main title, but the instructions required the subtitle to be \"Overall score 0-100, 100 = best environment\" and the main title to be exactly \"Global Food Security Index, 2020\". The figure's title is correct, but the subtitle is missing the required text \"Overall score 0-100, 100 = best environment\" as a separate line below the main title. The figure's subtitle is \"Overall score 0-100, 100 = best environment\" but it is not formatted as a separate"
+  ]
+ ],
+ "context_shed": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "9670e0a3a760ae1c",
+ "image": {
+  "present": true,
+  "bytes": 177881,
+  "size": [
+   1000,
+   1000
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 90,
+  "prompt_tokens": 6940,
+  "total_tokens": 7030,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "WRONG_DATA: NO\nWRONG_DATA_EVIDENCE: none\nWRONG_CHART: YES\nWRONG_CHART_EVIDENCE: The legend shows two different shades of green for Africa (one dark green, one light green), but the task specifies only one \"Africa\" region with green color, and the chart uses a single green for Africa.\nHARD_TO_READ: NO\nHARD_TO_READ_EVIDENCE: none",
+ "parsed_verdicts": {
+  "wrong_data": "NO",
+  "wrong_chart": "YES",
+  "hard_to_read": "NO"
+ },
+ "findings_out": [
+  [
+   "wrong_chart",
+   "The legend shows two different shades of green for Africa (one dark green, one light green), but the task specifies only one \"Africa\" region with green color, and the chart uses a single green for Africa."
+  ]
+ ],
+ "elapsed_s": 1.81
+}

@@ -1,0 +1,30 @@
+{
+ "run_id": "143",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "a9ff21b987a9c834",
+ "prompt_chars": 7990,
+ "image": {
+  "present": true,
+  "bytes": 92553,
+  "size": [
+   900,
+   700
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 37,
+  "prompt_tokens": 3037,
+  "total_tokens": 3074,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES\nEVIDENCE: The title \"Log scales\" is clipped at the top edge of the figure, with the top portion of the text cut off.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The title \"Log scales\" is clipped at the top edge of the figure, with the top portion of the text cut off.",
+ "elapsed_s": 1.09
+}

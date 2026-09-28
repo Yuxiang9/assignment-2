@@ -1,0 +1,58 @@
+{
+ "run_id": "016",
+ "findings_in": [
+  [
+   "wrong_data",
+   "The figure includes versions with data below 0.5% (e.g., \"Chrome 69.0\" at 0.43, \"IE 9.0\" at 0.44, \"Firefox 52.0\" at 0.5, \"Safari 10.1\" at 0.3, \"UC Browser 7.0\" at 0.36, \"Yandex Browser 19.4\" at 0.29), violating the requirement to drop versions with share below 0.5%."
+  ],
+  [
+   "wrong_chart",
+   "The chart title is \"Browser Market Share\" as required, but the legend is missing. The instructions explicitly required a legend naming the browsers, but the figure does not include a legend."
+  ],
+  [
+   "hard_to_read",
+   "The title \"Browser Market Share\" is clipped at the top edge of the image, with the last part of the text cut off."
+  ]
+ ],
+ "context_shed": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "3983a79ddc28df69",
+ "image": {
+  "present": true,
+  "bytes": 138080,
+  "size": [
+   1100,
+   1100
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 229,
+  "prompt_tokens": 5937,
+  "total_tokens": 6166,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "WRONG_DATA: YES\nWRONG_DATA_EVIDENCE: The figure includes versions with data below 0.5% (e.g., \"Chrome 69.0\" at 0.43, \"IE 9.0\" at 0.44, \"Firefox 52.0\" at 0.5, \"Safari 10.1\" at 0.3, \"UC Browser 7.0\" at 0.36, \"Yandex Browser 19.4\" at 0.29), violating the requirement to drop versions with share below 0.5%.\nWRONG_CHART: YES\nWRONG_CHART_EVIDENCE: The chart title is \"Browser Market Share\" as required, but the legend is missing. The instructions explicitly required a legend naming the browsers, but the figure does not include a legend.\nHARD_TO_READ: YES\nHARD_TO_READ_EVIDENCE: The title \"Browser Market Share\" is clipped at the top edge of the image, with the last part of the text cut off.",
+ "parsed_verdicts": {
+  "wrong_data": "YES",
+  "wrong_chart": "YES",
+  "hard_to_read": "YES"
+ },
+ "findings_out": [
+  [
+   "wrong_data",
+   "The figure includes versions with data below 0.5% (e.g., \"Chrome 69.0\" at 0.43, \"IE 9.0\" at 0.44, \"Firefox 52.0\" at 0.5, \"Safari 10.1\" at 0.3, \"UC Browser 7.0\" at 0.36, \"Yandex Browser 19.4\" at 0.29), violating the requirement to drop versions with share below 0.5%."
+  ],
+  [
+   "wrong_chart",
+   "The chart title is \"Browser Market Share\" as required, but the legend is missing. The instructions explicitly required a legend naming the browsers, but the figure does not include a legend."
+  ],
+  [
+   "hard_to_read",
+   "The title \"Browser Market Share\" is clipped at the top edge of the image, with the last part of the text cut off."
+  ]
+ ],
+ "elapsed_s": 3.25
+}

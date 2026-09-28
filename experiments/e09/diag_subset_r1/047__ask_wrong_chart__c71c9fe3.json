@@ -1,0 +1,30 @@
+{
+ "run_id": "047",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "e046cb0cd73ceb2b",
+ "prompt_chars": 8591,
+ "image": {
+  "present": true,
+  "bytes": 24594,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 2772,
+  "total_tokens": 3272,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "REQ 1: \"100% STACKED bar chart\" | expected: stacked bars summing to 100% | observed: one bar with a single segment at 100% | source: image | status: fail  \nREQ 2: \"One bar per country\" | expected: five bars | observed: one bar | source: image | status: fail  \nREQ 3: \"Countries along the x axis in the order France, Germany, Brazil, India, Canada\" | expected: five tick labels in that order | observed: one tick label \"47.9\" | source: image | status: fail  \nREQ 4: \"Stack the sources in the order Nuclear (bottom), Fossil (middle), Renewables (top)\" | expected: three segments in that order | observed: one segment | source: image | status: fail  \nREQ 5: \"Include a legend naming the three sources: Nuclear, Fossil, Renewables\" | expected: legend with three entries | observed: legend with one entry \"(Percentage, renewables)\" | source: image | status: fail  \nREQ 6: \"The y axis must start at 0\" | expected: y-axis starts at 0 | observed: y-axis starts at 0 | source: image | status: pass  \nREQ 7: \"y axis label must make clear the unit is a percentage share\" | expected: \"Percentage Share (%)\" | observed: \"Percentage Share (%)\" | source: image | status: pass  \nREQ 8: \"Give the chart a title\" | expected: title present | observed: title \"Annual Electricity Generation by Source\" | source: image | status: pass  \nREQ 9: \"x axis label\" | expected: \"Country\" | observed: \"Country\" | source: image | status: pass  \nREQ 10: \"y axis label\" | expected: \"Percentage Share (%)\" | observed: \"Percentage Share (%)\" | source: image | status: pass  \nREQ 11: \"x tick labels\" | expected: country names | observed: \"47.9\" | source: image | status: fail  \nREQ 12: \"Convert the terawatt-hours to percentages of each country's own total before plotting\" | expected: percentages | observed: one bar at 100% | source: image | status: fail  \n\nVERDICT: YES  \n",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "REQ 1: \"100% STACKED bar chart\" | expected: stacked bars summing to 100% | observed: one bar with a single segment at 100% | source: image | status: fail REQ 2: \"One bar per country\" | expected: five bars | observed: one bar | source: image | status: fail REQ 3: \"Countries along the x axis in the order France, Germany, Brazil, India, Canada\" | expected: five tick labels in that order | observed: one tick label \"47.9\" | source: image | status: fail REQ 4: \"Stack the sources in the order Nuclear (bottom), Fossil (middle), Renewables (top)\" | expected: three segments in that order | observed: one",
+ "elapsed_s": 7.19
+}

@@ -1,0 +1,29 @@
+{
+ "run_id": "126",
+ "raw_findings": [
+  [
+   "wrong_chart",
+   "The y-axis does not start from 0; it begins at a negative value, violating the requirement \"The y-axis should start from 0.\""
+  ],
+  [
+   "hard_to_read",
+   "The y-axis label \"y\" is partially cut off at the left edge of the image."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_chart",
+   "The y-axis does not start from 0; it begins at a negative value, violating the requirement \"The y-axis should start from 0.\""
+  ],
+  [
+   "hard_to_read",
+   "The y-axis label \"y\" is partially cut off at the left edge of the image."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The y-axis does not start from 0; it begins at a negative value, violating the requirement \"The y-axis should start from 0.\""
+  ]
+ ]
+}

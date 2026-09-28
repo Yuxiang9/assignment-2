@@ -1,0 +1,21 @@
+{
+ "run_id": "196",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The color for Group 1 is blue and Group 2 is orange as requested, but the legend incorrectly labels the blue points as \"Group 1\" and the orange points as \"Group 2\", which is the opposite of the requested assignment. The beeswarm plot shows Group 1 (blue) on the left and Group 2 (orange) on the right, matching the order in the code, but the legend labels are swapped."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The color for Group 1 is blue and Group 2 is orange as requested, but the legend incorrectly labels the blue points as \"Group 1\" and the orange points as \"Group 2\", which is the opposite of the requested assignment. The beeswarm plot shows Group 1 (blue) on the left and Group 2 (orange) on the right, matching the order in the code, but the legend labels are swapped."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_data",
+   "The color for Group 1 is blue and Group 2 is orange as requested, but the legend incorrectly labels the blue points as \"Group 1\" and the orange points as \"Group 2\", which is the opposite of the requested assignment. The beeswarm plot shows Group 1 (blue) on the left and Group 2 (orange) on the right, matching the order in the code, but the legend labels are swapped."
+  ]
+ ]
+}

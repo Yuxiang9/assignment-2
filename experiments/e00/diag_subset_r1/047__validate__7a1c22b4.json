@@ -1,0 +1,45 @@
+{
+ "run_id": "047",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The figure shows only one bar with a single segment labeled \"renewables,\" but the task requires a 100% stacked bar chart with three segments (Nuclear, Fossil, Renewables) for each of the five countries in the specified order. The data is completely missing for all requested sources and countries except one, and the stacking order is incorrect."
+  ],
+  [
+   "wrong_chart",
+   "The chart is not a 100% stacked bar chart with three segments per country; instead, it shows only one bar with a single blue segment, and the x-axis labels are incorrect (showing \"47.9\" instead of the country names). The legend is also incorrect, showing only one source."
+  ],
+  [
+   "hard_to_read",
+   "The x-axis label \"Country\" is clipped at the bottom edge of the image, with the text cut off and only partially visible."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The figure shows only one bar with a single segment labeled \"renewables,\" but the task requires a 100% stacked bar chart with three segments (Nuclear, Fossil, Renewables) for each of the five countries in the specified order. The data is completely missing for all requested sources and countries except one, and the stacking order is incorrect."
+  ],
+  [
+   "wrong_chart",
+   "The chart is not a 100% stacked bar chart with three segments per country; instead, it shows only one bar with a single blue segment, and the x-axis labels are incorrect (showing \"47.9\" instead of the country names). The legend is also incorrect, showing only one source."
+  ],
+  [
+   "hard_to_read",
+   "The x-axis label \"Country\" is clipped at the bottom edge of the image, with the text cut off and only partially visible."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_data",
+   "The figure shows only one bar with a single segment labeled \"renewables,\" but the task requires a 100% stacked bar chart with three segments (Nuclear, Fossil, Renewables) for each of the five countries in the specified order. The data is completely missing for all requested sources and countries except one, and the stacking order is incorrect."
+  ],
+  [
+   "wrong_chart",
+   "The chart is not a 100% stacked bar chart with three segments per country; instead, it shows only one bar with a single blue segment, and the x-axis labels are incorrect (showing \"47.9\" instead of the country names). The legend is also incorrect, showing only one source."
+  ],
+  [
+   "hard_to_read",
+   "The x-axis label \"Country\" is clipped at the bottom edge of the image, with the text cut off and only partially visible."
+  ]
+ ]
+}

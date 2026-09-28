@@ -1,0 +1,29 @@
+{
+ "run_id": "069",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The figure shows two separate segments labeled \"Africa\" (one dark green, one light green) while the task specifies only one \"Africa\" region with green color; the legend incorrectly lists \"Africa\" twice with different colors, indicating a wrong selection of data."
+  ],
+  [
+   "wrong_chart",
+   "The chart uses a sunburst design but the legend shows two entries for \"Africa\" (one green, one light green) and the color for \"Oceania\" is purple, which matches the instruction, but the legend incorrectly lists \"Africa\" twice with different colors, violating the requested legend for the five major areas."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The figure shows two separate segments labeled \"Africa\" (one dark green, one light green) while the task specifies only one \"Africa\" region with green color; the legend incorrectly lists \"Africa\" twice with different colors, indicating a wrong selection of data."
+  ],
+  [
+   "wrong_chart",
+   "The chart uses a sunburst design but the legend shows two entries for \"Africa\" (one green, one light green) and the color for \"Oceania\" is purple, which matches the instruction, but the legend incorrectly lists \"Africa\" twice with different colors, violating the requested legend for the five major areas."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The legend incorrectly lists \"Africa\" twice with different colors (green and light green), violating the requested legend for the five major areas."
+  ]
+ ]
+}

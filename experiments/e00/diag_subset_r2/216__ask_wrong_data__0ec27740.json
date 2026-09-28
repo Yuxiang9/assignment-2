@@ -1,0 +1,30 @@
+{
+ "run_id": "216",
+ "family": "wrong_data",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "bad5355322803986",
+ "prompt_chars": 5644,
+ "image": {
+  "present": true,
+  "bytes": 32786,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 107,
+  "prompt_tokens": 2051,
+  "total_tokens": 2158,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES  \nEVIDENCE: The figure shows the bars in the order Agree, Neutral, Disagree from left to right within each group, but the task requires the order to be Agree, Neutral, Disagree from left to right, and the figure has the bars in the wrong order: Disagree, Neutral, Agree. Additionally, the legend labels are not in the requested order, and the colors are incorrect (the task does not specify colors, but the legend labels are mismatched with the bar colors).",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The figure shows the bars in the order Agree, Neutral, Disagree from left to right within each group, but the task requires the order to be Agree, Neutral, Disagree from left to right, and the figure has the bars in the wrong order: Disagree, Neutral, Agree. Additionally, the legend labels are not in the requested order, and the colors are incorrect (the task does not specify colors, but the legend labels are mismatched with the bar colors).",
+ "elapsed_s": 1.8
+}

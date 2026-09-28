@@ -1,0 +1,30 @@
+{
+ "run_id": "008",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "8166f87313da5ed2",
+ "prompt_chars": 16532,
+ "image": {
+  "present": true,
+  "bytes": 160555,
+  "size": [
+   1500,
+   1050
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 38,
+  "prompt_tokens": 6445,
+  "total_tokens": 6483,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES\nEVIDENCE: The legend at the bottom is partially clipped by the image edge, with the rightmost part of the \"orange\" label cut off.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The legend at the bottom is partially clipped by the image edge, with the rightmost part of the \"orange\" label cut off.",
+ "elapsed_s": 1.88
+}

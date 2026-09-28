@@ -1,0 +1,30 @@
+{
+ "run_id": "070",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "d22fe6b26da8d9bb",
+ "prompt_chars": 9400,
+ "image": {
+  "present": true,
+  "bytes": 96474,
+  "size": [
+   900,
+   500
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 166,
+  "prompt_tokens": 3298,
+  "total_tokens": 3464,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"'ggplot' style sheet\" is fully visible at the top center of the plot.\nCHECK x-axis label: ok -- The label \"y\" is fully visible at the bottom center of the plot.\nCHECK y-axis label: ok -- The label \"value\" is fully visible on the left side of the plot.\nCHECK tick labels: ok -- All tick labels on both axes are fully visible and readable.\nCHECK legend: problem -- The legend is partially cut off at the right edge of the image, with the rightmost part of the labels and lines clipped.\nCHECK data series: ok -- All six data series are visible and distinguishable by color and line style.\n\nVERDICT: YES\nEVIDENCE: The legend is partially cut off at the right edge of the image.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The legend is partially cut off at the right edge of the image.",
+ "elapsed_s": 3.49
+}

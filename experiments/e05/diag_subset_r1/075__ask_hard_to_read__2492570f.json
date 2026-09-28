@@ -1,0 +1,30 @@
+{
+ "run_id": "075",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "b83431bebb847b29",
+ "prompt_chars": 7915,
+ "image": {
+  "present": true,
+  "bytes": 154401,
+  "size": [
+   1100,
+   450
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 234,
+  "prompt_tokens": 2818,
+  "total_tokens": 3052,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The suptitle \"A Story of 2 Subplots\" is fully visible at the top center of the figure.\nCHECK axis labels: ok -- The x-axis label \"s\" and y-axis label \"g\" in the left subplot, and the x, y, and z labels \"P\", \"Q\", and \"E\" in the right subplot are all fully visible and readable.\nCHECK tick labels: ok -- All tick labels on the x and y axes of the left subplot and on the P, Q, and E axes of the right subplot are fully visible and legible.\nCHECK legend: ok -- The legend in the top-right of the left subplot is fully visible and its labels are readable.\nCHECK annotations: ok -- There are no annotations that are clipped, overlapping, or covered.\nCHECK data series: ok -- The three curves in the left subplot are distinguishable by color and line style; the 3D surface in the right subplot is clearly rendered and visible.\nCHECK colorbar: ok -- The colorbar is fully visible and readable, with clear labels.\n\nVERDICT: NO\nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 3.55
+}

@@ -1,0 +1,21 @@
+{
+ "run_id": "022",
+ "raw_findings": [
+  [
+   "wrong_chart",
+   "The right panel's title is \"Logarithmic Scale\" instead of containing the word \"log\" as required; the y-axis label in the right panel is \"Active Users\" but the scale is logarithmic, which is correct, but the title must contain \"log\" to meet the instruction."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_chart",
+   "The right panel's title is \"Logarithmic Scale\" instead of containing the word \"log\" as required; the y-axis label in the right panel is \"Active Users\" but the scale is logarithmic, which is correct, but the title must contain \"log\" to meet the instruction."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The right panel's title is \"Logarithmic Scale\" instead of containing the word \"log\" as required; the y-axis label in the right panel is \"Active Users\" but the scale is logarithmic, which is correct, but the title must contain \"log\" to meet the instruction."
+  ]
+ ]
+}

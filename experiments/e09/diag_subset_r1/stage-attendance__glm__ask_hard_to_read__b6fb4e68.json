@@ -1,0 +1,30 @@
+{
+ "run_id": "stage-attendance__glm",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "5f7b7175cb8a065e",
+ "prompt_chars": 6673,
+ "image": {
+  "present": true,
+  "bytes": 78762,
+  "size": [
+   1374,
+   590
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 171,
+  "prompt_tokens": 2477,
+  "total_tokens": 2648,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"Peak attendance by stage\" is fully visible at the top of the figure.\nCHECK x axis label: ok -- The label \"Stage\" is fully visible at the bottom center of the figure.\nCHECK y axis label: ok -- The label \"Peak attendance\" is fully visible on the left side of the figure.\nCHECK tick labels: problem -- The x tick labels are partially cut off at the bottom edge of the image; the text at the far left and far right is clipped.\nCHECK legend: ok -- There is no legend in the figure.\nCHECK annotations: ok -- There are no annotations in the figure.\nCHECK data series: ok -- All bars are visible and distinguishable.\n\nVERDICT: YES\nEVIDENCE: The x tick labels are partially cut off at the bottom edge of the image.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The x tick labels are partially cut off at the bottom edge of the image.",
+ "elapsed_s": 2.91
+}

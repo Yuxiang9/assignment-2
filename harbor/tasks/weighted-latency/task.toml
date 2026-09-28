@@ -1,0 +1,61 @@
+schema_version = "1.4"
+
+# Files pulled OUT of the container, so you can look at what the agent produced
+# next to the verifier's verdict.  Paths are container paths.
+#
+# Collected at the END OF THE AGENT PHASE, before the verifier runs -- so do not
+# list verifier outputs like "/logs/verifier/pytest.log" here.  They do not
+# exist yet and are recorded as "status": "failed" in artifacts/manifest.json.
+# harbor saves the verifier logs for you at
+# jobs/<job-name>/<trial>/verifier/pytest.log regardless.
+artifacts = [
+  "/app/figure.png",
+  "/app/plot.py",
+  "/app/plotted_values.json",
+]
+
+[task]
+name = "cmu-11768/weighted-latency"
+version = "1.0.0"
+description = "Bar chart of request-weighted mean latency for four backend services."
+keywords = ["visualization", "matplotlib"]
+
+# TRAP 1.  Authors are TABLES, not strings.  `authors = ["your name"]` parses as
+# valid TOML but fails pydantic validation, and harbor reports that as
+# "Either datasets or tasks must be provided" -- i.e. "no task found", not
+# "bad task.toml".  Run preflight.py if you ever see that message.
+[[task.authors]]
+name = "Yuxiang9"
+
+[metadata]
+# Free-form; harbor does not validate this table.
+task_class = "derived-value aggregation"
+chart_family = "bar"
+source = "tasks/weighted-latency/task.json"
+
+[verifier]
+timeout_sec = 600.0
+# TRAP 2.  There is no `collect = [...]` list of files here.  [[verifier.collect]]
+# blocks are SHELL COMMANDS run after the agent phase (each block needs a
+# `command` key).  To pull files out, use the root-level `artifacts` list above.
+# Passing filenames to `collect` fails validation with the same misleading
+# "Either datasets or tasks must be provided".
+
+[verifier.env]
+
+[agent]
+timeout_sec = 900.0
+
+[environment]
+# Grading must not need the network: everything is baked into the image.
+network_mode = "no-network"
+build_timeout_sec = 900.0
+os = "linux"
+cpus = 1
+memory_mb = 2048
+mcp_servers = []
+
+[environment.env]
+MPLBACKEND = "Agg"
+
+[solution.env]

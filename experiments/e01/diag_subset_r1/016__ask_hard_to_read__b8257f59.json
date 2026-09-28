@@ -1,0 +1,30 @@
+{
+ "run_id": "016",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "d81a9e531bbd7986",
+ "prompt_chars": 15342,
+ "image": {
+  "present": true,
+  "bytes": 138080,
+  "size": [
+   1100,
+   1100
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 38,
+  "prompt_tokens": 5716,
+  "total_tokens": 5754,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES\nEVIDENCE: The title \"Browser Market Share\" is clipped at the top edge of the image, with the last part of the text cut off.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The title \"Browser Market Share\" is clipped at the top edge of the image, with the last part of the text cut off.",
+ "elapsed_s": 1.38
+}

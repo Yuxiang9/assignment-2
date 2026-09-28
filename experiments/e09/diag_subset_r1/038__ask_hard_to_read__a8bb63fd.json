@@ -1,0 +1,30 @@
+{
+ "run_id": "038",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "36ae31e5c37b3531",
+ "prompt_chars": 18168,
+ "image": {
+  "present": true,
+  "bytes": 48535,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 210,
+  "prompt_tokens": 8017,
+  "total_tokens": 8227,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"Total bill by day: smokers vs non-smokers\" is fully visible at the top of the plot.\nCHECK y-axis label: ok -- The y-axis label \"Total bill ($)\" is fully visible on the left side of the plot.\nCHECK x-axis label: ok -- The x-axis label \"Day of the week\" is fully visible at the bottom of the plot.\nCHECK x-tick labels: ok -- The day labels (Thur, Fri, Sat, Sun) are fully visible and not overlapping.\nCHECK legend: problem -- The legend is located in the top-right corner and is partially cut off by the image edge, with the right side of the legend box and the text \"Non-smoker\" being clipped.\nCHECK data series: ok -- The green violins for smokers and the white quartile lines are clearly visible and distinguishable against the dark background.\n\nVERDICT: YES\nEVIDENCE: The legend in the top-right corner is partially cut off by the image edge.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The legend in the top-right corner is partially cut off by the image edge.",
+ "elapsed_s": 5.03
+}

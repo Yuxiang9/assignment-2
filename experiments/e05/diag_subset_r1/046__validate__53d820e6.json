@@ -1,0 +1,21 @@
+{
+ "run_id": "046",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The title is clipped at the top edge, and the patch labels on the Sankey flows are too small and crowded to be read clearly, with many overlapping the flow lines."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The title is clipped at the top edge, and the patch labels on the Sankey flows are too small and crowded to be read clearly, with many overlapping the flow lines."
+  ]
+ ],
+ "final": [
+  [
+   "hard_to_read",
+   "The title is clipped at the top edge, and the patch labels on the Sankey flows are too small and crowded to be read clearly, with many overlapping the flow lines."
+  ]
+ ]
+}

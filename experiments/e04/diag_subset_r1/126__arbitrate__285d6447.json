@@ -1,0 +1,42 @@
+{
+ "run_id": "126",
+ "findings_in": [
+  [
+   "wrong_chart",
+   "The y-axis does not start from 0; it begins at a negative value, violating the requirement \"The y-axis should start from 0.\""
+  ]
+ ],
+ "context_shed": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "5d6b733aed15b00f",
+ "image": {
+  "present": true,
+  "bytes": 24982,
+  "size": [
+   800,
+   500
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 78,
+  "prompt_tokens": 2303,
+  "total_tokens": 2381,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "WRONG_DATA: NO  \nWRONG_DATA_EVIDENCE: none  \nWRONG_CHART: YES  \nWRONG_CHART_EVIDENCE: The y-axis does not start from 0; it begins at a negative value, violating the requirement \"The y-axis should start from 0.\"  \nHARD_TO_READ: NO  \nHARD_TO_READ_EVIDENCE: none",
+ "parsed_verdicts": {
+  "wrong_data": "NO",
+  "wrong_chart": "YES",
+  "hard_to_read": "NO"
+ },
+ "findings_out": [
+  [
+   "wrong_chart",
+   "The y-axis does not start from 0; it begins at a negative value, violating the requirement \"The y-axis should start from 0.\""
+  ]
+ ],
+ "elapsed_s": 1.6
+}

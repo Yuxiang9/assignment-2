@@ -1,0 +1,42 @@
+{
+ "run_id": "164",
+ "findings_in": [
+  [
+   "wrong_chart",
+   "The x-axis does not start at 0 as required; it starts at approximately 25. Additionally, the y-axis tick labels are in the wrong order: \"Bill\" is at the bottom and \"Jim\" is at the top, but the instructions specify the labels should be ['Bill', 'Jim'] corresponding to y-positions 10 and 20, respectively."
+  ]
+ ],
+ "context_shed": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "2d847e29fe2970fa",
+ "image": {
+  "present": true,
+  "bytes": 19959,
+  "size": [
+   1200,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 125,
+  "prompt_tokens": 2687,
+  "total_tokens": 2812,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "WRONG_DATA: NO\nWRONG_DATA_EVIDENCE: none\nWRONG_CHART: YES\nWRONG_CHART_EVIDENCE: The x-axis does not start at 0 as required; it starts at approximately 25. Additionally, the y-axis tick labels are in the wrong order: \"Bill\" is at the bottom and \"Jim\" is at the top, but the instructions specify the labels should be ['Bill', 'Jim'] corresponding to y-positions 10 and 20, respectively.\nHARD_TO_READ: NO\nHARD_TO_READ_EVIDENCE: none",
+ "parsed_verdicts": {
+  "wrong_data": "NO",
+  "wrong_chart": "YES",
+  "hard_to_read": "NO"
+ },
+ "findings_out": [
+  [
+   "wrong_chart",
+   "The x-axis does not start at 0 as required; it starts at approximately 25. Additionally, the y-axis tick labels are in the wrong order: \"Bill\" is at the bottom and \"Jim\" is at the top, but the instructions specify the labels should be ['Bill', 'Jim'] corresponding to y-positions 10 and 20, respectively."
+  ]
+ ],
+ "elapsed_s": 1.81
+}

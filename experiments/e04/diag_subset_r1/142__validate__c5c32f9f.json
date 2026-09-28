@@ -1,0 +1,21 @@
+{
+ "run_id": "142",
+ "raw_findings": [
+  [
+   "wrong_chart",
+   "The"
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_chart",
+   "The"
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The chart is vertical instead of horizontal as requested."
+  ]
+ ]
+}

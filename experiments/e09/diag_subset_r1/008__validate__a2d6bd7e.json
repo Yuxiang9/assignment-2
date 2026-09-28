@@ -1,0 +1,29 @@
+{
+ "run_id": "008",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The task requires using all data from 'data.csv', but the plotting code filters out rows where the source is 'orange' (df.query(\"source != 'orange'\")), which means flows originating from 'orange' are missing from the diagram."
+  ],
+  [
+   "hard_to_read",
+   "The legend at the bottom of the figure is partially cut off by the image edge."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The task requires using all data from 'data.csv', but the plotting code filters out rows where the source is 'orange' (df.query(\"source != 'orange'\")), which means flows originating from 'orange' are missing from the diagram."
+  ],
+  [
+   "hard_to_read",
+   "The legend at the bottom of the figure is partially cut off by the image edge."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_data",
+   "The task requires using all data from 'data.csv', but the plotting code filters out rows where the source is 'orange' (df.query(\"source != 'orange'\")), which means flows originating from 'orange' are missing from the diagram."
+  ]
+ ]
+}

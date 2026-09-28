@@ -1,0 +1,30 @@
+{
+ "run_id": "177",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "072a841491148bba",
+ "prompt_chars": 12817,
+ "image": {
+  "present": true,
+  "bytes": 22712,
+  "size": [
+   900,
+   500
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 3979,
+  "total_tokens": 4479,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "REQ 1: \"Draw the fruit shares as a pie chart.\" | expected: pie chart | observed: bar chart | source: image | status: fail\nREQ 2: \"Arrange the two panels side by side in a 1x2 grid.\" | expected: 1x2 grid with two panels | observed: two panels side by side | source: image | status: pass\nREQ 3: \"Show a legend naming the age groups.\" | expected: legend for age groups | observed: legend present | source: image | status: pass\nREQ 4: \"Give each panel a title.\" | expected: titles for both panels | observed: titles present | source: image | status: pass\nREQ 5: \"Connect the separated pie chart slice to the top and bottom of the stacked bar chart with lines\" | expected: connecting lines from pie to bar chart | observed: no connecting lines | source: image | status: fail\nREQ 6: \"These lines should be black in color and 1 in linewidth.\" | expected: black lines with linewidth 1 | observed: no lines | source: image | status: fail\nREQ 7: \"The pie chart represents the distribution of fruits in a basket, with the proportions being 35% apples (with this slice separated from the others), 45% oranges, and 20% bananas.\" | expected: pie chart with 35% apples, 45% oranges, 20% bananas, apples slice separated | observed: bar chart with 35% apples, 45% oranges, 20% bananas | source: image | status: fail\nREQ 8: \"The stacked bar chart shows the distribution of people favoring apples among different age groups: 25% under 18, 40% for ages 18-30, 20% for ages 30-50, and 15% for over 50.\" | expected: stacked bar chart with specified percentages | observed: stacked bar chart with specified percentages | source: image | status: pass\nREQ 9: \"Save the figure as figure.png.\" | expected: file named figure.png | observed: file named figure.png | source: code | status: pass\n\nVERDICT: YES\nEVIDENCE: The figure violates the requirement to draw a pie chart (REQ 1) by",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The figure violates the requirement to draw a pie chart (REQ 1) by",
+ "elapsed_s": 7.57
+}

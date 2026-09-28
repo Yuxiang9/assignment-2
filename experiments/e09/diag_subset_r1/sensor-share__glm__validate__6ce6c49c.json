@@ -1,0 +1,25 @@
+{
+ "run_id": "sensor-share__glm",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The sites are not ordered alphabetically as requested; the figure shows Dogwood, Cedar, Birch, Alder (top to bottom), but the correct order should be Alder, Birch, Cedar, Dogwood."
+  ],
+  [
+   "wrong_chart",
+   "The sites are not ordered alphabetically as required;"
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The sites are not ordered alphabetically as requested; the figure shows Dogwood, Cedar, Birch, Alder (top to bottom), but the correct order should be Alder, Birch, Cedar, Dogwood."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_data",
+   "The sites are not ordered alphabetically as requested; the figure shows Dogwood, Cedar, Birch, Alder (top to bottom), but the correct order should be Alder, Birch, Cedar, Dogwood."
+  ]
+ ]
+}

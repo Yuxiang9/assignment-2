@@ -1,0 +1,656 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+% Prefer slightly looser interword spacing over text running past the
+% margin; many lines here end in long unbreakable \texttt{} identifiers.
+\setlength{\emergencystretch}{3em}
+
+\title{11-768 HW2: Evaluating a Data-Visualization Agent}
+\author{Zoe Xue \\ Andrew ID: zoex}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Part 1: Examine Seed Agent Runs}
+
+\subsection{Comparison of Ground-Truth and Validator Labels}
+We ran the released baseline validator (\texttt{validator/baseline.py}) on all
+110 seed runs and scored it against \texttt{seed\_labels.json}:
+
+\begin{center}
+\begin{tabular}{lrrrrr}
+\toprule
+Family & MCC & TP & TN & FP & FN \\
+\midrule
+\texttt{execution\_failure} & $-0.0022$ & 4 & 65 & 33 & 8 \\
+\texttt{wrong\_data} & 0.0000 & 0 & 73 & 0 & 25 \\
+\texttt{wrong\_chart} & 0.1096 & 3 & 27 & 0 & 68 \\
+\texttt{hard\_to\_read} & 0.0000 & 0 & 59 & 0 & 39 \\
+\midrule
+macro-MCC & \textbf{0.0268} & & & & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The baseline carries almost no signal, and its disagreements with the human
+labels concentrate in two places. On \texttt{execution\_failure} it
+\emph{over}-predicts: 33 of its 37 positive calls are false, while it misses
+8 of the 12 genuinely failed runs. On the three content families it barely
+predicts at all --- and an important control-flow fact shapes that number:
+the baseline returns immediately after a positive execution verdict, so its
+37 execution-positive runs never reach the content questions at all. Only
+73 runs were actually asked the three content questions (219 questions, not
+$3\times110$), and across those the baseline produced five raw content
+positives (runs 059, 087, 096, 173, and 208, all \texttt{wrong\_chart}), of
+which three are scored --- 096 and 208 are excluded because their ground
+truth is a terminal \texttt{execution\_failure}. Against 135 positive
+ground-truth content labels, \texttt{wrong\_data} and
+\texttt{hard\_to\_read} are constant-NO (MCC 0 by definition) and
+\texttt{wrong\_chart} keeps only the sliver of credit its three scored hits
+earn.
+
+\subsection{Validator Error Type 1: verdict-polarity confusion on the
+execution question}
+The baseline asks the negatively-framed compound question ``Did the agent
+crash, exhaust its turns, or give up without producing a valid figure?'' and
+takes any reply beginning with ``YES'' as an error. On 33 runs that produced
+a perfectly valid figure --- among them \textbf{004, 022, 023, 034, 046, 062}
+--- the recorded evidence \emph{contradicts the recorded verdict}: the reply
+begins ``Yes'' and then continues, e.g.\ ``The agent successfully completed
+the task. It created a Python script that generated a 2x2 grid of subplots
+\ldots'' (run 004) or ``The agent successfully created the requested Sankey
+diagram\ldots'' (run 046). The model is answering the affirmative question it
+expected (``did the agent produce the figure?'') rather than the negative one
+it was asked, and the prefix-based parser turns that polarity slip into a
+false error. The mirror image appears on the 8 missed true failures
+(\textbf{010, 053, 065, 089, 096, 168, 181, 208}): each of these run
+directories contains no \texttt{figure.png} at all, so the label is
+mechanical, yet none of them is predicted as an execution failure. Six have
+entirely empty predictions (e.g.\ 010, 053), and two (096, 208) instead
+carry a \texttt{wrong\_chart} error --- the judge went on to critique the
+design of a figure that does not exist. Because the baseline does not
+record negative replies, we cannot distinguish a genuine NO verdict from a
+reply whose phrasing simply failed the leading-``YES'' parse; either way
+the family is decided by fragile surface form rather than by the artifact.
+
+\subsection{Validator Error Type 2: suppressed positives on the content
+families}
+For \texttt{wrong\_data}, \texttt{wrong\_chart}, and \texttt{hard\_to\_read},
+the baseline asks one maximally broad question per family (``Does the figure
+fail to follow any part of the requested chart design?'') with no definition
+of what counts, and again keeps only replies that begin with ``YES''. The
+result is near-total silence: 0/25, 3/71, and 0/39 scored true positives
+recovered. The misses are not subtle judgment calls; they include defects
+that are plainly observable in the figure and labeled with concrete
+evidence, on runs that \emph{were} asked the content questions. In run
+\textbf{009}, the x tick labels were requested rotated 30\,degrees, are
+drawn horizontal, and overlap into unreadability --- \texttt{wrong\_chart}
+and \texttt{hard\_to\_read}, neither flagged. In run \textbf{038}, the
+`Non-smoker' series is drawn in the background colour and is invisible; in
+run \textbf{016} the requested $<$0.5\% filter is ignored and the requested
+legend is missing; in run \textbf{030} the title reads ``Shared axes''
+instead of the requested exact text; in run \textbf{213} the Men's column
+is plotted where the Women's column was requested. None of it is flagged.
+Three mechanisms combine here. The question gives the judge no rubric for
+what the family covers, so borderline YES cases default to a safe NO; the
+prefix parse discards any positive expressed in a different surface form;
+and error type 1 compounds the silence structurally --- the 37 runs the
+baseline calls execution failures (run 004 among them, with its linear axis
+where log-base-3 was requested and its omitted cubing step) never reach the
+content questions at all, so a third of the dataset cannot produce a
+content positive no matter what the figure shows.
+
+\subsection{Proposed Validator Changes}
+\textbf{For error type 1:} take the model out of the loop entirely.
+\texttt{execution\_failure} is decidable from the artifact: a run failed
+exactly when it left no decodable, non-empty \texttt{figure.png}. On the
+seed set this deterministic rule agrees with the ground truth on all 110
+runs (12/12 positives, 98/98 negatives) and cannot suffer polarity or
+format errors.
+
+\textbf{For error type 2:} replace each broad question with the assignment's
+own rubric for that family (the full sub-criteria list), instruct the judge
+to enumerate the task's explicit requirements and check them one by one
+against the figure and the plotting code, and require a fixed two-line
+answer tail (\texttt{VERDICT: YES/NO}, \texttt{EVIDENCE: \ldots}) that is
+parsed structurally instead of by literal prefix, with a re-ask when the
+reply truncates before its verdict.
+
+\section{Part 2: Improve Your Validator}
+
+\subsection{Implemented Changes}
+Both changes are implemented in \texttt{validator/solution.py}.
+
+\textbf{Change 1: deterministic execution check.} The baseline asks the VLM
+whether the agent ``crashed, exhausted its turns, or gave up''.
+\texttt{execution\_failure}, however, is defined by the artifact, not the
+narrative: a run either left a decodable, non-empty \texttt{figure.png} or it
+did not. The improved validator decides this family without the model: missing,
+undecodable, or zero-sized figures are execution failures (evidence cites the
+final trajectory message), and everything else is not. On the seed set this
+rule reproduces the ground truth exactly (12/12 positives, 98/98 negatives).
+It is also model-agnostic by construction, which matters because the grading
+deployment uses the same fixed judge but a private set of runs.
+
+\textbf{Change 2: rubric-scoped questions with structured verdicts.} The
+baseline asks one broad yes/no question per family (e.g.\ ``does the figure
+fail to follow \emph{any} part of the requested chart design?'') and accepts
+the answer only if the reply literally starts with ``YES''. The improved
+validator sends, for each remaining family, the assignment's own sub-criteria
+for that family, an explicit instruction to check only what the task
+\emph{requested} and to answer NO when the instructions left a choice open,
+and a checklist procedure (enumerate the explicit requirements, then compare
+each against the figure and the plotting code). Replies must end with
+\texttt{VERDICT: YES/NO} and \texttt{EVIDENCE: ...} lines, which are parsed
+structurally (with a robust fallback, and a re-ask when the reply was
+truncated before reaching a verdict). The model sees the instructions
+verbatim, the input files, a digest of the trajectory that preserves every
+executed command (the plotting code) while clipping prose and tool output,
+and the final figure. The baseline's reactive context-compaction and image
+downscaling are retained for oversized runs.
+
+\subsection{Seed-Set Performance vs.\ Baseline}
+\begin{center}
+\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{2}{c}{MCC} & \multicolumn{4}{c}{Improved (counts)} \\
+Family & Baseline & Improved & TP & TN & FP & FN \\
+\midrule
+\texttt{execution\_failure} & $-0.0022$ & \textbf{1.0000} & 12 & 98 & 0 & 0 \\
+\texttt{wrong\_data} & 0.0000 & 0.3372 & 17 & 51 & 22 & 8 \\
+\texttt{wrong\_chart} & 0.1096 & 0.1387 & 20 & 23 & 4 & 51 \\
+\texttt{hard\_to\_read} & 0.0000 & 0.3142 & 13 & 54 & 5 & 26 \\
+\midrule
+macro-MCC & 0.0268 & \textbf{0.4475} & & & & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Qualitative Analysis of Targeted Error Types}
+\textbf{Error type 1 (execution polarity) is eliminated.} The deterministic
+check scores a perfect 1.0: all 33 baseline false positives (e.g.\ 004, 022,
+046) and all 8 false negatives (e.g.\ 010, 053) are gone, and no new errors
+appear, because the decision no longer passes through the model at all.
+
+\textbf{Error type 2 (suppressed positives) is strongly mitigated but not
+solved.} Positive predictions on the content families went from 5 raw / 3
+scored to 81, recovering 17/25 \texttt{wrong\_data}, 20/71
+\texttt{wrong\_chart}, and 13/39 \texttt{hard\_to\_read} true positives;
+every content-family MCC improved. Two causes contribute, and they should
+not be conflated: the rubric prompts and structural parsing raise the yield
+of the questions themselves, but change 1 also \emph{ungates} the content
+questions --- of the 37 runs the baseline short-circuited as execution
+failures, the 33 with valid figures are now all asked (the other four are
+genuine failures and remain terminal), so part of the recall gain is
+recovered coverage rather than better prompting. Where the questions fire, the
+evidence is genuinely grounded: on run \textbf{013} the prediction reads
+``uses the rainbow colormap instead of the required reversed plasma
+colormap'' against the human label ``the instructions forbid
+jet/rainbow/hsv, but the figure uses rainbow'' (a scored
+\texttt{wrong\_chart} true positive), and on run \textbf{016} it reads
+``includes versions with shares below 0.5\% (e.g., Chrome 69.0 at 0.43, IE
+9.0 at 0.44)'' against the label's identical filter violation (a scored
+\texttt{wrong\_data} true positive). Not every positive is this clean ---
+runs 196 and 216 show the judge asserting defects (swapped group colours, a
+stacked-vs-grouped confusion) that the figures do not support, and both are
+scored false positives; hallucinated perceptual claims remain the main
+precision cost, taken up in Parts 3 and 4.
+
+\textbf{A representative remaining false positive.} Run \textbf{013} is
+predicted \texttt{wrong\_data} with the evidence ``the task requires the
+reversed plasma colormap, but the figure uses the rainbow colormap\ldots
+explicitly prohibited''. The defect it describes is real, but a colormap
+choice is chart \emph{style} --- the ground truth files it (and we define
+it) under \texttt{wrong\_chart} --- so the same discovery is scored as a
+\texttt{wrong\_data} false positive. Runs 030 and 051 show the same
+signature (title text and colormap violations reported as data errors). The
+judge finds the right defect and attributes it to the wrong family: the
+rubric's exclusion lists (``do NOT report style here'') are not strong
+enough to stop a salient violation from leaking into whichever question
+notices it. A second false-positive mechanism appears in run \textbf{009}
+(\texttt{wrong\_data}), where the model asserts that plotted matplotlib
+version numbers are wrong and versions are omitted; the human label records
+no data error, so this is a misreading of a dense timeline image ---
+unverified perceptual claims stated as fact.
+
+\textbf{A representative remaining false negative.} Run \textbf{030} is a
+\texttt{wrong\_chart} false negative: the label's evidence is that the
+figure's title reads ``Shared axes'' instead of the requested exact text
+``Sharing x per column, y per row''. The validator \emph{did} report exactly
+this defect --- but inside its \texttt{wrong\_data} answer, so
+\texttt{wrong\_chart} recorded a miss and \texttt{wrong\_data} a false
+alarm. One family confusion thus costs two categories at once. More broadly,
+\texttt{wrong\_chart} keeps 51 false negatives against only 27 negative
+runs; with truth this positive-heavy, the instruction to answer YES only
+when confident suppresses exactly the recall this family needs. What is
+missing from the validator is a cross-family arbitration step: verdicts are
+made independently per family, so nothing re-files a discovered defect into
+the family our definitions assign it to.
+
+\section{Part 3: Design New Evaluation Tasks}
+
+\subsection{Anticipated Generalization Weaknesses}
+Reading \texttt{validator/solution.py}, the two families still delegated to
+the VLM with the least corroborating signal are \texttt{wrong\_data} and
+\texttt{hard\_to\_read}, which motivates two task classes.
+
+\textbf{Class 1: derived-value aggregation} (\texttt{task\_class} =
+``derived-value aggregation''). The validator judges plotted values from the
+rendered image plus the agent's code. When correctness hinges on a multi-step
+\emph{derived} quantity --- filter rows, then aggregate, then normalize or
+weight, then order by the result --- the image alone cannot reveal a wrong
+number (a bar of height 79 looks as plausible as one of height 49), so the
+validator must effectively re-derive the answer from the code and input data.
+That is exactly the kind of arithmetic-over-context that a 30B judge is weak
+at, so near-miss aggregations (dropped filter, unweighted mean, raw counts
+instead of shares, order computed from the wrong quantity) may slip through.
+
+\textbf{Class 2: readability stress} (\texttt{task\_class} = ``readability
+stress''). \texttt{hard\_to\_read} is judged purely by VLM perception of the
+rendered image. Subtle legibility defects --- tick labels that collide or get
+clipped by the image edge, a legend sitting on top of a data series,
+neighbouring series in nearly identical colours --- are known VLM blind
+spots, in both directions: a dense-but-legible chart invites false positives
+while genuinely overlapping text can be glossed over. Tasks that force many
+long tick labels or crowded legends probe this boundary directly.
+
+\subsection{Task Design}
+Five tasks (three in class 1, two in class 2); all data is synthetic and
+small enough to hand-verify, and every instruction pins the title, axis
+labels, ordering, and layout so correctness is human-reviewable.
+
+\begin{itemize}
+\item \textbf{\texttt{fine-totals}} (class 1; input \texttt{fines.csv}).
+  Sum fines per library branch \emph{excluding waived rows}, bars in
+  descending order of total. The data is adversarial: with the waived filter
+  the totals are $\{$Eastside 53.5, Northgate 49.0, Harborview 42.5, Central
+  37.5$\}$; without it they become $\{$Northgate 79.0, Central 77.5, Eastside
+  55.75, Harborview 42.5$\}$ --- three of the four totals and the required
+  bar order change (Harborview alone keeps 42.5, having no waived rows),
+  so a dropped filter is visible in both data and order.
+\item \textbf{\texttt{sensor-share}} (class 1; input \texttt{readings.csv}).
+  Aggregate repeated per-site readings and plot each site's \emph{percentage
+  share} of the grand total (exactly 17.5/21.0/31.5/30.0, summing to 100) as
+  a horizontal bar chart, alphabetical top-to-bottom, with formatted value
+  labels. Traps: plotting raw sums instead of shares, and matplotlib's
+  \texttt{barh} default of drawing the first category at the \emph{bottom}.
+\item \textbf{\texttt{weighted-latency}} (class 1; data inline).
+  Request-weighted mean latency per service (90.0, 80.0, 56.0, and
+  130.0~ms). The
+  unweighted means (100/80/120/100) differ on three of four services, and the
+  ``search'' service is a control where both agree.
+\item \textbf{\texttt{stage-attendance}} (class 2; data inline). Twelve bars
+  with long stage names as tick labels, which must be rotated 45°,
+  right-anchored, and fully visible on a canvas of at least $14 \times 6$
+  inches. Small default figures, missing rotation, or missing layout calls
+  produce exactly the clipped/overlapping-label defects the class targets.
+\item \textbf{\texttt{city-temps}} (class 2; data inline). Six crossing
+  temperature lines with pinned per-city colours and a legend that must sit
+  \emph{outside} the axes to the right without covering any line. Weak agents
+  reliably leave the legend inside, where it occludes data --- our very first
+  generated run (\texttt{city-temps\_\_qwen}) did exactly that.
+\end{itemize}
+
+\subsection{Agent Runs and Labeling}
+Each of the five tasks was run once with each fixed agent
+(Qwen2.5-Coder-3B-Instruct, Ministral-3-14B-Instruct-2512, GLM-4.7-Flash)
+through the provided Modal agent runner: 15 runs, all under \texttt{runs/}.
+Every run was reviewed against the assignment's evidence standard by reading
+the instructions, the trajectory (including the plotting code), and the
+rendered figure, and each label in \texttt{labels.json} cites its concrete
+evidence.
+
+The outcome splits cleanly by agent strength. Three Qwen-3B runs (on
+\texttt{fine-totals}, \texttt{sensor-share}, and
+\texttt{weighted-latency}) produced no figure at all and ended with
+\texttt{LimitsExceeded}, each stuck in its own failure loop: the first
+repeatedly invoked \texttt{sudo} in a container that has none (``sudo: not
+found'', returncode 127); the second died on a Python
+\texttt{SyntaxError}, a compound \texttt{for} statement placed after a
+semicolon in a one-liner; the third alternated between a Python
+\texttt{SyntaxError} and shell quoting errors (\texttt{/bin/sh}
+complaining of an unexpected parenthesis). That is three
+\texttt{execution\_failure} labels, each citing its own trajectory. Qwen's
+other two runs produced figures with design errors: on
+\texttt{stage-attendance} it drew the correct bars but left numeric
+position ticks (0, 2, 4, \ldots, 10) instead of the required stage names
+(\texttt{wrong\_chart}), and on \texttt{city-temps} it placed the legend
+inside the axes against an explicit outside-right requirement
+(\texttt{wrong\_chart}), where it covers the Farrow and Dunmore lines'
+January--February points (\texttt{hard\_to\_read}). The mid-size agents
+were stronger but fell into the designed ordering trap on
+\texttt{sensor-share}: both GLM and Ministral computed the percentage
+shares correctly and then let \texttt{barh} draw Alder at the bottom where
+the task demands it at the top (\texttt{wrong\_data}, wrong order).
+Ministral's run also lacks the required ``Site'' y-axis label in the saved
+image --- its script does call \texttt{set\_ylabel}, but the label lands
+outside the saved region, and a required text element entirely outside the
+image counts as missing (\texttt{wrong\_chart}). The remaining eight runs
+satisfied every requirement and are labeled acceptable.
+
+Two labeling decisions deserve comment. First, the inverted
+\texttt{sensor-share} bar order is filed under \texttt{wrong\_data} (not
+\texttt{wrong\_chart}) because the family definitions place ``wrong order:
+\ldots sequences appear in a different order from the one requested'' under
+data. Second, for \texttt{city-temps\_\_qwen} the same legend produces two
+distinct errors --- its placement violates an explicit design requirement,
+and, independently, it occludes data points --- which is exactly the
+design-versus-legibility distinction the two families encode; the occlusion
+was confirmed by inspecting a crop of the legend region.
+
+\subsection{Validator Performance on New Tasks}
+The Part 2 validator, run unchanged on the 15 authored runs
+(the pre-iteration authored predictions file in \texttt{output/}):
+
+\begin{center}
+\begin{tabular}{lrrrrrr}
+\toprule
+Family & MCC & TP & TN & FP & FN & support ($+$/$-$) \\
+\midrule
+\texttt{execution\_failure} & 1.0000 & 3 & 12 & 0 & 0 & 3/12 \\
+\texttt{wrong\_data} & $-0.3162$ & 0 & 6 & 4 & 2 & 2/10 \\
+\texttt{wrong\_chart} & $-0.1741$ & 0 & 8 & 1 & 3 & 3/9 \\
+\texttt{hard\_to\_read} & $-0.0909$ & 0 & 10 & 1 & 1 & 1/11 \\
+\midrule
+macro-MCC & \textbf{0.1047} & & & & & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+With supports this small each error moves MCC a long way, but the failures
+are systematic, not noise, and land exactly in the two designed weakness
+classes. Three patterns account for every mistake. \textbf{(1) Hallucinated
+colour violations:} on all three \texttt{city-temps} runs the validator
+reported that the lines are ``blue instead of tab:blue, orange instead of
+tab:orange'' --- but \texttt{tab:blue} \emph{is} matplotlib's default blue,
+so the claim describes no visible difference. It poisoned the two clean runs
+(false \texttt{wrong\_data} on GLM, false \texttt{wrong\_data} +
+\texttt{wrong\_chart} on Ministral) and displaced the real errors on the
+Qwen run, which was predicted \texttt{wrong\_data} instead of its true
+\texttt{wrong\_chart} + \texttt{hard\_to\_read}. \textbf{(2) Missed order
+inversion:} on both \texttt{sensor-share} runs the alphabetical-from-top
+requirement is violated by \texttt{barh}'s bottom-up default, and the
+validator saw nothing wrong --- the class-1 hypothesis (weak spatial/derived
+reasoning) confirmed on ordering rather than on values, which the agents
+computed correctly. \textbf{(3) Cross-family mis-filing with a perceptual
+hallucination:} on \texttt{stage-attendance\_\_qwen} it correctly noticed
+the tick labels are not the stage names but filed the defect under
+\texttt{wrong\_data}, and added a \texttt{hard\_to\_read} claim that ``the
+full stage names are cut off'' --- there are no stage names in that figure
+at all. The agents' failures (three qwen \texttt{LimitsExceeded} runs, the
+legend and tick-label mistakes, the \texttt{barh} inversion) are weaknesses
+of the \emph{agents}; every scoring mistake above is a weakness of the
+\emph{validator}, and the three patterns directly motivate Part 4.
+
+\subsection{Harbor Packaging}
+Each of the five tasks is packaged under \texttt{harbor/tasks/<task\_id>/}.
+The verifiers use three layers: S1-style artifact checks (a decodable,
+non-blank PNG of sane size; the input CSV unmodified, held to a sha256
+literal; a plotting script left behind), an exact comparison of
+\texttt{plotted\_values.json} against expected values derived by hand and
+written into the test as literals, and one re-execution of the delivered
+script in a scrubbed copy of \texttt{/app} (delivered artifacts are
+snapshotted first), which must exit 0 and reproduce a sidecar identical to
+the delivered one. All five tasks score 1.0 with \texttt{-a oracle}. The
+worked example was also run as required: oracle 1.0, \texttt{nop} 0.0, and
+two of its mutants (\texttt{sum\_crates} 0.0; \texttt{illegible} 1.0).
+
+\textbf{Mutant scoring 0: \texttt{fine-totals/mutants/no\_filter}.} A
+plausible dropped-clause error: it sums every row, ignoring the waived
+filter. Reward 0. It passes every artifact and re-execution check and is
+rejected by exactly one assertion,
+\texttt{test\_sidecar\_declares\_}\allowbreak\texttt{exactly\_the\_expected\_values},
+which
+reports the declared $\{$Northgate 79.0, Central 77.5, Eastside 55.75,
+Harborview 42.5$\}$ against the hand-derived key.
+
+\textbf{Mutant scoring 1.0: \texttt{stage-attendance/mutants/illegible}.}
+Every number is correct, the sidecar matches the key, and --- deliberately
+--- every structurally checkable clause of the instructions is satisfied:
+the canvas is the required $14\times6$ inches, the tick labels are the full
+stage names, rotated 45\,degrees and right-anchored, and all text lies
+inside the saved image. What is wrong is purely perceptual: every text
+element is set at 2\,pt, roughly three pixels tall at 100\,dpi, unreadable
+by any person. Reward 1.0. Our verifier accepts it because its checks read
+file metadata, JSON values, and re-execution behaviour, never the rendered
+pixels; the S1 gates (image $>100$\,px on a side, $>1000$ bytes, $>4$
+colours) are all cleared. We state the boundary carefully: this acceptance
+partly reflects checks we did not write --- a verifier that instrumented
+matplotlib's artist tree, as \texttt{harbor/example} does, could read the
+font sizes off the figure and reject this particular mutant with a
+threshold. But legibility in general (labels that collide under rotation,
+low-contrast text, a legend occluding data) has no per-clause deterministic
+test, which is why the assignment's own accepted example works the same
+way. To make the contrast measured rather than asserted, we ran our
+validators on this mutant's figure (with its instructions and a minimal
+trajectory), twice each. The Part 2 validator flags
+\texttt{hard\_to\_read} --- the right family --- but with a fabricated
+mechanism (it calls the tick labels ``clipped'' when they are merely far
+too small). The final validator never accepts the mutant either, but on
+both repeats it files the problem elsewhere: a \texttt{wrong\_data} claim
+fabricated from the axis text it cannot read, and a \texttt{wrong\_chart}
+answer that in one repeat describes the true defect exactly (``font size
+2 \ldots\ the text is unreadable'') while filing it in the wrong family.
+Its edge-verification stage, which requires a clipping claim to leave ink
+at the named image edge, correctly refuses the fabricated ``clipped''
+mechanism --- and with it, the lucky-family credit the Part 2 validator
+earned. Text that is present, unclipped, and simply too small sits in the
+residual blind spot of the deterministic verifier and both VLM validators
+at once; we report that plainly rather than claiming the boundary
+crossed.
+
+\textbf{Could a deterministic per-task verifier decide each family?}
+\texttt{execution\_failure}: yes --- file existence and PNG decodability are
+fully deterministic (our validator already decides it this way).
+\texttt{wrong\_data}: for an \emph{authored} task, largely yes --- the sidecar
+plus hand-derived literals decides the plotted values, and re-execution ties
+them to the script; what it cannot see is a figure whose drawn geometry
+disagrees with the sidecar, which needs either savefig instrumentation (as in
+\texttt{harbor/example}) or perception. \texttt{wrong\_chart}: only
+partially --- structural facts (orientation, axis limits, tick text) are
+recoverable with matplotlib instrumentation, but only per-task, per-clause;
+each explicit design requirement needs its own assertion.
+\texttt{hard\_to\_read}: mostly no --- individual proxies exist (a
+font-size threshold read off an instrumented artist tree would catch our
+own accepted mutant), but legibility as a property (labels colliding under
+rotation, contrast against a background, a legend occluding data) lives in
+the rendered pixels, admits no per-clause test, and is where the accepted
+mutant sits relative to the value-level checks we wrote.
+
+\textbf{Why a per-task verifier cannot be the grading mechanism.} A Harbor
+verifier encodes the answer key for one known task: hand-derived literals, a
+schema for the sidecar, sha256 digests of the inputs, assertions matched to
+each clause of one instruction. The private grading set contains tasks we
+never saw, so there are no literals to write, no schema to pin, and no
+clause-by-clause assertions to prepare. Grading there requires a single
+function that generalizes across arbitrary instructions --- deriving the
+expected chart from the task text, data, trajectory, and image at run time
+--- which is precisely the validator, not a fixed test suite.
+
+\section{Part 4: Iterate on Your Design}
+
+\subsection{Additional Improvements Motivated by Part 3}
+Part 3 exposed three failure patterns (colour hallucinations, missed order
+inversions, cross-family mis-filing), and our first response was a
+composite change --- deterministic colour filters plus a model arbitration
+pass. A subsequent review found both components defective: the colour
+filter deleted valid findings (a genuine ``the requested tab:blue series
+is red'' loses its sentence to word co-occurrence; a mixed
+``title is missing and the line colour is incorrect'' sentence loses the
+title defect too), and the arbitration parser could silently erase
+findings for families a truncated reply never answered. Rather than patch
+by intuition, we re-ran Part 4 as a measured campaign.
+
+\emph{Method.} We froze the incumbent (predictions, scores, source
+hashes, a manifest of run/input hashes), added optional per-call
+diagnostics (disabled by default; reads no labels; changes no decisions),
+built a fixed 39-run diagnostic subset enriched with hard cases from both
+released and authored runs, and measured the incumbent twice on it and
+twice on the authored set to establish a repeat-noise floor of about
+$\pm$0.02--0.03 macro-MCC. Every candidate was pre-registered
+(hypothesis and plausible regression written before running), gated on
+local regression tests, evaluated on the subset, and audited finding by
+finding before promotion; the full ledger ships in
+\texttt{experiments/LEDGER.md}. The diagnostics answered the first
+question directly: of $\sim$38 content-family misses on the subset,
+34--35 were never detected by the first-stage questions --- recall was
+bounded by detection, not by filtering or arbitration.
+
+\emph{Adopted changes, in pipeline order.}
+(1)~\textbf{Correctness repairs}: the colour filter was disconnected
+(four of five required-preservation regression cases fail against it) and
+the arbiter lost the ability to emit a verdict for a family no reviewer
+proposed with fabricated ``confirmed by arbitration'' evidence.
+(2)~\textbf{Checklist \texttt{wrong\_chart} prompting}: the broad
+``check each requirement'' instruction became an enumerated checklist
+(at most 12 items: quote, expected, observed, source image/code, status
+pass/fail/unknown) with an explicit image-over-code rule --- a property
+set in code but absent from the saved image is absent. Subset
+\texttt{wrong\_chart} went from $-0.045$ to $+0.279$ (TP 5$\to$15),
+recovering legend, axis-label, orientation, axis-limit, and colorbar
+defects, including \texttt{sensor-share\_\_ministral}'s off-canvas
+label mechanism.
+(3)~\textbf{Readability-specific prompting with deterministic edge
+verification}: \texttt{hard\_to\_read} no longer answers under the
+``explicit requirement'' confidence gate (legibility defects are rarely
+explicit clauses); it walks element groups with CHECK lines and must name
+the element, location, and visible mechanism. Alone this recovered real
+occlusion/overlap/invisibility defects but amplified ``partially cut
+off'' fabrications (11 new false alarms); an edge-ink audit showed only
+one clipping claim in the entire subset run was physically real, so a
+deterministic verifier now strikes any clipping claim whose named image
+edge holds no ink. Replayed on the same run: \texttt{hard\_to\_read}
+$+0.107 \to +0.444$ with false positives 16$\to$1.
+(4)~\textbf{Deterministic family mapping replaces model arbitration}: an
+ablation replaying identical recorded findings under three configurations
+scored direct $+0.378$, deterministically re-filed $+0.436$, and
+model-arbitrated $+0.370$ --- the arbiter erased more true positives than
+it repaired --- so findings are now re-filed by rule (drawn order
+$\to$ \texttt{wrong\_data}; missing/wrong title, label, legend, colormap,
+scale $\to$ \texttt{wrong\_chart}; partial clipping $\to$
+\texttt{hard\_to\_read}) and the arbitration model call is gone.
+(5)~\textbf{A deterministic fact layer}: an explicit DPI request is
+compared against the PNG's own metadata (fires on exactly the three true
+violations across all 125 development runs, silent on the twelve
+compliant DPI-mentioning runs), and literal number series in the
+instructions are compared against literal lists in the last successful
+figure-writing command (fires on exactly one run, 077's re-ordered
+series; sorting requests suppress the order rule). Both audited offline
+to zero false positives before inclusion. The composed validator scored
+0.6104 on the diagnostic subset against the incumbent's 0.2675--0.2891.
+
+\subsection{Final Evaluation on Seed and New Tasks}
+The designated final sweeps of the shipped validator, against the Part 2
+version's designated sweeps:
+
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+& \multicolumn{2}{c}{Seed runs} & \multicolumn{2}{c}{Authored runs} \\
+Family & Part 2 & Final & Part 2 & Final \\
+\midrule
+\texttt{execution\_failure} & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+\texttt{wrong\_data} & 0.3372 & \textbf{0.4411} & $-0.3162$ & \textbf{0.6325} \\
+\texttt{wrong\_chart} & 0.1387 & \textbf{0.4536} & $-0.1741$ & \textbf{0.2928} \\
+\texttt{hard\_to\_read} & 0.3142 & 0.0779 & $-0.0909$ & \textbf{1.0000} \\
+\midrule
+macro-MCC & 0.4475 & \textbf{0.4931} & 0.1047 & \textbf{0.7313} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Seed \texttt{wrong\_chart} recall rose from 23/71 to 49/71 true
+positives. Repeat variation is reported in full rather than summarized
+away: two fresh comparison sweeps each gave the final validator
+0.4800/0.4939 on seed and 0.6787/0.6529 on authored, against
+0.4389/0.4700 and 0.3552/0.2808 for the incumbent under interleaved,
+matched serving --- on seed, the final validator's worse repeat beats the
+incumbent's better one; the designated numbers above sit inside those
+bands.
+
+Two results are reported against ourselves. First, seed
+\texttt{hard\_to\_read} falls from 0.3142 to 0.0779. We investigated
+every lost true positive across the comparison sweeps: all twelve were
+fabricated clipping claims that happened to land on runs whose real
+defect is a different mechanism (overlapping tick labels, an invisible
+series, upside-down text, a legend covering tick labels). The
+edge-verifier removes exactly that unsound credit; what remains is a
+genuine, still-open recall gap on non-clipping legibility mechanisms (33
+misses on seed, e.g.\ 008's near-white value labels and 009's
+overlapping tick labels). Second, before tuning we built and reserved a
+fresh 26-run validation suite (12 correct/faulty pairs across the three
+content families plus two execution failures; constructed and visually
+verified by us, not human-reviewed course labels; provenance and scores
+in \texttt{experiments/}) and evaluated it exactly once after selecting
+the champion: incumbent macro $+0.7248$, champion $+0.7108$ ---
+statistically a tie inside the noise floor, with the champion perfect on
+readability (4/4, no false positives) and more false-positive-prone on
+clean charts elsewhere. The development-set gains therefore do
+\emph{not} demonstrate private-set superiority; the defensible claim is
+comparable-or-better classification with substantially sounder evidence,
+at one model call less per positive run. Our engineering stretch target
+of 0.60 seed macro-MCC was not reached (best repeat 0.4939); the subset
+result (0.6104) shows the pipeline can get there on hard cases, and the
+open \texttt{hard\_to\_read} recall gap is the identified remainder.
+
+\subsection{Qualitative Analysis of Self-Authored Tasks}
+On the designated authored sweep the champion scores 0.7313, catching
+\texttt{city-temps\_\_qwen} exactly (\texttt{wrong\_chart} +
+\texttt{hard\_to\_read}, the legend-over-lines mechanism named
+correctly), both \texttt{sensor-share} order inversions as
+\texttt{wrong\_data}, and \texttt{stage-attendance\_\_qwen}'s missing
+stage names.
+
+\textbf{A false positive.} \texttt{city-temps\_\_ministral} (a correct
+run) is again flagged \texttt{wrong\_chart}: ``Brinport is orange
+(should be tab:orange), Calder is green (should be \ldots)''. The
+trajectory contains \texttt{'Brinport': 'tab:orange',} and the drawn
+lines match it; the claim asserts a difference no pixels can show.
+This is the known cost of removing the colour filter: that filter was
+measurably destructive (it also deleted genuine colour defects), so we
+took the principled trade and this hallucination channel stays open. The
+second residual FP channel is re-derivation: \texttt{fine-totals\_\_ministral}
+is accused of breaking the descending order its own code
+(\texttt{sorted(totals, key=..., reverse=True)}) demonstrably satisfies
+--- the judge re-ranks the four close totals in its head and trusts its
+arithmetic over the image.
+
+\textbf{A false negative.} \texttt{sensor-share\_\_ministral}'s
+\texttt{wrong\_chart} label is still missed. The script calls
+\texttt{ax.set\_ylabel('Site')}, but the label lies entirely outside the
+saved image; a judge that weighs the code sees the requirement satisfied.
+The final validator can catch this mechanism class --- its checklist's
+image-over-code rule recovered this very run on the diagnostic subset ---
+but detection is unstable run to run, and the designated sweep missed it
+(that sweep ran without diagnostics, so we cannot say which checklist
+line failed). Noticing an \emph{absence} in the image against a
+\emph{presence} in the code remains the hardest case for the judge.
+
+\subsection{Further Changes}
+Everything beyond the adopted changes is infrastructure, shipped for
+reproducibility rather than score: the optional diagnostics layer
+(\texttt{HW2\_DIAG\_DIR}), the frozen Part 2 validator
+(\texttt{validator/solution\_part2.py}; the pre-iteration numbers
+regenerate with \texttt{--solution validator.solution\_part2}), the
+experiment ledger and per-candidate frozen sources under
+\texttt{experiments/} (e00 incumbent freeze, candidate shas, the
+arbitration ablation, the reserved-suite builder and its labels), and
+regression tests covering the filtering and malformed-reply cases that
+started the campaign. Cost: the shipped validator makes 3 judge calls
+per valid-figure run (plus at most one bounded truncation re-ask each;
+no arbitration call), and 0 calls for missing-figure runs; the full
+110-run seed sweep completes in roughly 35--45 minutes on the course
+deployment. Known open limitations, measured and not patched around:
+dual-filing (one real defect credited in two families, which the removed
+arbiter used to collapse), re-derivation and misbinding hallucinations
+on correct charts, the non-clipping \texttt{hard\_to\_read} recall gap,
+and tiny-but-unclipped text, which evades the deterministic verifier and
+both VLM validators alike. The natural next candidate --- targeted crop
+verification for proposed legibility defects --- is specified in the
+ledger but was not pursued after the campaign's stopping review.
+
+\end{document}

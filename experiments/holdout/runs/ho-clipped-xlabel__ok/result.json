@@ -1,0 +1,44 @@
+{
+ "run_id": "ho-clipped-xlabel__ok",
+ "task_id": "ho-clipped-xlabel__ok",
+ "task": {
+  "instructions": "Using matplotlib, draw a bar chart of items recycled by material: Glass 340, Paper 510, Plastic 425, Metal 280. Bars in the given order, y axis from 0 labeled \"Items recycled\", x axis labeled \"Material category\", title exactly \"Recycling by material\". All text must be fully visible in the saved image. Save the figure as figure.png.",
+  "inputs": []
+ },
+ "trajectory": {
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are a helpful assistant that can interact with a computer."
+   },
+   {
+    "role": "user",
+    "content": "Please solve this issue:\nUsing matplotlib, draw a bar chart of items recycled by material: Glass 340, Paper 510, Plastic 425, Metal 280. Bars in the given order, y axis from 0 labeled \"Items recycled\", x axis labeled \"Material category\", title exactly \"Recycling by material\". All text must be fully visible in the saved image. Save the figure as figure.png."
+   },
+   {
+    "role": "assistant",
+    "content": "I will write plot.py and run it.",
+    "tool_calls": [
+     {
+      "id": "call1",
+      "type": "function",
+      "function": {
+       "name": "bash",
+       "arguments": "{\"command\": \"cat > plot.py <<'PY'\\nimport matplotlib\\nmatplotlib.use(\\\"Agg\\\")\\nimport matplotlib.pyplot as plt\\nimport numpy as np\\n\\nfig, ax = plt.subplots(figsize=(8, 5))\\nax.bar([\\\"Glass\\\", \\\"Paper\\\", \\\"Plastic\\\", \\\"Metal\\\"], [340, 510, 425, 280])\\nax.set_ylim(0, 560)\\nax.set_title(\\\"Recycling by material\\\")\\nax.set_xlabel(\\\"Material category\\\"); ax.set_ylabel(\\\"Items recycled\\\")\\nfig.tight_layout()\\nfig.savefig(\\\"figure.png\\\", dpi=100)\\nPY\\npython plot.py\"}"
+      }
+     }
+    ]
+   },
+   {
+    "role": "tool",
+    "tool_call_id": "call1",
+    "content": "{\"returncode\": 0, \"output\": \"\"}"
+   },
+   {
+    "role": "exit",
+    "content": "Submitted"
+   }
+  ],
+  "trajectory_format": "synthetic-holdout"
+ }
+}

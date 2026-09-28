@@ -1,0 +1,42 @@
+{
+ "run_id": "stage-attendance__glm",
+ "findings_in": [
+  [
+   "hard_to_read",
+   "The x tick labels are partially cut off at the bottom edge of the image."
+  ]
+ ],
+ "context_shed": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "dd806b460ee0c49d",
+ "image": {
+  "present": true,
+  "bytes": 78762,
+  "size": [
+   1374,
+   590
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 64,
+  "prompt_tokens": 2361,
+  "total_tokens": 2425,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "WRONG_DATA: NO  \nWRONG_DATA_EVIDENCE: none  \nWRONG_CHART: NO  \nWRONG_CHART_EVIDENCE: none  \nHARD_TO_READ: YES  \nHARD_TO_READ_EVIDENCE: The x tick labels are partially cut off at the bottom edge of the image.",
+ "parsed_verdicts": {
+  "wrong_data": "NO",
+  "wrong_chart": "NO",
+  "hard_to_read": "YES"
+ },
+ "findings_out": [
+  [
+   "hard_to_read",
+   "The x tick labels are partially cut off at the bottom edge of the image."
+  ]
+ ],
+ "elapsed_s": 1.2
+}

@@ -1,0 +1,30 @@
+{
+ "run_id": "097",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "75bdd74fed2d0a64",
+ "prompt_chars": 6327,
+ "image": {
+  "present": true,
+  "bytes": 55114,
+  "size": [
+   1167,
+   881
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 2730,
+  "total_tokens": 3230,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "REQ 1: \"Use contourf with exactly these levels: -1.0, -0.75, -0.5, -0.25, 0.0, 0.25, 0.5, 0.75, 1.0.\" | expected: levels [-1.0, -0.75, -0.5, -0.25, 0.0, 0.25, 0.5, 0.75, 1.0] | observed: levels match exactly | source: image | status: pass  \nREQ 2: \"Use a perceptually uniform colormap such as viridis, cividis, magma or inferno. Do NOT use jet, rainbow or hsv.\" | expected: perceptually uniform colormap (e.g., viridis) | observed: colormap is viridis | source: image | status: pass  \nREQ 3: \"Add a colorbar and label it.\" | expected: colorbar with label | observed: colorbar present with label \"f(x, y) = sin(x) * cos(y)\" | source: image | status: pass  \nREQ 4: \"Find the grid point where f is largest and mark it with a single plotted marker at that (x, y) location (one point, no connecting line), and put a text annotation next to it.\" | expected: red marker and annotation at maximum point | observed: red marker and annotation present at (x, y) \u2248 (1.57, 0.0) with \"Max: 1.000\" | source: image | status: pass  \nREQ 5: \"Keep the plotted region equal to the grid: x from -3 to 3, y from -2 to 2.\" | expected: x \u2208 [-3, 3], y \u2208 [-2, 2] | observed: x-axis from -3 to 3, y-axis from -2 to 2 | source: image | status: pass  \nREQ 6: \"Give the figure a title and label both axes.\" | expected: title and axis labels | observed: title \"Filled Contour Map of f(x, y) = sin(x) * cos(y)\", x-label \"x\", y-label \"y\" | source: image | status: pass  \n\nVERDICT: NO  \nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 6.8
+}

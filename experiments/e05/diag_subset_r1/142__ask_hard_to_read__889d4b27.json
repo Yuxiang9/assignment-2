@@ -1,0 +1,30 @@
+{
+ "run_id": "142",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "20378e729f8e9f3d",
+ "prompt_chars": 12900,
+ "image": {
+  "present": true,
+  "bytes": 34635,
+  "size": [
+   1080,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 248,
+  "prompt_tokens": 4553,
+  "total_tokens": 4801,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"Favorite Sports by Country\" is fully visible at the top of the chart.\nCHECK axis labels: ok -- The x-axis has numerical labels (0, 20, 40, 60, 80) and the y-axis has country labels (USA, UK, Germany, Spain, China, Italy), all fully visible and readable.\nCHECK tick labels: ok -- The numerical labels on the x-axis and the country labels on the y-axis are clear and not clipped or overlapping.\nCHECK legend: problem -- The legend is located at the top-left corner and is partially cut off by the image edge, with the right side of the legend box and the \"Tennis\" label being clipped.\nCHECK annotations: ok -- The data labels (e.g., 12, 13, 15, etc.) inside the bars are fully visible and readable.\nCHECK data series: ok -- The stacked bars are distinct and the colors are different enough to be distinguishable.\n\nVERDICT: YES\nEVIDENCE: The legend is partially cut off by the image edge, with the right side of the legend box and the \"Tennis\" label being clipped.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The legend is partially cut off by the image edge, with the right side of the legend box and the \"Tennis\" label being clipped.",
+ "elapsed_s": 3.8
+}

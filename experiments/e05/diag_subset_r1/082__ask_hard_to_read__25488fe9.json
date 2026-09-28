@@ -1,0 +1,30 @@
+{
+ "run_id": "082",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "e942fccb9e18c847",
+ "prompt_chars": 7343,
+ "image": {
+  "present": true,
+  "bytes": 23776,
+  "size": [
+   640,
+   480
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 202,
+  "prompt_tokens": 2338,
+  "total_tokens": 2540,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"Distribution of Request Latency Across Backend Services\" is fully visible at the top of the figure.\nCHECK y-axis label: ok -- The label \"Latency (ms)\" is fully visible along the left side of the figure.\nCHECK x-axis label: ok -- The label \"Service\" is fully visible at the bottom of the figure.\nCHECK tick labels: ok -- The x-axis tick labels \"auth\", \"catalog\", \"search\", and \"checkout\" are fully visible and not overlapping.\nCHECK legend: unknown -- There is no legend in the figure.\nCHECK annotations: ok -- There are no annotations in the figure.\nCHECK data series: ok -- The four box plots are clearly visible, with distinct colors and positions, and the median lines are at the correct values.\nCHECK outliers: ok -- The outliers are visible as individual points, with the highest one for \"auth\" and \"checkout\" clearly shown.\n\nVERDICT: NO\nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 2.96
+}

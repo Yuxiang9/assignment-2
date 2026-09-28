@@ -1,0 +1,30 @@
+{
+ "run_id": "130",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "acdca0c4c2153f1c",
+ "prompt_chars": 15246,
+ "image": {
+  "present": true,
+  "bytes": 110652,
+  "size": [
+   648,
+   576
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 192,
+  "prompt_tokens": 8902,
+  "total_tokens": 9094,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"Cars: 0-60 time, mileage and power\" is fully visible at the top of the plot.\nCHECK axis labels: ok -- The labels \"0-60 mph (sec)\", \"Gas mileage (mpg)\", and \"Power (kW)\" are fully visible and not clipped.\nCHECK tick labels: ok -- The tick labels on all three axes are fully visible and readable.\nCHECK legend: problem -- The colorbar, which acts as a legend for engine displacement, is partially cut off at the right edge of the image.\nCHECK data series: ok -- The data points are distinct and readable, with no overlapping or indistinguishable series.\nCHECK annotations: ok -- There are no annotations that are clipped or overlapping.\n\nVERDICT: YES\nEVIDENCE: The colorbar, which serves as a legend for engine displacement, is partially cut off at the right edge of the image.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The colorbar, which serves as a legend for engine displacement, is partially cut off at the right edge of the image.",
+ "elapsed_s": 4.92
+}

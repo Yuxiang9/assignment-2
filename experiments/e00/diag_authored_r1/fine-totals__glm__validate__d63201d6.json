@@ -1,0 +1,16 @@
+{
+ "run_id": "fine-totals__glm",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The figure shows the branches in the order Eastside, Northgate, Harborview, Central, but the task requires them to be in descending order of collected totals, which is Eastside (53.5), Northgate (49.0), Harborview (42.5), Central (37.5). The figure incorrectly places Central before Harborview, violating the required order."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The figure shows the branches in the order Eastside, Northgate, Harborview, Central, but the task requires them to be in descending order of collected totals, which is Eastside (53.5), Northgate (49.0), Harborview (42.5), Central (37.5). The figure incorrectly places Central before Harborview, violating the required order."
+  ]
+ ],
+ "final": []
+}

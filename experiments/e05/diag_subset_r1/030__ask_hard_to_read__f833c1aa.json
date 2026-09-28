@@ -1,0 +1,30 @@
+{
+ "run_id": "030",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": true,
+ "prompt_sha": "85e3850cfad8266e",
+ "prompt_chars": 8893,
+ "image": {
+  "present": true,
+  "bytes": 46210,
+  "size": [
+   800,
+   800
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 3376,
+  "total_tokens": 3876,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: problem -- the title \"Shared axes\" is clipped at the top edge of the image, with the top of the text cut off\nCHECK axis labels: problem -- the x-axis label \"w\" in the bottom row is clipped at the right edge of the image, with the rightmost part of the text cut off\nCHECK tick labels: ok -- all tick labels are fully visible and readable\nCHECK data series: problem -- the data series in the bottom-right subplot (white line) is indistinguishable from the background due to low contrast\nCHECK legend: unknown -- no legend is present in the figure\nCHECK annotations: unknown -- no annotations are present in the figure\n\nVERDICT: YES\nEVIDENCE: The title \"Shared axes\" is clipped at the top edge, the x-axis label \"w\" in the bottom-right subplot is clipped at the right edge, and the white data series in the bottom-right subplot is indistinguishable from the background due to low contrast.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The title \"Shared axes\" is clipped at the top edge, the x-axis label \"w\" in the bottom-right subplot is clipped at the right edge, and the white data series in the bottom-right subplot is indistinguishable from the background due to low contrast.",
+ "elapsed_s": 9.33
+}

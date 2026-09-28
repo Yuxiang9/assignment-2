@@ -1,0 +1,30 @@
+{
+ "run_id": "stage-attendance__glm",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "8321f9cb3ff8b5c9",
+ "prompt_chars": 5977,
+ "image": {
+  "present": true,
+  "bytes": 78762,
+  "size": [
+   1374,
+   590
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 35,
+  "prompt_tokens": 2320,
+  "total_tokens": 2355,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES\nEVIDENCE: The x-axis tick labels are clipped at the bottom of the image, with the text cut off by the image edge.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The x-axis tick labels are clipped at the bottom of the image, with the text cut off by the image edge.",
+ "elapsed_s": 1.05
+}

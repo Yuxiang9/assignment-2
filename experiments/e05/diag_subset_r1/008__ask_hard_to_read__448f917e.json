@@ -1,0 +1,30 @@
+{
+ "run_id": "008",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "7c47feee851dffda",
+ "prompt_chars": 17228,
+ "image": {
+  "present": true,
+  "bytes": 160555,
+  "size": [
+   1500,
+   1050
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 174,
+  "prompt_tokens": 6602,
+  "total_tokens": 6776,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"Sankey diagram of source to target flows\" is fully visible at the top center of the figure.\nCHECK axis labels: ok -- The labels \"Source\" and \"Target\" are fully visible at the top left and top right, respectively.\nCHECK tick labels: ok -- The labels for the source and target categories (e.g., \"apple (278)\", \"blueberry (213)\") are fully visible and not clipped.\nCHECK legend: ok -- The legend at the bottom is fully visible and not overlapping any data.\nCHECK annotations: ok -- All annotations (category labels with counts) are fully visible and not clipped.\nCHECK data series: ok -- All flows are visible and distinguishable by color and width; no data is covered or indistinguishable.\n\nVERDICT: NO\nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 3.83
+}

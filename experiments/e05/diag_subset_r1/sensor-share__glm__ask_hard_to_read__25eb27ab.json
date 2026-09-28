@@ -1,0 +1,30 @@
+{
+ "run_id": "sensor-share__glm",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "260cbfef1cef4e40",
+ "prompt_chars": 7828,
+ "image": {
+  "present": true,
+  "bytes": 22427,
+  "size": [
+   790,
+   590
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 233,
+  "prompt_tokens": 2614,
+  "total_tokens": 2847,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"Share of readings by site\" is fully visible at the top of the chart.\nCHECK x-axis label: ok -- The label \"Share of total readings (%)\" is fully visible at the bottom of the chart.\nCHECK y-axis label: ok -- The label \"Site\" is fully visible on the left side of the chart.\nCHECK tick labels: ok -- The tick labels (0, 20, 40, 60, 80, 100) are fully visible along the x-axis.\nCHECK data labels: ok -- The percentage labels (17.5%, 21.0%, 31.5%, 30.0%) are fully visible at the end of each bar.\nCHECK legend: ok -- There is no legend in the figure.\nCHECK data series: ok -- The four horizontal bars are clearly distinguishable by their different lengths and positions.\nCHECK y-axis tick labels: ok -- The site names (Alder, Birch, Cedar, Dogwood) are fully visible on the y-axis.\n\nVERDICT: NO\nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 3.32
+}

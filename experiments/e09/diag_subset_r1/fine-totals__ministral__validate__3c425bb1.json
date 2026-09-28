@@ -1,0 +1,21 @@
+{
+ "run_id": "fine-totals__ministral",
+ "raw_findings": [
+  [
+   "wrong_chart",
+   "The branches are ordered in ascending order of collected fines (Eastside, Northgate, Harborview, Central), violating the requirement that they must be in descending order (largest total leftmost)."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The branches are ordered in ascending order of collected fines (Eastside, Northgate, Harborview, Central), violating the requirement that they must be in descending order (largest total leftmost)."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_data",
+   "The branches are ordered in ascending order of collected fines (Eastside, Northgate, Harborview, Central), violating the requirement that they must be in descending order (largest total leftmost)."
+  ]
+ ]
+}

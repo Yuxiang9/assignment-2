@@ -1,0 +1,30 @@
+{
+ "run_id": "fine-totals__ministral",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "580dc8ce9d28125f",
+ "prompt_chars": 6557,
+ "image": {
+  "present": true,
+  "bytes": 20401,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 164,
+  "prompt_tokens": 2263,
+  "total_tokens": 2427,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"Collected fines by branch\" is fully visible at the top center of the figure.\nCHECK x axis label: ok -- The label \"Branch\" is fully visible below the x-axis ticks.\nCHECK y axis label: ok -- The label \"Fines collected (USD)\" is fully visible along the left side of the y-axis.\nCHECK tick labels: ok -- All branch names (Eastside, Northgate, Harborview, Central) are fully visible and not clipped or overlapping.\nCHECK data series: ok -- The bars are distinct, clearly visible, and not indistinguishable.\nCHECK legend: unknown -- There is no legend present in the figure.\nCHECK annotations: unknown -- There are no annotations present in the figure.\n\nVERDICT: NO\nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 2.39
+}

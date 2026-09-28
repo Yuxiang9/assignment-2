@@ -1,0 +1,50 @@
+{
+ "run_id": "216",
+ "findings_in": [
+  [
+   "wrong_data",
+   "The figure shows the bars for \"AI Coding Tools\" and \"Open Floor Plans\" in the wrong order compared to the requested left-to-right sequence of topics; the correct order should be Remote Work, Four-Day Week, AI Coding Tools, Open Floor Plans, but the figure displays them as Remote Work, Four-Day Week, Open Floor Plans, AI Coding Tools."
+  ],
+  [
+   "hard_to_read",
+   "The title, legend, and annotation are all partially cut off at the image edges."
+  ]
+ ],
+ "context_shed": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "ff70b01b59b91abc",
+ "image": {
+  "present": true,
+  "bytes": 32786,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 127,
+  "prompt_tokens": 2075,
+  "total_tokens": 2202,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "WRONG_DATA: NO  \nWRONG_DATA_EVIDENCE: none  \nWRONG_CHART: YES  \nWRONG_CHART_EVIDENCE: The bars for \"AI Coding Tools\" and \"Open Floor Plans\" are in the wrong order; the topics should appear left-to-right as Remote Work, Four-Day Week, AI Coding Tools, Open Floor Plans, but the figure shows them as Remote Work, Four-Day Week, Open Floor Plans, AI Coding Tools.  \nHARD_TO_READ: YES  \nHARD_TO_READ_EVIDENCE: The title, legend, and annotation are partially cut off at the image edges.",
+ "parsed_verdicts": {
+  "wrong_data": "NO",
+  "wrong_chart": "YES",
+  "hard_to_read": "YES"
+ },
+ "findings_out": [
+  [
+   "wrong_chart",
+   "The bars for \"AI Coding Tools\" and \"Open Floor Plans\" are in the wrong order; the topics should appear left-to-right as Remote Work, Four-Day Week, AI Coding Tools, Open Floor Plans, but the figure shows them as Remote Work, Four-Day Week, Open Floor Plans, AI Coding Tools."
+  ],
+  [
+   "hard_to_read",
+   "The title, legend, and annotation are partially cut off at the image edges."
+  ]
+ ],
+ "elapsed_s": 1.77
+}

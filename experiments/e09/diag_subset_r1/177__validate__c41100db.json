@@ -1,0 +1,29 @@
+{
+ "run_id": "177",
+ "raw_findings": [
+  [
+   "wrong_chart",
+   "The figure violates the requirement to draw a pie chart (REQ 1) by"
+  ],
+  [
+   "hard_to_read",
+   "The figure has multiple rendering problems: titles are clipped at the top, the legend overlaps data on the right subplot, the stacked bar chart uses indistinguishable colors, and x-axis labels are clipped at the bottom."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_chart",
+   "The figure violates the requirement to draw a pie chart (REQ 1) by"
+  ],
+  [
+   "hard_to_read",
+   "The figure has multiple rendering problems: titles are clipped at the top, the legend overlaps data on the right subplot, the stacked bar chart uses indistinguishable colors, and x-axis labels are clipped at the bottom."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The figure violates the requirement to draw a pie chart (REQ 1) by"
+  ]
+ ]
+}

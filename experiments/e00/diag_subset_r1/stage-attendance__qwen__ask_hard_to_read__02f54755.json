@@ -1,0 +1,30 @@
+{
+ "run_id": "stage-attendance__qwen",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "98cc6b0177da2b0a",
+ "prompt_chars": 4949,
+ "image": {
+  "present": true,
+  "bytes": 20961,
+  "size": [
+   1400,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 39,
+  "prompt_tokens": 2155,
+  "total_tokens": 2194,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES  \nEVIDENCE: The x tick labels are clipped by the right edge of the image, as the full stage names are not fully visible and are cut off.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The x tick labels are clipped by the right edge of the image, as the full stage names are not fully visible and are cut off.",
+ "elapsed_s": 0.95
+}

@@ -1,0 +1,33 @@
+{
+ "run_id": "stage-attendance__qwen",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The x tick labels are missing entirely, so the stages are not labeled with their full names as required. Additionally, the bars are plotted in the wrong order: the tallest bar (8900) is at index 4, which corresponds to \"Starlight Terrace\" in the requested order, but in the figure it appears at position 4 (index 4), which is correct, but the labels are missing, so we cannot confirm the correct stage names are used. However, since the labels are completely absent, this violates the requirement to use the full stage names as x tick labels."
+  ],
+  [
+   "hard_to_read",
+   "The x tick labels are clipped at the bottom of the image, as the full stage names are cut off by the image edge."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The x tick labels are missing entirely, so the stages are not labeled with their full names as required. Additionally, the bars are plotted in the wrong order: the tallest bar (8900) is at index 4, which corresponds to \"Starlight Terrace\" in the requested order, but in the figure it appears at position 4 (index 4), which is correct, but the labels are missing, so we cannot confirm the correct stage names are used. However, since the labels are completely absent, this violates the requirement to use the full stage names as x tick labels."
+  ],
+  [
+   "hard_to_read",
+   "The x tick labels are clipped at the bottom of the image, as the full stage names are cut off by the image edge."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The x tick labels are missing entirely, so the stages are not labeled with their full names as required."
+  ],
+  [
+   "hard_to_read",
+   "The x tick labels are clipped at the bottom of the image, as the full stage names are cut off by the image edge."
+  ]
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "run_id": "097",
+ "findings_in": [
+  [
+   "hard_to_read",
+   "The annotation \"Max: 1.000\" is partially covered by the colorbar on the right side of the figure, causing overlap and making it difficult to read."
+  ]
+ ],
+ "context_shed": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "eed616caba75e85d",
+ "image": {
+  "present": true,
+  "bytes": 55114,
+  "size": [
+   1167,
+   881
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 84,
+  "prompt_tokens": 2519,
+  "total_tokens": 2603,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "WRONG_DATA: NO  \nWRONG_DATA_EVIDENCE: none  \nWRONG_CHART: NO  \nWRONG_CHART_EVIDENCE: none  \nHARD_TO_READ: YES  \nHARD_TO_READ_EVIDENCE: The annotation \"Max: 1.000\" is partially covered by the colorbar on the right side of the figure, causing overlap and making it difficult to read.",
+ "parsed_verdicts": {
+  "wrong_data": "NO",
+  "wrong_chart": "NO",
+  "hard_to_read": "YES"
+ },
+ "findings_out": [
+  [
+   "hard_to_read",
+   "The annotation \"Max: 1.000\" is partially covered by the colorbar on the right side of the figure, causing overlap and making it difficult to read."
+  ]
+ ],
+ "elapsed_s": 1.84
+}

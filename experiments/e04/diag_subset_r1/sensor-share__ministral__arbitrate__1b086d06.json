@@ -1,0 +1,42 @@
+{
+ "run_id": "sensor-share__ministral",
+ "findings_in": [
+  [
+   "wrong_chart",
+   "The sites are not ordered alphabetically from top to bottom as required; the observed order is Dogwood, Cedar, Birch, Alder, but the expected order is Alder,"
+  ]
+ ],
+ "context_shed": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "4f60573040fdad26",
+ "image": {
+  "present": true,
+  "bytes": 20474,
+  "size": [
+   640,
+   480
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 88,
+  "prompt_tokens": 1847,
+  "total_tokens": 1935,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "WRONG_DATA: NO\nWRONG_DATA_EVIDENCE: none\nWRONG_CHART: YES\nWRONG_CHART_EVIDENCE: The sites are not ordered alphabetically from top to bottom; the observed order is Dogwood, Cedar, Birch, Alder, but the expected order is Alder, Birch, Cedar, Dogwood.\nHARD_TO_READ: NO\nHARD_TO_READ_EVIDENCE: none",
+ "parsed_verdicts": {
+  "wrong_data": "NO",
+  "wrong_chart": "YES",
+  "hard_to_read": "NO"
+ },
+ "findings_out": [
+  [
+   "wrong_chart",
+   "The sites are not ordered alphabetically from top to bottom; the observed order is Dogwood, Cedar, Birch, Alder, but the expected order is Alder, Birch, Cedar, Dogwood."
+  ]
+ ],
+ "elapsed_s": 1.52
+}

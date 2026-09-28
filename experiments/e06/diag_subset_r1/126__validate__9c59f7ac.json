@@ -1,0 +1,21 @@
+{
+ "run_id": "126",
+ "raw_findings": [
+  [
+   "wrong_chart",
+   "The y-axis does not start from 0; it begins at a negative value, violating the requirement \"The y-axis should start from 0.\""
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_chart",
+   "The y-axis does not start from 0; it begins at a negative value, violating the requirement \"The y-axis should start from 0.\""
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The y-axis does not start from 0; it begins at a negative value, violating the requirement \"The y-axis should start from 0.\""
+  ]
+ ]
+}

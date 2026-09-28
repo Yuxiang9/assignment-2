@@ -1,0 +1,42 @@
+{
+ "run_id": "142",
+ "findings_in": [
+  [
+   "wrong_chart",
+   "The"
+  ]
+ ],
+ "context_shed": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "7ed775b4415bc65e",
+ "image": {
+  "present": true,
+  "bytes": 34635,
+  "size": [
+   1080,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 57,
+  "prompt_tokens": 4422,
+  "total_tokens": 4479,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "WRONG_DATA: NO\nWRONG_DATA_EVIDENCE: none\nWRONG_CHART: YES\nWRONG_CHART_EVIDENCE: The chart is vertical instead of horizontal as requested.\nHARD_TO_READ: NO\nHARD_TO_READ_EVIDENCE: none",
+ "parsed_verdicts": {
+  "wrong_data": "NO",
+  "wrong_chart": "YES",
+  "hard_to_read": "NO"
+ },
+ "findings_out": [
+  [
+   "wrong_chart",
+   "The chart is vertical instead of horizontal as requested."
+  ]
+ ],
+ "elapsed_s": 1.13
+}

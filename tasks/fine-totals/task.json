@@ -1,0 +1,8 @@
+{
+  "task_id": "fine-totals",
+  "task_class": "derived-value aggregation",
+  "instructions": "Using matplotlib, read fines.csv and draw a vertical bar chart of the total library fines actually collected by each branch. The file has a header row and the columns branch, weekday, amount, waived. Compute the totals like this:\n1. Keep only the rows whose waived column is exactly \"no\"; waived fines were never collected and must not be counted.\n2. Sum the amount column within each branch.\nDraw one vertical bar per branch on a single set of axes, with the branches ordered from left to right in DESCENDING order of their collected total (largest total leftmost). The y axis must start at zero. Set the title to exactly \"Collected fines by branch\", label the x axis \"Branch\", and label the y axis \"Fines collected (USD)\". Save the figure as figure.png.",
+  "inputs": [
+    {"name": "fines.csv", "path": "inputs/fines.csv"}
+  ]
+}

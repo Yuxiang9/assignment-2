@@ -1,0 +1,21 @@
+{
+ "run_id": "111",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The data series are indistinguishable because the bars for each y=k layer are drawn with the same colors and are overlapping, making it impossible to tell which bar belongs to which layer."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The data series are indistinguishable because the bars for each y=k layer are drawn with the same colors and are overlapping, making it impossible to tell which bar belongs to which layer."
+  ]
+ ],
+ "final": [
+  [
+   "hard_to_read",
+   "The bars are overlapping and indistinct, making it difficult to distinguish individual data series, especially in the dense central region of the plot."
+  ]
+ ]
+}

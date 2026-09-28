@@ -1,0 +1,41 @@
+{
+ "run_id": "016",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The figure includes versions with shares below 0.5% (e.g., \"Chrome 69.0\" at 0.43%, \"IE 9.0\" at 0.44%), violating the requirement to drop versions with share below 0.5%."
+  ],
+  [
+   "wrong_chart",
+   "The chart does not drop versions with share below 0.5% as required; for example, \"Chrome 69.0\" (0.43%) and \"Chrome 68.0\" (0.2%) are included in the outer ring."
+  ],
+  [
+   "hard_to_read",
+   "The version labels on the outer ring are partially cut off at the right edge of the image, which makes them difficult to read."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The figure includes versions with shares below 0.5% (e.g., \"Chrome 69.0\" at 0.43%, \"IE 9.0\" at 0.44%), violating the requirement to drop versions with share below 0.5%."
+  ],
+  [
+   "wrong_chart",
+   "The chart does not drop versions with share below 0.5% as required; for example, \"Chrome 69.0\" (0.43%) and \"Chrome 68.0\" (0.2%) are included in the outer ring."
+  ],
+  [
+   "hard_to_read",
+   "The version labels on the outer ring are partially cut off at the right edge of the image, which makes them difficult to read."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_data",
+   "The figure includes versions with shares below 0.5% (e.g., \"Chrome 69.0\" at 0.43%, \"IE 9.0\" at 0.44%), violating the requirement to drop versions with share below 0.5%."
+  ],
+  [
+   "hard_to_read",
+   "The version labels on the outer ring are partially cut off at the right edge of the image, which makes them difficult to read."
+  ]
+ ]
+}

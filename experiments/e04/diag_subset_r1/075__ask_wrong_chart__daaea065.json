@@ -1,0 +1,30 @@
+{
+ "run_id": "075",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": true,
+ "prompt_sha": "9fd284d47f5480d4",
+ "prompt_chars": 8524,
+ "image": {
+  "present": true,
+  "bytes": 154401,
+  "size": [
+   1100,
+   450
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 2933,
+  "total_tokens": 3433,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES\nEVIDENCE: The instructions require the suptitle to be exactly \"A Story of 2 Subplots\", but the figure shows \"A Story of 2 Subplots\" with an extra \"2\" in the title, making it \"A Story of 2 Subplots\" (incorrectly formatted as \"A Story of 2 Subplots\" with a trailing \"2\"). The actual title in the image is \"A Story of 2 Subplots\", which is not exactly as specified.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The instructions require the suptitle to be exactly \"A Story of 2 Subplots\", but the figure shows \"A Story of 2 Subplots\" with an extra \"2\" in the title, making it \"A Story of 2 Subplots\" (incorrectly formatted as \"A Story of 2 Subplots\" with a trailing \"2\"). The actual title in the image is \"A Story of 2 Subplots\", which is not exactly as specified.",
+ "elapsed_s": 8.24
+}

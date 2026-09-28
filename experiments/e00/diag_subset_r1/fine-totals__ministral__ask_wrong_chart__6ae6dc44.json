@@ -1,0 +1,30 @@
+{
+ "run_id": "fine-totals__ministral",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "4caa83e9589f3d13",
+ "prompt_chars": 6382,
+ "image": {
+  "present": true,
+  "bytes": 20401,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 12,
+  "prompt_tokens": 2206,
+  "total_tokens": 2218,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: NO\nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 0.65
+}

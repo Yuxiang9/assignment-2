@@ -1,0 +1,21 @@
+{
+ "run_id": "021",
+ "raw_findings": [
+  [
+   "wrong_chart",
+   "The x-axis label is missing, violating the requirement to label both axes."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_chart",
+   "The x-axis label is missing, violating the requirement to label both axes."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The x-axis label is missing, violating the requirement to label both axes."
+  ]
+ ]
+}

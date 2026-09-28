@@ -1,0 +1,263 @@
+{
+  "predictions": [
+    {
+      "run_id": "008",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The agent's code filters out rows where the source is 'orange', so the data for 'orange' as a source is missing from the diagram."
+        }
+      ]
+    },
+    {
+      "run_id": "016",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure includes versions with shares below 0.5% (e.g., \"Chrome 69.0\" at 0.43%, \"IE 9.0\" at 0.44%), violating the requirement to drop versions with share below 0.5%."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The title \"Browser Market Share\" is clipped at the top edge of the image, with the last part of the text cut off."
+        }
+      ]
+    },
+    {
+      "run_id": "021",
+      "errors": []
+    },
+    {
+      "run_id": "028",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure plots every data point from all years instead of showing only the highest temperature for each month (aggregated across years), with the 2015 data highlighted as a blue curve."
+        }
+      ]
+    },
+    {
+      "run_id": "030",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure title is \"Shared axes\" instead of the required \"Sharing x per column, y per row\", and the data plotted does not match the requested transformations (e.g., the first subplot shows z vs w but with incorrect scaling and missing the required shared axis setup)."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure title is \"Shared axes\" instead of the required \"Sharing x per column, y per row\"."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The figure title \"Shared axes\" is clipped at the top edge, with the top portion of the letters cut off, making it difficult to read."
+        }
+      ]
+    },
+    {
+      "run_id": "031",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The legend entries are in the order Agree, Neutral, Disagree, but the colors assigned to them are not in the requested order: the first legend entry (Agree) is blue, the second (Neutral) is orange, and the third (Disagree) is green, which does not match the expected \"tab:\" palette order."
+        }
+      ]
+    },
+    {
+      "run_id": "038",
+      "errors": []
+    },
+    {
+      "run_id": "046",
+      "errors": []
+    },
+    {
+      "run_id": "047",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure shows only one bar with a single segment labeled \"renewables,\" but the task requires a 100% stacked bar chart with three segments (Nuclear, Fossil, Renewables) for each of the five countries in the specified order. The data is completely missing for all requested sources and countries except one, and the stacking order is incorrect."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The chart is not a 100% stacked bar chart with three segments per country; instead, it shows only one bar with a single blue segment, and the x-axis labels are incorrect (showing \"47.9\" instead of the country names). The legend is also incorrect, showing only one source."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The x-axis label \"Country\" is clipped at the bottom edge of the image, with the text cut off and only partially visible."
+        }
+      ]
+    },
+    {
+      "run_id": "060",
+      "errors": []
+    },
+    {
+      "run_id": "069",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The legend shows two different shades of green for Africa (one dark green, one light green), but the task specifies only one \"Africa\" region with green color, and the chart uses a single green for Africa."
+        }
+      ]
+    },
+    {
+      "run_id": "070",
+      "errors": []
+    },
+    {
+      "run_id": "075",
+      "errors": []
+    },
+    {
+      "run_id": "077",
+      "errors": []
+    },
+    {
+      "run_id": "087",
+      "errors": []
+    },
+    {
+      "run_id": "111",
+      "errors": []
+    },
+    {
+      "run_id": "126",
+      "errors": []
+    },
+    {
+      "run_id": "130",
+      "errors": []
+    },
+    {
+      "run_id": "142",
+      "errors": []
+    },
+    {
+      "run_id": "143",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The third subplot uses a linear x-axis instead of a base 3 logarithmic scale as requested, and the fourth subplot's y-axis includes negative values despite the requirement for a lower limit of 0.15."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The title \"Log scales\" is clipped at the top edge of the figure, with the top portion of the text cut off."
+        }
+      ]
+    },
+    {
+      "run_id": "164",
+      "errors": []
+    },
+    {
+      "run_id": "177",
+      "errors": []
+    },
+    {
+      "run_id": "196",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The beeswarm plot for Group 1 is colored blue and Group 2 is colored orange, but the legend incorrectly labels the blue points as Group 2 and the orange points as Group 1, violating the requested color assignment."
+        }
+      ]
+    },
+    {
+      "run_id": "200",
+      "errors": []
+    },
+    {
+      "run_id": "203",
+      "errors": []
+    },
+    {
+      "run_id": "204",
+      "errors": []
+    },
+    {
+      "run_id": "216",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The legend labels are incorrect: it shows \"Agree\", \"Neutral\", \"Disagree\" but the colors are assigned in the order Agree (blue), Neutral (orange), Disagree (green), which matches the data, but the legend entries are mislabeled as \"Agree\", \"Neutral\", \"Disagree\" with the wrong color order; the legend shows blue as \"Agree\", orange as \"Neutral\", green as \"Disagree\", which is correct, but the legend title is missing and the order of entries is not aligned with the bar order;"
+        }
+      ]
+    },
+    {
+      "run_id": "001",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final tool message: {\n  \"returncode\": 0,\n  \"output\": \"\"\n}"
+        }
+      ]
+    },
+    {
+      "run_id": "168",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final assistant message: Since the environment does not support Chrome or `kaleido`, I will use an alternative approach by saving the figure as an HTML and then using `plotly`'s `offline` mode to generate a static image. However, this is not directly possible without Chrome.\n\nAs a final workaround, I will use `plotly`'s `fi"
+        }
+      ]
+    },
+    {
+      "run_id": "sensor-share__glm",
+      "errors": []
+    },
+    {
+      "run_id": "sensor-share__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "city-temps__qwen",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The legend is placed inside the plotting area in the upper left, not outside to the right as requested."
+        }
+      ]
+    },
+    {
+      "run_id": "stage-attendance__glm",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The x-axis tick labels are clipped at the bottom of the image, with the text cut off by the image edge."
+        }
+      ]
+    },
+    {
+      "run_id": "stage-attendance__qwen",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The x tick labels are missing entirely, violating the requirement to label each stage with its full name."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The x tick labels are clipped by the right edge of the image, making the full stage names unreadable."
+        }
+      ]
+    },
+    {
+      "run_id": "fine-totals__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "022",
+      "errors": []
+    },
+    {
+      "run_id": "062",
+      "errors": []
+    },
+    {
+      "run_id": "082",
+      "errors": []
+    },
+    {
+      "run_id": "097",
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+ "run_id": "sensor-share__ministral",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "e654bde08ef64371",
+ "prompt_chars": 7229,
+ "image": {
+  "present": true,
+  "bytes": 20474,
+  "size": [
+   640,
+   480
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 2058,
+  "total_tokens": 2558,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "REQ 1: \"draw a horizontal bar chart\" | expected: horizontal bar chart | observed: horizontal bar chart | source: image | status: pass  \nREQ 2: \"one horizontal bar per site on a single set of axes\" | expected: one bar per site, single axes | observed: one bar per site, single axes | source: image | status: pass  \nREQ 3: \"sites ordered ALPHABETICALLY from top to bottom (Alder at the top, then Birch, Cedar, Dogwood below it)\" | expected: order: Alder, Birch, Cedar, Dogwood | observed: order: Dogwood, Cedar, Birch, Alder | source: image | status: fail  \nREQ 4: \"x axis must start at zero\" | expected: x-axis starts at 0 | observed: x-axis starts at 0 | source: image | status: pass  \nREQ 5: \"x axis labeled exactly 'Share of total readings (%)'\" | expected: x-axis label = \"Share of total readings (%)\" | observed: x-axis label = \"Share of total readings (%)\" | source: image | status: pass  \nREQ 6: \"y axis labeled 'Site'\" | expected: y-axis label = \"Site\" | observed: y-axis label = \"Site\" | source: image | status: pass  \nREQ 7: \"title to exactly 'Share of readings by site'\" | expected: title = \"Share of readings by site\" | observed: title = \"Share of readings by site\" | source: image | status: pass  \nREQ 8: \"each bar's percentage at the end of the bar, formatted with exactly one decimal place followed by a percent sign\" | expected: percentage label with one decimal and % | observed: percentage labels with one decimal and % | source: image | status: pass  \nREQ 9: \"the four percentages must add up to 100\" | expected: sum = 100 | observed: 30.0 + 31.5 + 21.0 + 17.5 = 100.0 | source: image | status: pass  \n\nVERDICT: YES  \nEVIDENCE: The sites are not ordered alphabetically from top to bottom as required; the observed order is Dogwood, Cedar, Birch, Alder, but the expected order is Alder,",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The sites are not ordered alphabetically from top to bottom as required; the observed order is Dogwood, Cedar, Birch, Alder, but the expected order is Alder,",
+ "elapsed_s": 6.16
+}

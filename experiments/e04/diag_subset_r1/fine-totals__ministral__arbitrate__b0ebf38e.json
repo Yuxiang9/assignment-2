@@ -1,0 +1,42 @@
+{
+ "run_id": "fine-totals__ministral",
+ "findings_in": [
+  [
+   "wrong_chart",
+   "The branches are not ordered in descending order of collected total; the observed order (Eastside, Northgate, Harborview, Central) does not match the required descending order by total fines."
+  ]
+ ],
+ "context_shed": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "6b4f3cd4e5500b15",
+ "image": {
+  "present": true,
+  "bytes": 20401,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 86,
+  "prompt_tokens": 2168,
+  "total_tokens": 2254,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "WRONG_DATA: NO  \nWRONG_DATA_EVIDENCE: none  \nWRONG_CHART: YES  \nWRONG_CHART_EVIDENCE: The branches are not ordered in descending order of collected total; the observed order (Eastside, Northgate, Harborview, Central) does not match the required descending order by total fines.  \nHARD_TO_READ: NO  \nHARD_TO_READ_EVIDENCE: none",
+ "parsed_verdicts": {
+  "wrong_data": "NO",
+  "wrong_chart": "YES",
+  "hard_to_read": "NO"
+ },
+ "findings_out": [
+  [
+   "wrong_chart",
+   "The branches are not ordered in descending order of collected total; the observed order (Eastside, Northgate, Harborview, Central) does not match the required descending order by total fines."
+  ]
+ ],
+ "elapsed_s": 1.4
+}

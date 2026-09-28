@@ -1,0 +1,30 @@
+{
+ "run_id": "fine-totals__glm",
+ "family": "wrong_data",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "fb9a1a22bcd5b888",
+ "prompt_chars": 8312,
+ "image": {
+  "present": true,
+  "bytes": 20499,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 12,
+  "prompt_tokens": 2916,
+  "total_tokens": 2928,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: NO\nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 0.61
+}

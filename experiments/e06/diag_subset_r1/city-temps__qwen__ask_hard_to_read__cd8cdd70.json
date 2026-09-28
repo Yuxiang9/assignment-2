@@ -1,0 +1,30 @@
+{
+ "run_id": "city-temps__qwen",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "41c4fd70bf4316a0",
+ "prompt_chars": 5038,
+ "image": {
+  "present": true,
+  "bytes": 101850,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 12,
+  "prompt_tokens": 2247,
+  "total_tokens": 2259,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: NO  \nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 0.67
+}

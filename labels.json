@@ -1,0 +1,107 @@
+{
+  "labels": [
+    {
+      "run_id": "city-temps__glm",
+      "errors": []
+    },
+    {
+      "run_id": "city-temps__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "city-temps__qwen",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions require the legend outside the plotting area to the right of the axes, but the legend is drawn inside the axes at the upper left"
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "the upper-left legend box sits on top of the Farrow and Dunmore lines, hiding their January markers and the line segments between January and February"
+        }
+      ]
+    },
+    {
+      "run_id": "fine-totals__glm",
+      "errors": []
+    },
+    {
+      "run_id": "fine-totals__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "fine-totals__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "no figure.png was produced; the agent's shell commands repeatedly failed (final tool results: 'sudo: not found', returncode 127) and the run ended with exit status LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "run_id": "sensor-share__glm",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "the instructions require the sites in alphabetical order from top to bottom (Alder at the top, Dogwood at the bottom), but the chart draws Dogwood at the top and Alder at the bottom"
+        }
+      ]
+    },
+    {
+      "run_id": "sensor-share__ministral",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "the instructions require the sites in alphabetical order from top to bottom (Alder at the top, Dogwood at the bottom), but the chart draws Dogwood at the top and Alder at the bottom"
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions require the y axis labeled 'Site'; the script does call ax.set_ylabel('Site'), but the label lies entirely outside the saved image, so the figure shows no y-axis label (a required text element entirely outside the image counts as missing)"
+        }
+      ]
+    },
+    {
+      "run_id": "sensor-share__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "no figure.png was produced; the agent's plotting attempts (a python -c one-liner and plot_script.py) failed repeatedly with Python SyntaxError (a compound for statement placed after a semicolon) and the run ended with exit status LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "run_id": "stage-attendance__glm",
+      "errors": []
+    },
+    {
+      "run_id": "stage-attendance__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "stage-attendance__qwen",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions require each stage's full name as its x tick label, but the axis shows only numeric position ticks (0, 2, 4, 6, 8, 10); no stage name appears anywhere in the figure"
+        }
+      ]
+    },
+    {
+      "run_id": "weighted-latency__glm",
+      "errors": []
+    },
+    {
+      "run_id": "weighted-latency__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "weighted-latency__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "no figure.png was produced; the agent's commands failed repeatedly with a Python SyntaxError in an inline script and /bin/sh quoting errors ('Syntax error: \"(\" unexpected') and the run ended with exit status LimitsExceeded"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+ "run_id": "196",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The beeswarm plot for Group 1 is shown in orange and Group 2 in blue, which violates the requested color assignment (Group 1 should be blue, Group 2 orange)."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The beeswarm plot for Group 1 is shown in orange and Group 2 in blue, which violates the requested color assignment (Group 1 should be blue, Group 2 orange)."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The beeswarm plot for Group 1 is shown in blue and Group 2 in orange, but the request specified Group 1 should be blue and Group 2 orange, which is correct; however, the legend incorrectly labels the blue points as Group 1 and orange as Group 2, matching the data, but the color assignment in the plot is reversed from the instruction."
+  ]
+ ]
+}

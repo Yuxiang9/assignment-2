@@ -1,0 +1,29 @@
+{
+ "run_id": "069",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The figure shows two separate segments labeled \"Africa\" (one dark green, one light green) in the legend and chart, but the task specifies only one \"Africa\" region with green color. The plotting code incorrectly uses the same color for both the \"Africa\" major area and the \"Oceania\" major area, which is a wrong selection of data."
+  ],
+  [
+   "wrong_chart",
+   "The chart uses a polar projection (sunburst) but the title is incorrect: it shows \"Overall score 0-100, 100 = best environment\" as a subtitle below the main title, but the instructions required the subtitle to be \"Overall score 0-100, 100 = best environment\" and the main title to be exactly \"Global Food Security Index, 2020\". The figure's title is correct, but the subtitle is missing the required text \"Overall score 0-100, 100 = best environment\" as a separate line below the main title. The figure's subtitle is \"Overall score 0-100, 100 = best environment\" but it is not formatted as a separate"
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The figure shows two separate segments labeled \"Africa\" (one dark green, one light green) in the legend and chart, but the task specifies only one \"Africa\" region with green color."
+  ],
+  [
+   "wrong_chart",
+   "The chart uses a polar projection (sunburst) but the title is incorrect: it shows \"Overall score 0-100, 100 = best environment\" as a subtitle below the main title, but the instructions required the subtitle to be \"Overall score 0-100, 100 = best environment\" and the main title to be exactly \"Global Food Security Index, 2020\". The figure's title is correct, but the subtitle is missing the required text \"Overall score 0-100, 100 = best environment\" as a separate line below the main title. The figure's subtitle is \"Overall score 0-100, 100 = best environment\" but it is not formatted as a separate"
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The legend shows two different shades of green for Africa (one dark green, one light green), but the task specifies only one \"Africa\" region with green color, and the chart uses a single green for Africa."
+  ]
+ ]
+}

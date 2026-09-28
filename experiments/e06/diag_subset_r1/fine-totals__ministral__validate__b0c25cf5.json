@@ -1,0 +1,21 @@
+{
+ "run_id": "fine-totals__ministral",
+ "raw_findings": [
+  [
+   "wrong_chart",
+   "The branches are not ordered in descending order of collected totals; the observed order (Eastside, Northgate, Harborview, Central) is ascending, violating the instruction to order them descending with the largest total leftmost."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The branches are not ordered in descending order of collected totals; the observed order (Eastside, Northgate, Harborview, Central) is ascending, violating the instruction to order them descending with the largest total leftmost."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_data",
+   "The branches are not ordered in descending order of collected totals; the observed order (Eastside, Northgate, Harborview, Central) is ascending, violating the instruction to order them descending with the largest total leftmost."
+  ]
+ ]
+}

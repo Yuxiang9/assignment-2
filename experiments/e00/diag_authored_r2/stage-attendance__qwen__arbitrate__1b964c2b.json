@@ -1,0 +1,50 @@
+{
+ "run_id": "stage-attendance__qwen",
+ "findings_in": [
+  [
+   "wrong_data",
+   "The x tick labels are missing entirely, so the stages are not labeled with their full names as required. Additionally, the bars are plotted in the wrong order: the tallest bar (8900) is at index 4, which corresponds to \"Thundering Falls Main Stage\", but in the figure it appears as the fifth bar from the left, while the first bar (index 0) shows 4200, which should be \"Whispering Pines Amphitheater\" \u2014 but the labels are absent, so the order cannot be verified visually, yet the code uses the correct values in the correct order. However, the absence of labels violates the requirement to use each s"
+  ],
+  [
+   "hard_to_read",
+   "The x tick labels are clipped at the bottom of the image, as the full stage names are cut off by the image edge."
+  ]
+ ],
+ "context_shed": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "60d65c942b34f241",
+ "image": {
+  "present": true,
+  "bytes": 20961,
+  "size": [
+   1400,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 97,
+  "prompt_tokens": 2353,
+  "total_tokens": 2450,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "WRONG_DATA: NO  \nWRONG_DATA_EVIDENCE: none  \nWRONG_CHART: YES  \nWRONG_CHART_EVIDENCE: The x tick labels are missing entirely, violating the requirement to use each stage's full name as the x tick label.  \nHARD_TO_READ: YES  \nHARD_TO_READ_EVIDENCE: The x tick labels are clipped at the bottom of the image, as the full stage names are cut off by the image edge.",
+ "parsed_verdicts": {
+  "wrong_data": "NO",
+  "wrong_chart": "YES",
+  "hard_to_read": "YES"
+ },
+ "findings_out": [
+  [
+   "wrong_chart",
+   "The x tick labels are missing entirely, violating the requirement to use each stage's full name as the x tick label."
+  ],
+  [
+   "hard_to_read",
+   "The x tick labels are clipped at the bottom of the image, as the full stage names are cut off by the image edge."
+  ]
+ ],
+ "elapsed_s": 1.41
+}

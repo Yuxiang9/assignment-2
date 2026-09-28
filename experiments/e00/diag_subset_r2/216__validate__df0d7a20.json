@@ -1,0 +1,21 @@
+{
+ "run_id": "216",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The figure shows the bars in the order Agree, Neutral, Disagree from left to right within each group, but the task requires the order to be Agree, Neutral, Disagree from left to right, and the figure has the bars in the wrong order: Disagree, Neutral, Agree. Additionally, the legend labels are not in the requested order, and the colors are incorrect (the task does not specify colors, but the legend labels are mismatched with the bar colors)."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The figure shows the bars in the order Agree, Neutral, Disagree from left to right within each group, but the task requires the order to be Agree, Neutral, Disagree from left to right, and the figure has the bars in the wrong order: Disagree, Neutral, Agree."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The bars are in the order Agree, Neutral, Disagree from left to right within each group, but the figure shows the order as Disagree, Neutral, Agree, which violates the required order."
+  ]
+ ]
+}

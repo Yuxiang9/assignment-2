@@ -1,0 +1,33 @@
+{
+ "run_id": "216",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The figure shows the bars for \"AI Coding Tools\" and \"Open Floor Plans\" in the wrong order compared to the requested left-to-right sequence of topics; the correct order should be Remote Work, Four-Day Week, AI Coding Tools, Open Floor Plans, but the figure displays them as Remote Work, Four-Day Week, Open Floor Plans, AI Coding Tools."
+  ],
+  [
+   "hard_to_read",
+   "The title, legend, and annotation are all partially cut off at the image edges."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The figure shows the bars for \"AI Coding Tools\" and \"Open Floor Plans\" in the wrong order compared to the requested left-to-right sequence of topics; the correct order should be Remote Work, Four-Day Week, AI Coding Tools, Open Floor Plans, but the figure displays them as Remote Work, Four-Day Week, Open Floor Plans, AI Coding Tools."
+  ],
+  [
+   "hard_to_read",
+   "The title, legend, and annotation are all partially cut off at the image edges."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The bars for \"AI Coding Tools\" and \"Open Floor Plans\" are in the wrong order; the topics should appear left-to-right as Remote Work, Four-Day Week, AI Coding Tools, Open Floor Plans, but the figure shows them as Remote Work, Four-Day Week, Open Floor Plans, AI Coding Tools."
+  ],
+  [
+   "hard_to_read",
+   "The title, legend, and annotation are partially cut off at the image edges."
+  ]
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "run_id": "weighted-latency__glm",
+ "family": "wrong_data",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "72cabecdfa962f48",
+ "prompt_chars": 7521,
+ "image": {
+  "present": true,
+  "bytes": 24015,
+  "size": [
+   790,
+   590
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 12,
+  "prompt_tokens": 2508,
+  "total_tokens": 2520,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: NO\nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 0.65
+}

@@ -1,0 +1,30 @@
+{
+ "run_id": "097",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "c4e58e3e8d384ada",
+ "prompt_chars": 5718,
+ "image": {
+  "present": true,
+  "bytes": 55114,
+  "size": [
+   1167,
+   881
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 231,
+  "prompt_tokens": 2615,
+  "total_tokens": 2846,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title is fully visible at the top of the figure and not clipped or obscured.  \nCHECK x-axis label: ok -- The label \"x\" is fully visible at the bottom of the plot and not clipped.  \nCHECK y-axis label: ok -- The label \"y\" is fully visible on the left side and not clipped.  \nCHECK tick labels: ok -- All tick labels on both axes are fully visible and legible.  \nCHECK colorbar: ok -- The colorbar is fully visible on the right, with readable labels and no clipping.  \nCHECK data series: ok -- The contour levels are clearly distinguishable, with no overlapping or indistinguishable regions.  \nCHECK annotation: problem -- The annotation \"Max: 1.000\" is partially clipped at the top edge of the image, with the top of the text cut off.  \nCHECK legend: ok -- There is no legend in the figure, so no issue.  \n\nVERDICT: YES  \nEVIDENCE: The annotation \"Max: 1.000\" is partially clipped at the top edge of the image.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The annotation \"Max: 1.000\" is partially clipped at the top edge of the image.",
+ "elapsed_s": 3.2
+}

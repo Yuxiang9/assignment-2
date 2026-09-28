@@ -1,0 +1,41 @@
+{
+ "run_id": "047",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The figure shows only one bar with a single segment labeled \"renewables,\" but the task requires a 100% stacked bar chart with three segments (Nuclear, Fossil, Renewables) for each of five countries in the specified order. The data is completely missing for all requested sources and countries except one, and the stacking order is incorrect."
+  ],
+  [
+   "wrong_chart",
+   "REQ 1: \"100% STACKED bar chart\" | expected: stacked bars summing to 100% | observed: one bar with a single segment at 100% | source: image | status: fail REQ 2: \"One bar per country\" | expected: five bars | observed: one bar | source: image | status: fail REQ 3: \"Countries along the x axis in the order France, Germany, Brazil, India, Canada\" | expected: five tick labels in that order | observed: one tick label \"47.9\" | source: image | status: fail REQ 4: \"Stack the sources in the order Nuclear (bottom), Fossil (middle), Renewables (top)\" | expected: three segments in that order | observed: one"
+  ],
+  [
+   "hard_to_read",
+   "The title, y-axis label, x-axis label, x-axis tick label, and legend are all partially cut off at the edges of the image."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The figure shows only one bar with a single segment labeled \"renewables,\" but the task requires a 100% stacked bar chart with three segments (Nuclear, Fossil, Renewables) for each of five countries in the specified order. The data is completely missing for all requested sources and countries except one, and the stacking order is incorrect."
+  ],
+  [
+   "wrong_chart",
+   "REQ 1: \"100% STACKED bar chart\" | expected: stacked bars summing to 100% | observed: one bar with a single segment at 100% | source: image | status: fail REQ 2: \"One bar per country\" | expected: five bars | observed: one bar | source: image | status: fail REQ 3: \"Countries along the x axis in the order France, Germany, Brazil, India, Canada\" | expected: five tick labels in that order | observed: one tick label \"47.9\" | source: image | status: fail REQ 4: \"Stack the sources in the order Nuclear (bottom), Fossil (middle), Renewables (top)\" | expected: three segments in that order | observed: one"
+  ],
+  [
+   "hard_to_read",
+   "The title, y-axis label, x-axis label, x-axis tick label, and legend are all partially cut off at the edges of the image."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_data",
+   "The figure shows only one bar with a single segment labeled \"renewables,\" but the task requires a 100% stacked bar chart with three segments (Nuclear, Fossil, Renewables) for each of five countries in the specified order. The data is completely missing for all requested sources and countries except one, and the stacking order is incorrect."
+  ],
+  [
+   "wrong_chart",
+   "REQ 1: \"100% STACKED bar chart\" | expected: stacked bars summing to 100% | observed: one bar with a single segment at 100% | source: image | status: fail REQ 2: \"One bar per country\" | expected: five bars | observed: one bar | source: image | status: fail REQ 3: \"Countries along the x axis in the order France, Germany, Brazil, India, Canada\" | expected: five tick labels in that order | observed: one tick label \"47.9\" | source: image | status: fail REQ 4: \"Stack the sources in the order Nuclear (bottom), Fossil (middle), Renewables (top)\" | expected: three segments in that order | observed: one"
+  ]
+ ]
+}

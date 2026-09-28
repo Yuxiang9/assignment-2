@@ -1,0 +1,30 @@
+{
+ "run_id": "stage-attendance__qwen",
+ "family": "wrong_data",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "7dbf22b49172963a",
+ "prompt_chars": 5427,
+ "image": {
+  "present": true,
+  "bytes": 20961,
+  "size": [
+   1400,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 152,
+  "prompt_tokens": 2252,
+  "total_tokens": 2404,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES  \nEVIDENCE: The x tick labels are missing entirely, so the stages are not labeled with their full names as required. Additionally, the bars are plotted in the wrong order: the tallest bar (8900) is at index 4, which corresponds to \"Starlight Terrace\" in the requested order, but in the figure it appears at position 4 (fifth bar), while the actual first bar (Whispering Pines Amphitheater, 4200) is at position 0, which is correct. However, since no labels are visible, the requirement for full stage names as x tick labels is violated. The labels are missing, so the data is not drawn as requested.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The x tick labels are missing entirely, so the stages are not labeled with their full names as required. Additionally, the bars are plotted in the wrong order: the tallest bar (8900) is at index 4, which corresponds to \"Starlight Terrace\" in the requested order, but in the figure it appears at position 4 (fifth bar), while the actual first bar (Whispering Pines Amphitheater, 4200) is at position 0, which is correct. However, since no labels are visible, the requirement for full stage names as x tick labels is violated. The labels are missing, so the data is not drawn as requested.",
+ "elapsed_s": 2.86
+}

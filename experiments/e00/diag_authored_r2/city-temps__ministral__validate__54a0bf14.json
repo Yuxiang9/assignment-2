@@ -1,0 +1,25 @@
+{
+ "run_id": "city-temps__ministral",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The figure uses incorrect colors for the cities; for example, Aluna is shown in blue instead of tab:blue, Brinport in orange instead of tab:orange, and so on, violating the specified color assignments."
+  ],
+  [
+   "wrong_chart",
+   "The legend is placed outside the plotting area to the right, but the legend entries are not in the requested order (Aluna, Brinport, Calder, Dunmore, Eastwick, Farrow) and the colors do not match the specified tab: palette (e.g., Aluna is blue but Brinport is orange instead of tab:orange, and Farrow is brown but the color is not tab:brown). Additionally, the legend is not completely visible as it extends beyond the image boundary."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_chart",
+   "The legend is placed outside the plotting area to the right, but the legend entries are not in the requested order (Aluna, Brinport, Calder, Dunmore, Eastwick, Farrow) and the colors do not match the specified tab: palette (e.g., Aluna is blue but Brinport is orange instead of tab:orange, and Farrow is brown but the color is not tab:brown). Additionally, the legend is not completely visible as it extends beyond the image boundary."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The legend is placed outside the plotting area to the right, but the legend entries are not in the requested order (Aluna, Brinport, Calder, Dunmore, Eastwick, Farrow) and the colors do not match the specified tab: palette (e.g., Aluna is blue but Brinport is orange instead of tab:orange, and Farrow is brown but the color is not tab:brown). Additionally, the legend is not completely visible as it extends beyond the image boundary."
+  ]
+ ]
+}

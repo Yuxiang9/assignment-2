@@ -1,0 +1,30 @@
+{
+ "run_id": "031",
+ "family": "wrong_data",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "3fe7e3c11c4141a6",
+ "prompt_chars": 6024,
+ "image": {
+  "present": true,
+  "bytes": 59298,
+  "size": [
+   1484,
+   881
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 65,
+  "prompt_tokens": 2838,
+  "total_tokens": 2903,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES  \nEVIDENCE: The bars for each topic are in the wrong order: the legend shows Agree (blue), Neutral (orange), Disagree (green), but the figure shows them in the order Neutral, Agree, Disagree from left to right within each group, violating requirement 2.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The bars for each topic are in the wrong order: the legend shows Agree (blue), Neutral (orange), Disagree (green), but the figure shows them in the order Neutral, Agree, Disagree from left to right within each group, violating requirement 2.",
+ "elapsed_s": 1.43
+}

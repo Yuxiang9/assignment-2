@@ -1,0 +1,30 @@
+{
+ "run_id": "177",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "574770702281a5e0",
+ "prompt_chars": 12208,
+ "image": {
+  "present": true,
+  "bytes": 22712,
+  "size": [
+   900,
+   500
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 234,
+  "prompt_tokens": 3864,
+  "total_tokens": 4098,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: problem -- The title \"Fruit basket\" is partially cut off at the top edge of the image.\nCHECK axis labels: problem -- The x-axis label \"Apples\" is partially cut off at the bottom edge of the image.\nCHECK tick labels: problem -- The x-axis label \"Oranges\" is partially cut off at the bottom edge of the image.\nCHECK tick labels: problem -- The x-axis label \"Bananas\" is partially cut off at the bottom edge of the image.\nCHECK legend: problem -- The legend for the stacked bar chart is partially cut off at the right edge of the image.\nCHECK data series: problem -- The stacked bar chart data is squeezed into a sliver by the axis limits, making it difficult to read.\nVERDICT: YES\nEVIDENCE: The figure has multiple issues: the title \"Fruit basket\" is clipped at the top, the x-axis labels \"Apples\", \"Oranges\", and \"Bananas\" are clipped at the bottom, the legend is clipped at the right, and the stacked bar chart data is squeezed into a sliver, making it difficult to read.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The figure has multiple issues: the title \"Fruit basket\" is clipped at the top, the x-axis labels \"Apples\", \"Oranges\", and \"Bananas\" are clipped at the bottom, the legend is clipped at the right, and the stacked bar chart data is squeezed into a sliver, making it difficult to read.",
+ "elapsed_s": 3.54
+}

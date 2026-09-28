@@ -1,0 +1,30 @@
+{
+ "run_id": "city-temps__qwen",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": true,
+ "prompt_sha": "758cf417e14e8ea6",
+ "prompt_chars": 6343,
+ "image": {
+  "present": true,
+  "bytes": 101850,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 2519,
+  "total_tokens": 3019,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES\nEVIDENCE: The legend is placed inside the plotting area (upper left) instead of outside to the right as required, and the legend entries are in the wrong order (Aluna, Brinport, etc.) compared to the requested order (Aluna, Brinport, Calder, Dunmore, Eastwick, Farrow).",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The legend is placed inside the plotting area (upper left) instead of outside to the right as required, and the legend entries are in the wrong order (Aluna, Brinport, etc.) compared to the requested order (Aluna, Brinport, Calder, Dunmore, Eastwick, Farrow).",
+ "elapsed_s": 8.39
+}

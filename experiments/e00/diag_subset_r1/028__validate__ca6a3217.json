@@ -1,0 +1,21 @@
+{
+ "run_id": "028",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The figure shows data from all years (2004-2015) plotted as scattered points, but the task specifically requires only the highest temperature for each month (aggregated across years) to be plotted, with the 2015 data highlighted as a blue curve. The agent's code incorrectly plots every data point from every year, violating the \"highest temperatures\" requirement."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The figure shows data from all years (2004-2015) plotted as scattered points, but the task specifically requires only the highest temperature for each month (aggregated across years) to be plotted, with the 2015 data highlighted as a blue curve. The agent's code incorrectly plots every data point from every year, violating the \"highest temperatures\" requirement."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_data",
+   "The figure plots every data point from all years instead of showing only the highest temperature for each month (aggregated across years), with the 2015 data highlighted as a blue curve."
+  ]
+ ]
+}

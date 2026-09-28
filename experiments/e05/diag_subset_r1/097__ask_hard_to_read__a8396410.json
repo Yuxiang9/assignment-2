@@ -1,0 +1,30 @@
+{
+ "run_id": "097",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "c4e58e3e8d384ada",
+ "prompt_chars": 5718,
+ "image": {
+  "present": true,
+  "bytes": 55114,
+  "size": [
+   1167,
+   881
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 284,
+  "prompt_tokens": 2615,
+  "total_tokens": 2899,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"Filled Contour Map of f(x, y) = sin(x) * cos(y)\" is fully visible at the top of the figure and not clipped.\nCHECK x-axis label: ok -- The label \"x\" is fully visible at the bottom of the figure and not clipped.\nCHECK y-axis label: ok -- The label \"y\" is fully visible on the left side of the figure and not clipped.\nCHECK tick labels: ok -- All tick labels on both axes are fully visible and readable, with no clipping or overlap.\nCHECK colorbar: ok -- The colorbar is fully visible on the right side, with all labels readable and no clipping.\nCHECK legend: unknown -- There is no legend in the figure.\nCHECK annotation: problem -- The annotation \"Max: 1.000\" is located near (x=1.8, y=0.0), and the text is partially covered by the colorbar, which is positioned immediately to its right, causing visual overlap and reducing readability.\nCHECK data series: ok -- The contour lines and filled regions are clearly distinguishable, with no overlapping or indistinguishable series.\n\nVERDICT: YES\nEVIDENCE: The annotation \"Max: 1.000\" is partially covered by the colorbar on the right side of the figure, causing overlap and making it difficult to read.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The annotation \"Max: 1.000\" is partially covered by the colorbar on the right side of the figure, causing overlap and making it difficult to read.",
+ "elapsed_s": 5.45
+}

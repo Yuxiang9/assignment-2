@@ -1,0 +1,30 @@
+{
+ "run_id": "031",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "79d8e52954c7e2d9",
+ "prompt_chars": 6242,
+ "image": {
+  "present": true,
+  "bytes": 59298,
+  "size": [
+   1484,
+   881
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 255,
+  "prompt_tokens": 2898,
+  "total_tokens": 3153,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"Survey Response Breakdown by Topic\" is fully visible at the top of the chart.\nCHECK x-axis labels: ok -- The four topic names are fully visible and readable along the bottom.\nCHECK y-axis label: ok -- \"Percent of Respondents\" is fully visible on the left side.\nCHECK y-axis ticks: ok -- The tick labels (0, 20, 40, 60, 80, 100) are fully visible and readable.\nCHECK legend: problem -- The legend is located in the top-right corner and is partially clipped by the image edge, with the right side of the legend box cut off.\nCHECK data bars: ok -- All bars are clearly visible, distinct, and readable.\nCHECK annotation: problem -- The text annotation \"Highest disagreement: Open Floor Plans (48%)\" is located in the top-center and is partially clipped by the image edge, with the right side of the text cut off.\nCHECK reference line: ok -- The dashed horizontal line at y=50 is fully visible.\n\nVERDICT: YES\nEVIDENCE: The legend in the top-right corner and the annotation in the top-center are both partially clipped by the image edge.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The legend in the top-right corner and the annotation in the top-center are both partially clipped by the image edge.",
+ "elapsed_s": 4.17
+}

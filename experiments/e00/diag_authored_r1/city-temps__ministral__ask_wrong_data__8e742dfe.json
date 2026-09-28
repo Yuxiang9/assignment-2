@@ -1,0 +1,30 @@
+{
+ "run_id": "city-temps__ministral",
+ "family": "wrong_data",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "bcb4e8b3a08fbd03",
+ "prompt_chars": 6776,
+ "image": {
+  "present": true,
+  "bytes": 94694,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 56,
+  "prompt_tokens": 2649,
+  "total_tokens": 2705,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES\nEVIDENCE: The figure uses incorrect colors for the cities; for example, Aluna is shown in blue instead of tab:blue, Brinport in orange instead of tab:orange, and so on, violating the specified color assignments.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The figure uses incorrect colors for the cities; for example, Aluna is shown in blue instead of tab:blue, Brinport in orange instead of tab:orange, and so on, violating the specified color assignments.",
+ "elapsed_s": 1.4
+}

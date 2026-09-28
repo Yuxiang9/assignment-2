@@ -1,0 +1,30 @@
+{
+ "run_id": "sensor-share__glm",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "c56b4ad3d0d9e59b",
+ "prompt_chars": 7132,
+ "image": {
+  "present": true,
+  "bytes": 22427,
+  "size": [
+   790,
+   590
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 12,
+  "prompt_tokens": 2457,
+  "total_tokens": 2469,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: NO\nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 0.84
+}

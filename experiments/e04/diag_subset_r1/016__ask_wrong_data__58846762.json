@@ -1,0 +1,30 @@
+{
+ "run_id": "016",
+ "family": "wrong_data",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "7ce0d17ab7838bf9",
+ "prompt_chars": 15820,
+ "image": {
+  "present": true,
+  "bytes": 138080,
+  "size": [
+   1100,
+   1100
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 131,
+  "prompt_tokens": 5813,
+  "total_tokens": 5944,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES\nEVIDENCE: The figure includes versions with data below 0.5% (e.g., \"Chrome 69.0\" at 0.43, \"IE 9.0\" at 0.44, \"Firefox 52.0\" at 0.5, \"Safari 10.1\" at 0.3, \"UC Browser 7.0\" at 0.36, \"Yandex Browser 19.4\" at 0.29), violating the requirement to drop versions with share below 0.5%.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The figure includes versions with data below 0.5% (e.g., \"Chrome 69.0\" at 0.43, \"IE 9.0\" at 0.44, \"Firefox 52.0\" at 0.5, \"Safari 10.1\" at 0.3, \"UC Browser 7.0\" at 0.36, \"Yandex Browser 19.4\" at 0.29), violating the requirement to drop versions with share below 0.5%.",
+ "elapsed_s": 2.76
+}

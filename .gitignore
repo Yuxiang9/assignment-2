@@ -13,3 +13,6 @@ __pycache__/
 
 # OS metadata
 .DS_Store
+
+# Local run archives and scratch
+jobs_archive_*/

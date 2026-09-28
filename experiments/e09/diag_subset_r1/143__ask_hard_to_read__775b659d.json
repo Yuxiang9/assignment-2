@@ -1,0 +1,30 @@
+{
+ "run_id": "143",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "20d7dd03b9c7f4ec",
+ "prompt_chars": 8686,
+ "image": {
+  "present": true,
+  "bytes": 92553,
+  "size": [
+   900,
+   700
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 249,
+  "prompt_tokens": 3194,
+  "total_tokens": 3443,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: problem -- the main title \"Log scales\" is clipped at the top edge of the image, with the top of the text cut off.\nCHECK axis labels: problem -- the x-axis label \"Data (log scale)\" in the bottom-right subplot is partially cut off at the right edge of the image.\nCHECK tick labels: problem -- the y-axis tick labels in the bottom-right subplot are squeezed into a sliver due to the y-axis limits and the plot's layout, making them difficult to read.\nCHECK data series: unknown -- the data series are visible and distinguishable, though the error bars in the bottom-right subplot extend into negative values, which is not a rendering issue.\nCHECK legend: ok -- there is no legend in the figure.\nCHECK annotations: problem -- the title of the bottom-right subplot, \"Errorbars go negative\", is partially cut off at the top edge of the image.\n\nVERDICT: YES\nEVIDENCE: The main title \"Log scales\" is clipped at the top edge, the x-axis label in the bottom-right subplot is clipped at the right edge, and the y-axis tick labels in the bottom-right subplot are squeezed into a sliver, making them difficult to read.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The main title \"Log scales\" is clipped at the top edge, the x-axis label in the bottom-right subplot is clipped at the right edge, and the y-axis tick labels in the bottom-right subplot are squeezed into a sliver, making them difficult to read.",
+ "elapsed_s": 5.18
+}

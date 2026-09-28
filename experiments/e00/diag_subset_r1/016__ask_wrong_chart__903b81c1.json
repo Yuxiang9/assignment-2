@@ -1,0 +1,30 @@
+{
+ "run_id": "016",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "cf0f66875ba0a211",
+ "prompt_chars": 15863,
+ "image": {
+  "present": true,
+  "bytes": 138080,
+  "size": [
+   1100,
+   1100
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 67,
+  "prompt_tokens": 5816,
+  "total_tokens": 5883,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES\nEVIDENCE: The chart does not drop versions with share below 0.5% as required; for example, \"Chrome 69.0\" (0.43%) and \"Chrome 68.0\" (0.2%) are still shown in the outer ring.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The chart does not drop versions with share below 0.5% as required; for example, \"Chrome 69.0\" (0.43%) and \"Chrome 68.0\" (0.2%) are still shown in the outer ring.",
+ "elapsed_s": 2.16
+}

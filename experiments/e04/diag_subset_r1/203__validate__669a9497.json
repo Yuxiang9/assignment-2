@@ -1,0 +1,21 @@
+{
+ "run_id": "203",
+ "raw_findings": [
+  [
+   "wrong_chart",
+   "REQ 1: \"Use a polar projection for the axes.\" | expected: polar projection | observed: polar projection | source: image | status: pass REQ 2: \"Add a colorbar for the point colours.\" | expected: colorbar present | observed: no colorbar | source: image | status: fail REQ 3: \"Give the chart a title.\" | expected: title present | observed: title present | source: image | status: pass REQ 4: \"Make the figure 7 by 7 inches.\" | expected: 7x7 inches | observed: image size 700x700px (approx. 7x7 in at 100 DPI) | source: code and image | status: pass REQ 5: \"Turn on the polar grid.\" | expected: polar gri"
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_chart",
+   "REQ 1: \"Use a polar projection for the axes.\" | expected: polar projection | observed: polar projection | source: image | status: pass REQ 2: \"Add a colorbar for the point colours.\" | expected: colorbar present | observed: no colorbar | source: image | status: fail REQ 3: \"Give the chart a title.\" | expected: title present | observed: title present | source: image | status: pass REQ 4: \"Make the figure 7 by 7 inches.\" | expected: 7x7 inches | observed: image size 700x700px (approx. 7x7 in at 100 DPI) | source: code and image | status: pass REQ 5: \"Turn on the polar grid.\" | expected: polar gri"
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The colorbar is missing from the plot, which violates the requirement to add a colorbar for the point colors."
+  ]
+ ]
+}

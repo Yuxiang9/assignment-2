@@ -1,0 +1,30 @@
+{
+ "run_id": "196",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "bdb5ce6edc20360a",
+ "prompt_chars": 5973,
+ "image": {
+  "present": true,
+  "bytes": 121337,
+  "size": [
+   1182,
+   883
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 261,
+  "prompt_tokens": 2550,
+  "total_tokens": 2811,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title is fully visible at the top of the figure and is not clipped or obscured.\nCHECK y-axis label: ok -- The y-axis label \"Value\" is clearly visible along the left side of the plot.\nCHECK x-axis labels: ok -- The x-axis labels \"0\" and \"1\" are fully visible and not clipped.\nCHECK tick labels: ok -- The y-axis tick labels (25, 50, 75, 100, 125, 150, 175, 200) are fully visible and readable.\nCHECK legend: problem -- The legend is located in the top-right corner and is partially clipped by the right edge of the image; the rightmost part of the legend box and the text \"Group 2\" are cut off.\nCHECK data series: ok -- The beeswarm points and boxplots for both groups are fully visible and distinguishable.\nCHECK annotations: ok -- There are no additional annotations beyond the title, labels, and legend.\n\nVERDICT: YES\nEVIDENCE: The legend in the top-right corner is partially clipped by the image edge, with the rightmost part of the legend box and the text \"Group 2\" cut off.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The legend in the top-right corner is partially clipped by the image edge, with the rightmost part of the legend box and the text \"Group 2\" cut off.",
+ "elapsed_s": 3.85
+}

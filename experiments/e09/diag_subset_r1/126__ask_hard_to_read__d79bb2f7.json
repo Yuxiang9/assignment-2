@@ -1,0 +1,30 @@
+{
+ "run_id": "126",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "a3a72e2054fbd6d1",
+ "prompt_chars": 7094,
+ "image": {
+  "present": true,
+  "bytes": 24982,
+  "size": [
+   800,
+   500
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 206,
+  "prompt_tokens": 2405,
+  "total_tokens": 2611,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title is fully visible at the top of the figure and not clipped or obscured.\nCHECK x-axis label: ok -- The x-axis label \"x\" is clearly visible at the bottom center of the figure.\nCHECK y-axis label: problem -- The y-axis label \"y\" is partially cut off at the left edge of the image.\nCHECK x-tick labels: ok -- The x-tick labels \"a\" and \"b\" are fully visible and not overlapping or obscured.\nCHECK y-tick labels: ok -- There are no y-tick labels, as required by the task.\nCHECK data series: ok -- The blue line and the shaded region are clearly visible and distinguishable.\nCHECK annotation: ok -- The integral formula annotation is centered in the shaded region and fully readable.\nCHECK legend: unknown -- There is no legend in the figure.\n\nVERDICT: YES\nEVIDENCE: The y-axis label \"y\" is partially cut off at the left edge of the image.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The y-axis label \"y\" is partially cut off at the left edge of the image.",
+ "elapsed_s": 3.47
+}

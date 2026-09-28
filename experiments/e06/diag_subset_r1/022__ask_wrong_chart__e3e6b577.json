@@ -1,0 +1,30 @@
+{
+ "run_id": "022",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": true,
+ "prompt_sha": "57efdf3d814928b7",
+ "prompt_chars": 6202,
+ "image": {
+  "present": true,
+  "bytes": 42528,
+  "size": [
+   1200,
+   500
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 2146,
+  "total_tokens": 2646,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES\nEVIDENCE: The right panel's title is \"Logarithmic Scale\" instead of containing the word \"log\" as required; the y-axis label in the right panel is \"Active Users\" but the scale is logarithmic, which is correct, but the title must contain \"log\" to meet the instruction.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The right panel's title is \"Logarithmic Scale\" instead of containing the word \"log\" as required; the y-axis label in the right panel is \"Active Users\" but the scale is logarithmic, which is correct, but the title must contain \"log\" to meet the instruction.",
+ "elapsed_s": 7.41
+}

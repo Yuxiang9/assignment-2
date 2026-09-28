@@ -1,0 +1,21 @@
+{
+ "run_id": "stage-attendance__glm",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The x tick labels are partially cut off at the bottom edge of the image."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The x tick labels are partially cut off at the bottom edge of the image."
+  ]
+ ],
+ "final": [
+  [
+   "hard_to_read",
+   "The x tick labels are partially cut off at the bottom edge of the image."
+  ]
+ ]
+}

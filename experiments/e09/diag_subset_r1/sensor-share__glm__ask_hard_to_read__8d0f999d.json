@@ -1,0 +1,30 @@
+{
+ "run_id": "sensor-share__glm",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "260cbfef1cef4e40",
+ "prompt_chars": 7828,
+ "image": {
+  "present": true,
+  "bytes": 22427,
+  "size": [
+   790,
+   590
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 301,
+  "prompt_tokens": 2614,
+  "total_tokens": 2915,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"Share of readings by site\" is fully visible at the top of the figure and not clipped or overlapped.\nCHECK x-axis label: ok -- The label \"Share of total readings (%)\" is fully visible along the bottom of the figure and not clipped or overlapped.\nCHECK y-axis label: ok -- The label \"Site\" is fully visible along the left side of the figure and not clipped or overlapped.\nCHECK tick labels: ok -- The tick labels on the x-axis (0, 20, 40, 60, 80, 100) are fully visible and not clipped or overlapped.\nCHECK y-axis tick labels: ok -- The site names (Alder, Birch, Cedar, Dogwood) are fully visible along the y-axis and not clipped or overlapped.\nCHECK data labels: ok -- The percentage labels (17.5%, 21.0%, 31.5%, 30.0%) are fully visible at the end of each bar and not clipped or overlapped.\nCHECK legend: ok -- There is no legend in the figure, so no legend-related issues.\nCHECK data series: ok -- The four horizontal bars are clearly distinguishable by their different lengths and are not indistinguishable from each other.\nCHECK layout: ok -- The layout is not squeezed; all elements are clearly visible and readable.\n\nVERDICT: NO\nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 4.77
+}

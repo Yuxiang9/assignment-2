@@ -1,0 +1,30 @@
+{
+ "run_id": "077",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "3e0e958cf0d3ea0a",
+ "prompt_chars": 7114,
+ "image": {
+  "present": true,
+  "bytes": 42060,
+  "size": [
+   640,
+   480
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 12,
+  "prompt_tokens": 2683,
+  "total_tokens": 2695,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: NO\nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 0.71
+}

@@ -1,0 +1,21 @@
+{
+ "run_id": "142",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The legend is partially cut off by the image edge, with the right side of the legend box and the \"Tennis\" label being clipped."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The legend is partially cut off by the image edge, with the right side of the legend box and the \"Tennis\" label being clipped."
+  ]
+ ],
+ "final": [
+  [
+   "hard_to_read",
+   "The legend is partially cut off by the image edge, with the right side of the legend box and the \"Tennis\" label being clipped."
+  ]
+ ]
+}

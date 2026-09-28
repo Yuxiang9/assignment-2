@@ -1,0 +1,30 @@
+{
+ "run_id": "069",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": true,
+ "prompt_sha": "12d40bc38266de1a",
+ "prompt_chars": 18918,
+ "image": {
+  "present": true,
+  "bytes": 177881,
+  "size": [
+   1000,
+   1000
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 6981,
+  "total_tokens": 7481,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "REQ 1: \"create a sunburst chart\" | expected: sunburst chart | observed: sunburst chart | source: image | status: pass\nREQ 2: \"The center of the circle should be hollow\" | expected: hollow center | observed: hollow center | source: image | status: pass\nREQ 3: \"The chart should be structured based on the hierarchy of 'Major Area', 'Regions', and 'Country' columns\" | expected: hierarchy: Major Area \u2192 Regions \u2192 Country | observed: hierarchy: Major Area \u2192 Regions \u2192 Country | source: image | status: pass\nREQ 4: \"The 'Overall score' column providing the values for each segment\" | expected: values from 'Overall score' | observed: values from 'Overall score' | source: image | status: pass\nREQ 5: \"The legend on the chart indicates the color coding for different regions: Europe (dark green), Asia (yellow), Americas (blue), Oceania (purple), and Africa (green)\" | expected: legend with correct colors for regions | observed: legend with correct colors for regions | source: image | status: pass\nREQ 6: \"The center of the circle should be hollow\" | expected: hollow center | observed: hollow center | source: image | status: pass\nREQ 7: \"The chart should be titled 'Global Food Security Index, 2020'\" | expected: title exactly \"Global Food Security Index, 2020\" | observed: title exactly \"Global Food Security Index, 2020\" | source: image | status: pass\nREQ 8: \"subtitle 'Overall score 0-100, 100 = best environment'\" | expected: subtitle exactly \"Overall score 0-100, 100 = best environment\" | observed: subtitle exactly \"Overall score 0-100, 100 = best environment\" | source: image | status: pass\nREQ 9: \"Make the figure 10 by 10 inches\" | expected: 10x10 inches | observed: 10x10 inches | source: image | status: pass\nREQ 10: \"Save the figure at 100 dpi so the image is 1000x1000 pixels\" | expected: 1000",
+ "verdict_parsed": false,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 15.12
+}

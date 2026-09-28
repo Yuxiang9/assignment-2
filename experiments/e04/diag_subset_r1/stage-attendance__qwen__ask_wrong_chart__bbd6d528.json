@@ -1,0 +1,30 @@
+{
+ "run_id": "stage-attendance__qwen",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": true,
+ "prompt_sha": "7f1f12338825594a",
+ "prompt_chars": 6254,
+ "image": {
+  "present": true,
+  "bytes": 20961,
+  "size": [
+   1400,
+   600
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 2427,
+  "total_tokens": 2927,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES\nEVIDENCE: The x tick labels are missing entirely, violating the requirement to use each stage's full name as the x tick label. Additionally, the title, axis labels, and tick labels are cut off at the edges of the image, violating the requirement that all text must be completely visible.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The x tick labels are missing entirely, violating the requirement to use each stage's full name as the x tick label. Additionally, the title, axis labels, and tick labels are cut off at the edges of the image, violating the requirement that all text must be completely visible.",
+ "elapsed_s": 8.82
+}

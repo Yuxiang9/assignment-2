@@ -1,0 +1,21 @@
+{
+ "run_id": "087",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The legend in the top-left subplot is partially cut off at the right edge of the plot area."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The legend in the top-left subplot is partially cut off at the right edge of the plot area."
+  ]
+ ],
+ "final": [
+  [
+   "hard_to_read",
+   "The legend in the top-left subplot is partially cut off at the right edge of the plot area."
+  ]
+ ]
+}

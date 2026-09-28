@@ -1,0 +1,30 @@
+{
+ "run_id": "126",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": true,
+ "prompt_sha": "4f8d1df5467f92c7",
+ "prompt_chars": 7703,
+ "image": {
+  "present": true,
+  "bytes": 24982,
+  "size": [
+   800,
+   500
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 2520,
+  "total_tokens": 3020,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES\nEVIDENCE: The y-axis does not start from 0; it begins at a negative value, violating the requirement \"The y-axis should start from 0.\"",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The y-axis does not start from 0; it begins at a negative value, violating the requirement \"The y-axis should start from 0.\"",
+ "elapsed_s": 7.21
+}

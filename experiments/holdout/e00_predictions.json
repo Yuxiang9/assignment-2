@@ -1,0 +1,201 @@
+{
+  "predictions": [
+    {
+      "run_id": "ho-annotated-peak__bad",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The annotation \"Launch week\" is placed such that it touches the line, violating the instruction to place it so it does not touch or cover the line."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-annotated-peak__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-clipped-xlabel__bad",
+      "errors": []
+    },
+    {
+      "run_id": "ho-clipped-xlabel__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-contrast-series__bad",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The Beta series is drawn in a very light color (#fdfdf0) that blends into the white background, violating the requirement for a colour clearly distinguishable from the white background."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The Beta series line is drawn in a very light color (#fdfdf0) that blends into the white background, making it nearly invisible and thus impossible to read."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-contrast-series__ok",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The legend shows Alpha as red and Beta as blue, which is the opposite of the requested color assignment (Alpha should be blue, Beta red)."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-crash-badimport",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-crash-syntax",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "run_id": "ho-cumulative-rainfall__bad",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure plots the raw monthly rainfall values (80, 65, 90, 40, 25, 10) instead of the cumulative rainfall (80, 145, 235, 275, 300, 310)."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-cumulative-rainfall__ok",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The title is \"Cumulative rainfall\" but the y-axis label is \"Cumulative rainfall (mm)\" and the x-axis label is \"Month\", which matches the instructions; however, the y-axis scale is not properly labeled with the correct values, but the plotted points are correct, and the data is correctly computed. The issue is that the y-axis labels are not matching the actual values shown. The y-axis labels are not correct, but the data points are correct. The y-axis labels are not correct, but the data points are correct. The y-axis labels are not correct, but the data points are correct."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-hist-bins__bad",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The title is \"Quality scores\" instead of the required \"Distribution of quality scores\"."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-hist-bins__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-hourly-ticks__bad",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The x-axis labels are not rotated, causing neighboring labels to overlap and making them unreadable, which violates the instruction to rotate labels so they are readable."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The x-axis tick labels are clipped at the bottom of the image, with the last few labels (e.g., \"22:00\", \"23:00\") partially cut off by the image edge."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-hourly-ticks__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-log-decay__bad",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The y-axis is on a linear scale, but the instructions explicitly required a logarithmic scale."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-log-decay__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-quarterly-revenue__bad",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The code uses Alpha values [12, 9, 15, 18], which swaps Q2 and Q3, resulting in incorrect data being plotted."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-quarterly-revenue__ok",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The legend shows Alpha as blue and Beta as orange, but the requested legend assignment was Alpha blue and Beta orange, which is the opposite of what is shown."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-scatter-styled__bad",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The scatter plot uses default round blue markers instead of the required square red markers."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-scatter-styled__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-sem-errorbars__bad",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The error bars use standard deviation instead of standard error of the mean (SEM), which is calculated as standard deviation divided by the square root of the sample size."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-sem-errorbars__ok",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The error bars are computed using incorrect sample sizes (4, 4, 5, 2 instead of 16, 16, 25, 4), resulting in wrong standard error of the mean values."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-subplot-pair__bad",
+      "errors": []
+    },
+    {
+      "run_id": "ho-subplot-pair__ok",
+      "errors": []
+    },
+    {
+      "run_id": "ho-top-films__bad",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The agent sorted by year instead of gross, selecting \"Noon Eclipse\", \"Gullwing\", \"Midnight Freight\", \"Iron Harvest\", and \"Paper Lanterns\" instead of the correct top five by gross: \"Midnight Freight\", \"Starfall\", \"The Long Thaw\", \"Noon Eclipse\", and \"Iron Harvest\"."
+        }
+      ]
+    },
+    {
+      "run_id": "ho-top-films__ok",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The chart includes \"The Long Thaw\" and \"Starfall\" but excludes \"Midnight Freight\" and \"The Long Thaw\" is not among the top five by gross; the top five should be Midnight Freight, Starfall, The Long Thaw, Iron Harvest, and Noon Eclipse, but the chart shows Midnight Freight, The Long Thaw, Noon Eclipse, Starfall, and Iron Harvest, which is incorrect."
+        }
+      ]
+    }
+  ]
+}

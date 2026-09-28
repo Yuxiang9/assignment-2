@@ -1,0 +1,42 @@
+{
+ "run_id": "046",
+ "findings_in": [
+  [
+   "hard_to_read",
+   "The title is clipped at the top edge, and the patch labels on the Sankey flows are too small and crowded to be read clearly, with many overlapping the flow lines."
+  ]
+ ],
+ "context_shed": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "97b4f1fb7cc7d1c7",
+ "image": {
+  "present": true,
+  "bytes": 126150,
+  "size": [
+   1000,
+   800
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 83,
+  "prompt_tokens": 2245,
+  "total_tokens": 2328,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "WRONG_DATA: NO\nWRONG_DATA_EVIDENCE: none\nWRONG_CHART: NO\nWRONG_CHART_EVIDENCE: none\nHARD_TO_READ: YES\nHARD_TO_READ_EVIDENCE: The title is clipped at the top edge, and the patch labels on the Sankey flows are too small and crowded to be read clearly, with many overlapping the flow lines.",
+ "parsed_verdicts": {
+  "wrong_data": "NO",
+  "wrong_chart": "NO",
+  "hard_to_read": "YES"
+ },
+ "findings_out": [
+  [
+   "hard_to_read",
+   "The title is clipped at the top edge, and the patch labels on the Sankey flows are too small and crowded to be read clearly, with many overlapping the flow lines."
+  ]
+ ],
+ "elapsed_s": 1.32
+}

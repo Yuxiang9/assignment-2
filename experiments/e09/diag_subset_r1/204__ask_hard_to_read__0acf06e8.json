@@ -1,0 +1,30 @@
+{
+ "run_id": "204",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "01ed6908ddca725f",
+ "prompt_chars": 5637,
+ "image": {
+  "present": true,
+  "bytes": 25344,
+  "size": [
+   800,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 178,
+  "prompt_tokens": 1886,
+  "total_tokens": 2064,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title is fully visible at the top of the figure and is not clipped or overlapping.\nCHECK x-axis labels: ok -- The condition names are clearly visible below the x-axis and are not clipped or overlapping.\nCHECK y-axis label: ok -- The y-axis label \"Mean Yield (%)\" is fully visible on the left side and not clipped.\nCHECK tick labels: ok -- The y-axis tick labels (0, 10, 20, 30, 40, 50, 60) are fully visible and not overlapping.\nCHECK legend: unknown -- There is no legend present in the figure.\nCHECK data series: ok -- The data points and error bars are clearly visible and distinguishable.\nCHECK annotations: unknown -- There are no annotations present in the figure.\n\nVERDICT: NO\nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 2.95
+}

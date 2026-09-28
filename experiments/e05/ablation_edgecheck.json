@@ -1,0 +1,262 @@
+{
+ "predictions": [
+  {
+   "run_id": "008",
+   "errors": [
+    {
+     "family": "wrong_data",
+     "evidence": "The agent filtered out rows where the source is 'orange', which means the data used in the figure is not the full dataset requested."
+    }
+   ]
+  },
+  {
+   "run_id": "016",
+   "errors": [
+    {
+     "family": "wrong_data",
+     "evidence": "The figure includes versions with shares below 0.5% (e.g., \"Chrome 69.0\" at 0.43%, \"IE 9.0\" at 0.44%), violating the requirement to drop versions with share below 0.5%."
+    }
+   ]
+  },
+  {
+   "run_id": "021",
+   "errors": []
+  },
+  {
+   "run_id": "028",
+   "errors": []
+  },
+  {
+   "run_id": "030",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "The figure title is \"Shared axes\" instead of the required \"Sharing x per column, y per row\"."
+    }
+   ]
+  },
+  {
+   "run_id": "031",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "The legend uses colors that do not match the requested order; the bars are in the correct order (Agree, Neutral, Disagree) but the legend shows Agree as blue, Neutral as orange, and Disagree as green, which is not the requested color order."
+    }
+   ]
+  },
+  {
+   "run_id": "038",
+   "errors": []
+  },
+  {
+   "run_id": "046",
+   "errors": [
+    {
+     "family": "hard_to_read",
+     "evidence": "The title is clipped at the top edge, and the patch labels on the Sankey flows are too small and crowded to be read clearly, with many overlapping the flow lines."
+    }
+   ]
+  },
+  {
+   "run_id": "047",
+   "errors": [
+    {
+     "family": "wrong_data",
+     "evidence": "The figure shows only one bar with a single segment labeled \"renewables,\" but the task requires a 100% stacked bar chart with three segments (Nuclear, Fossil, Renewables) for each of the five countries in the specified order. The data is completely missing for all requested sources and countries except one, and the stacking order is incorrect."
+    },
+    {
+     "family": "wrong_chart",
+     "evidence": "The chart is not a 100% stacked bar chart with three segments per country; instead, it shows only one bar with a single blue segment, and the x-axis labels are incorrect (showing \"47.9\" instead of the country names). The legend is also incorrect, showing only one source."
+    }
+   ]
+  },
+  {
+   "run_id": "060",
+   "errors": []
+  },
+  {
+   "run_id": "069",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "The legend shows two entries for \"Africa\" (one green, one light green) and the color for \"Oceania\" is purple, which matches the instruction, but the legend incorrectly lists \"Africa\" twice with different colors, violating the requested legend for the five major areas."
+    }
+   ]
+  },
+  {
+   "run_id": "070",
+   "errors": [
+    {
+     "family": "hard_to_read",
+     "evidence": "The legend in the lower right quadrant is partially covered by the orange data line \"cos(y) - 3y\", making some of the legend text difficult to read."
+    }
+   ]
+  },
+  {
+   "run_id": "075",
+   "errors": []
+  },
+  {
+   "run_id": "077",
+   "errors": []
+  },
+  {
+   "run_id": "087",
+   "errors": []
+  },
+  {
+   "run_id": "111",
+   "errors": [
+    {
+     "family": "hard_to_read",
+     "evidence": "The bars are overlapping and indistinct, making it difficult to distinguish individual data series, especially in the dense central region of the plot."
+    }
+   ]
+  },
+  {
+   "run_id": "126",
+   "errors": []
+  },
+  {
+   "run_id": "130",
+   "errors": []
+  },
+  {
+   "run_id": "142",
+   "errors": []
+  },
+  {
+   "run_id": "143",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "The third subplot uses a linear x-axis instead of a base 3 logarithmic scale as requested, and the fourth subplot's y-axis includes negative values despite the requirement for a lower limit of 0.15."
+    }
+   ]
+  },
+  {
+   "run_id": "164",
+   "errors": []
+  },
+  {
+   "run_id": "177",
+   "errors": []
+  },
+  {
+   "run_id": "196",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "The beeswarm plot for Group 1 is shown in blue and Group 2 in orange, but the instruction required Group 1 to be blue and Group 2 to be orange, which is correctly implemented; however, the legend incorrectly labels the blue points as \"Group 1\" and orange as \"Group 2\", matching the data, but the color assignment in the plot is correct, so this is not a wrong_chart issue. Wait, rechecking: the plot shows Group 1 (blue) and Group 2 (orange), which matches the instruction. The legend also correctly labels them. So the color assignment is correct. The only issue is the title has \"matplotlib\" instea"
+    }
+   ]
+  },
+  {
+   "run_id": "200",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "The title is incorrect, reading \"Beeswarm plot and Boxplots, made with matplotliblib\" instead of the required \"Beeswarm plot and Boxplots, made with matplotlib\"."
+    },
+    {
+     "family": "hard_to_read",
+     "evidence": "The legend in the top-left corner partially covers the data points of Group 1, which is a case of overlapping text (the legend) covering content (the data points)."
+    }
+   ]
+  },
+  {
+   "run_id": "203",
+   "errors": []
+  },
+  {
+   "run_id": "204",
+   "errors": []
+  },
+  {
+   "run_id": "216",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "The bars for \"AI Coding Tools\" and \"Open Floor Plans\" are in the wrong order; the topics should appear left-to-right as Remote Work, Four-Day Week, AI Coding Tools, Open Floor Plans, but the figure shows them as Remote Work, Four-Day Week, Open Floor Plans, AI Coding Tools."
+    }
+   ]
+  },
+  {
+   "run_id": "001",
+   "errors": [
+    {
+     "family": "execution_failure",
+     "evidence": "No valid figure was produced: the run directory contains no figure.png; final tool message: {\n  \"returncode\": 0,\n  \"output\": \"\"\n}"
+    }
+   ]
+  },
+  {
+   "run_id": "168",
+   "errors": [
+    {
+     "family": "execution_failure",
+     "evidence": "No valid figure was produced: the run directory contains no figure.png; final assistant message: Since the environment does not support Chrome or `kaleido`, I will use an alternative approach by saving the figure as an HTML and then using `plotly`'s `offline` mode to generate a static image. However, this is not directly possible without Chrome.\n\nAs a final workaround, I will use `plotly`'s `fi"
+    }
+   ]
+  },
+  {
+   "run_id": "sensor-share__glm",
+   "errors": []
+  },
+  {
+   "run_id": "sensor-share__ministral",
+   "errors": []
+  },
+  {
+   "run_id": "city-temps__qwen",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "The legend is placed inside the plotting area in the upper left, overlapping data lines, and the task required the legend to be placed outside the plotting area to the right."
+    },
+    {
+     "family": "hard_to_read",
+     "evidence": "The legend overlaps the data lines for Aluna, Brinport, and Calder, making those lines partially obscured."
+    }
+   ]
+  },
+  {
+   "run_id": "stage-attendance__glm",
+   "errors": []
+  },
+  {
+   "run_id": "stage-attendance__qwen",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "The x tick labels are missing entirely, so the stages are not labeled with their full names as required."
+    }
+   ]
+  },
+  {
+   "run_id": "fine-totals__ministral",
+   "errors": []
+  },
+  {
+   "run_id": "022",
+   "errors": []
+  },
+  {
+   "run_id": "062",
+   "errors": []
+  },
+  {
+   "run_id": "082",
+   "errors": []
+  },
+  {
+   "run_id": "097",
+   "errors": [
+    {
+     "family": "hard_to_read",
+     "evidence": "The annotation \"Max: 1.000\" is partially covered by the colorbar on the right side of the figure, causing overlap and making it difficult to read."
+    }
+   ]
+  }
+ ]
+}

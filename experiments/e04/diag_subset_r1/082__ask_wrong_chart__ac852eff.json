@@ -1,0 +1,30 @@
+{
+ "run_id": "082",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "4cb7cf61872a6632",
+ "prompt_chars": 7952,
+ "image": {
+  "present": true,
+  "bytes": 23776,
+  "size": [
+   640,
+   480
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 499,
+  "prompt_tokens": 2453,
+  "total_tokens": 2952,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "REQ 1: \"draw a vertical box plot\" | expected: vertical box plot | observed: vertical box plot | source: image | status: pass  \nREQ 2: \"One box per service, side by side along the x axis in the order given above\" | expected: four boxes in order auth, catalog, search, checkout | observed: four boxes in that order | source: image | status: pass  \nREQ 3: \"the service name as that box's x tick label\" | expected: x tick labels are 'auth', 'catalog', 'search', 'checkout' | observed: labels match exactly | source: image | status: pass  \nREQ 4: \"The median line of every box must sit at that service's median latency\" | expected: median lines at correct positions | observed: median lines visually match medians of the data (auth: 97, catalog: 56.5, search: 159, checkout: 79.5) | source: image | status: pass  \nREQ 5: \"Keep matplotlib's default whisker rule (1.5 x IQR) and leave outliers showing as individual points\" | expected: whiskers at 1.5x IQR, outliers shown | observed: whiskers and outliers visible as per default rule | source: image | status: pass  \nREQ 6: \"Give the chart a title\" | expected: title present | observed: title \"Distribution of Request Latency Across Backend Services\" | source: image | status: pass  \nREQ 7: \"label both axes\" | expected: x and y axis labels present | observed: y label \"Latency (ms)\", x label \"Service\" | source: image | status: pass  \nREQ 8: \"the y axis is latency in milliseconds\" | expected: y axis label \"Latency (ms)\" | observed: y axis label \"Latency (ms)\" | source: image | status: pass  \nREQ 9: \"The median line of every box must sit at that service's median latency\" | expected: median lines at correct positions | observed: median lines visually match medians of the data (auth: 97, catalog: 56.5, search: 159, checkout: 79.5) | source: image | status: pass  \n\nVERDICT: NO  \nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 6.75
+}

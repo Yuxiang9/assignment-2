@@ -1,0 +1,21 @@
+{
+ "run_id": "177",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The figure has multiple issues: the title \"Fruit basket\" is clipped at the top, the x-axis labels \"Apples\", \"Oranges\", and \"Bananas\" are clipped at the bottom, the legend is clipped at the right, and the stacked bar chart data is squeezed into a sliver, making it difficult to read."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The figure has multiple issues: the title \"Fruit basket\" is clipped at the top, the x-axis labels \"Apples\", \"Oranges\", and \"Bananas\" are clipped at the bottom, the legend is clipped at the right, and the stacked bar chart data is squeezed into a sliver, making it difficult to read."
+  ]
+ ],
+ "final": [
+  [
+   "hard_to_read",
+   "The figure has multiple issues: the title \"Fruit basket\" is clipped at the top, the x-axis labels \"Apples\", \"Oranges\", and \"Bananas\" are clipped at the bottom, the legend is clipped at the right, and the stacked bar chart data is squeezed into a sliver, making it difficult to read."
+  ]
+ ]
+}

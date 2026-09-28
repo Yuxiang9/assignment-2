@@ -1,0 +1,29 @@
+{
+ "run_id": "216",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The figure shows the bars in the order Agree, Neutral, Disagree from left to right within each group, but the task requires the order to be Agree, Neutral, Disagree from left to right, and the figure has the bars in the wrong order: Disagree is first, then Neutral, then Agree. This violates the required bar order within each group."
+  ],
+  [
+   "wrong_chart",
+   "The legend entries are incorrect: the instructions require the legend to have entries \"Agree\", \"Neutral\", \"Disagree\", but the figure shows \"Agree\", \"Neutral\", \"Disagree\" with the wrong colors (the colors are swapped: the blue bar is labeled \"Agree\" but is actually the \"Agree\" data, but the legend shows blue as \"Agree\", orange as \"Neutral\", green as \"Disagree\", which matches the data, but the color order in the legend is not the same as the bar order in the chart, and the legend labels are not in the correct order. However, the main violation is that the legend entries are not in the correct or"
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The figure shows the bars in the order Agree, Neutral, Disagree from left to right within each group, but the task requires the order to be Agree, Neutral, Disagree from left to right, and the figure has the bars in the wrong order: Disagree is first, then Neutral, then Agree. This violates the required bar order within each group."
+  ],
+  [
+   "wrong_chart",
+   "The legend entries are incorrect: the instructions require the legend to have entries \"Agree\", \"Neutral\", \"Disagree\", but the figure shows \"Agree\", \"Neutral\", \"Disagree\" with the wrong colors (the colors are swapped: the blue bar is labeled \"Agree\" but is actually the \"Agree\" data, but the legend shows blue as \"Agree\", orange as \"Neutral\", green as \"Disagree\", which matches the data, but the color order in the legend is not the same as the bar order in the chart, and the legend labels are not in the correct order. However, the main violation is that the legend entries are not in the correct or"
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The legend entries are in the order Agree, Neutral, Disagree, but the bars within each group are in the order Disagree, Neutral, Agree, violating the required bar order."
+  ]
+ ]
+}

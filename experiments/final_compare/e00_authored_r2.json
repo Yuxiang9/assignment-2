@@ -1,0 +1,98 @@
+{
+  "predictions": [
+    {
+      "run_id": "city-temps__glm",
+      "errors": []
+    },
+    {
+      "run_id": "city-temps__ministral",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The legend is placed outside the plotting area to the right, but the legend entries are not in the requested order (Aluna, Brinport, Calder, Dunmore, Eastwick, Farrow) and the colors do not match the specified tab: palette (e.g., Aluna is blue but Brinport is orange instead of tab:orange, and Farrow is brown but the legend shows it as a different color). Additionally, the legend is not fully visible as it extends beyond the image boundaries."
+        }
+      ]
+    },
+    {
+      "run_id": "city-temps__qwen",
+      "errors": []
+    },
+    {
+      "run_id": "fine-totals__glm",
+      "errors": []
+    },
+    {
+      "run_id": "fine-totals__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "fine-totals__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "run_id": "sensor-share__glm",
+      "errors": []
+    },
+    {
+      "run_id": "sensor-share__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "sensor-share__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "run_id": "stage-attendance__glm",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The x-axis tick labels are clipped at the bottom of the image, with the text cut off by the image edge."
+        }
+      ]
+    },
+    {
+      "run_id": "stage-attendance__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "stage-attendance__qwen",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The x tick labels are missing entirely, so the stages are not labeled with their full names as required."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The x tick labels are clipped at the bottom of the image, as the full stage names are cut off by the image edge."
+        }
+      ]
+    },
+    {
+      "run_id": "weighted-latency__glm",
+      "errors": []
+    },
+    {
+      "run_id": "weighted-latency__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "weighted-latency__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+ "run_id": "stage-attendance__glm",
+ "family": "wrong_data",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "a61074c7f4ec9f94",
+ "prompt_chars": 6455,
+ "image": {
+  "present": true,
+  "bytes": 78762,
+  "size": [
+   1374,
+   590
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 12,
+  "prompt_tokens": 2417,
+  "total_tokens": 2429,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: NO  \nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 0.93
+}

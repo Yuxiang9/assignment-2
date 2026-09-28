@@ -1,0 +1,25 @@
+{
+ "run_id": "200",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The legend in the top-left corner partially covers the data points of Group 1, which is a case of overlapping text (the legend) covering content (the data points)."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The legend in the top-left corner partially covers the data points of Group 1, which is a case of overlapping text (the legend) covering content (the data points)."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The title is incorrect, reading \"Beeswarm plot and Boxplots, made with matplotliblib\" instead of the required \"Beeswarm plot and Boxplots, made with matplotlib\"."
+  ],
+  [
+   "hard_to_read",
+   "The legend in the top-left corner partially covers the data points of Group 1, which is a case of overlapping text (the legend) covering content (the data points)."
+  ]
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "run_id": "047",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "0bbd6ed24825db7e",
+ "prompt_chars": 7807,
+ "image": {
+  "present": true,
+  "bytes": 24594,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 75,
+  "prompt_tokens": 2600,
+  "total_tokens": 2675,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES  \nEVIDENCE: The chart is not a 100% stacked bar chart with three segments per country; instead, it shows only one bar with a single blue segment, and the x-axis labels are incorrect (showing \"47.9\" instead of country names). The legend is also incorrect, showing only one source.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The chart is not a 100% stacked bar chart with three segments per country; instead, it shows only one bar with a single blue segment, and the x-axis labels are incorrect (showing \"47.9\" instead of country names). The legend is also incorrect, showing only one source.",
+ "elapsed_s": 1.69
+}

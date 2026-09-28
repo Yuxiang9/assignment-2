@@ -1,0 +1,30 @@
+{
+ "run_id": "021",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": true,
+ "prompt_sha": "c3f00722a458d056",
+ "prompt_chars": 12422,
+ "image": {
+  "present": true,
+  "bytes": 105247,
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 7791,
+  "total_tokens": 8291,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "REQ 1: \"vertical box plot\" | expected: vertical | observed: vertical | source: image | status: pass  \nREQ 2: \"one box per service, side by side along the x axis in the order given above\" | expected: auth, catalog, search, checkout | observed: auth, catalog, search, checkout | source: image | status: pass  \nREQ 3: \"the median line of every box must sit at that service's median latency\" | expected: median at correct value | observed: median lines at correct positions | source: image | status: pass  \nREQ 4: \"keep matplotlib's default whisker rule (1.5 x IQR) and leave outliers showing as individual points\" | expected: whiskers 1.5xIQR, outliers shown | observed: whiskers 1.5xIQR, outliers shown | source: image | status: pass  \nREQ 5: \"give the chart a title\" | expected: title present | observed: title present | source: image | status: pass  \nREQ 6: \"label both axes\" | expected: x and y labels present | observed: y label present, x label missing | source: image | status: fail  \nREQ 7: \"the y axis is latency in milliseconds\" | expected: y label \"Latency (ms)\" | observed: y label \"Latency (ms)\" | source: image | status: pass  \nREQ 8: \"the service name as that box's x tick label\" | expected: x tick labels: auth, catalog, search, checkout | observed: x tick labels: auth, catalog, search, checkout | source: image | status: pass  \nREQ 9: \"x tick labels rotated\" | expected: x tick labels rotated | observed: x tick labels rotated | source: image | status: pass  \nREQ 10: \"no legend or colour bar requested\" | expected: none | observed: none | source: image | status: pass  \nREQ 11: \"no annotations or formula requested\" | expected: none | observed: none | source: image | status: pass  \nREQ 12: \"no style requirements beyond default\" | expected: default style | observed: default style | source: image | status: pass  \n\nVERDICT: YES  \nEVIDENCE: The x-axis label is missing, violating the requirement to label both axes.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The x-axis label is missing, violating the requirement to label both axes.",
+ "elapsed_s": 14.98
+}

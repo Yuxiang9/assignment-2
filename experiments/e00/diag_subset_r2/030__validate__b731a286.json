@@ -1,0 +1,25 @@
+{
+ "run_id": "030",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The figure title is \"Shared axes\" instead of the required \"Sharing x per column, y per row\", and the data plotted does not match the requested transformations (e.g., the first subplot shows z vs w but with incorrect scaling and no shared axes as specified)."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The figure title is \"Shared axes\" instead of the required \"Sharing x per column, y per row\", and the data plotted does not match the requested transformations (e.g., the first subplot shows z vs w but with incorrect scaling and no shared axes as specified)."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_data",
+   "The data plotted does not match the requested transformations; for example, the first subplot shows z vs w but with incorrect scaling and no shared axes as specified."
+  ],
+  [
+   "wrong_chart",
+   "The figure title is \"Shared axes\" instead of the required \"Sharing x per column, y per row\"."
+  ]
+ ]
+}

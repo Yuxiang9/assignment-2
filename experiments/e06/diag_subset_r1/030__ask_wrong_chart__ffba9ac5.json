@@ -1,0 +1,30 @@
+{
+ "run_id": "030",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": true,
+ "prompt_sha": "4dba9395333303bc",
+ "prompt_chars": 9502,
+ "image": {
+  "present": true,
+  "bytes": 46210,
+  "size": [
+   800,
+   800
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 3491,
+  "total_tokens": 3991,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: YES\nEVIDENCE: The figure's title is \"Shared axes\" instead of the required \"Sharing x per column, y per row\". Additionally, the x-axis label \"w\" appears in all subplots, but only the outermost subplots should be labeled.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The figure's title is \"Shared axes\" instead of the required \"Sharing x per column, y per row\". Additionally, the x-axis label \"w\" appears in all subplots, but only the outermost subplots should be labeled.",
+ "elapsed_s": 8.1
+}

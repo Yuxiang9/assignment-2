@@ -1,0 +1,21 @@
+{
+ "run_id": "087",
+ "raw_findings": [
+  [
+   "wrong_chart",
+   "The figure violates the requirement to label each subplot with the corresponding distribution type; instead, the titles are generic descriptions of the axis limits and scaling."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_chart",
+   "The figure violates the requirement to label each subplot with the corresponding distribution type; instead, the titles are generic descriptions of the axis limits and scaling."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The figure violates the requirement to label each subplot with the corresponding distribution type; instead, the titles are generic descriptions of the axis limits and scaling."
+  ]
+ ]
+}

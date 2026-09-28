@@ -1,0 +1,30 @@
+{
+ "run_id": "weighted-latency__ministral",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "17f0500e6bbf1236",
+ "prompt_chars": 6329,
+ "image": {
+  "present": true,
+  "bytes": 23906,
+  "size": [
+   800,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 12,
+  "prompt_tokens": 2068,
+  "total_tokens": 2080,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "VERDICT: NO\nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 0.64
+}

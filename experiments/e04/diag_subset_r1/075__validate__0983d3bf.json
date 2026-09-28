@@ -1,0 +1,21 @@
+{
+ "run_id": "075",
+ "raw_findings": [
+  [
+   "wrong_chart",
+   "The instructions require the suptitle to be exactly \"A Story of 2 Subplots\", but the figure shows \"A Story of 2 Subplots\" with an extra \"2\" in the title, making it \"A Story of 2 Subplots\" (incorrectly formatted as \"A Story of 2 Subplots\" with a trailing \"2\"). The actual title in the image is \"A Story of 2 Subplots\", which is not exactly as specified."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_chart",
+   "The instructions require the suptitle to be exactly \"A Story of 2 Subplots\", but the figure shows \"A Story of 2 Subplots\" with an extra \"2\" in the title, making it \"A Story of 2 Subplots\" (incorrectly formatted as \"A Story of 2 Subplots\" with a trailing \"2\"). The actual title in the image is \"A Story of 2 Subplots\", which is not exactly as specified."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The suptitle is \"A Story of 2 Subplots\" as required, but the first subplot has a title \"2D Plot of g(s)\" which is not requested and not part of the instructions."
+  ]
+ ]
+}

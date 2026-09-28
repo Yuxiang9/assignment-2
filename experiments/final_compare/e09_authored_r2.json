@@ -1,0 +1,130 @@
+{
+  "predictions": [
+    {
+      "run_id": "city-temps__glm",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The figure uses the wrong colors for the cities: Aluna is shown in blue (tab:blue) but Brinport is also shown in blue, and the color for Brinport should be tab:orange. The legend shows Brinport with an orange line, but the plotted line for Brinport is blue, indicating a mismatch between the requested color and the drawn data."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The data series for Farrow and Dunmore are indistinguishable due to nearly identical colors and overlapping values."
+        }
+      ]
+    },
+    {
+      "run_id": "city-temps__ministral",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure uses incorrect colors for the cities: Aluna is shown in blue (tab:blue) but Brinport is shown in orange (tab:orange), which is correct, but Calder is shown in green (tab:green) which is correct, Dunmore in red (tab:red) which is correct, Eastwick in purple (tab:purple) which is correct, and Farrow in brown (tab:brown) which is correct. However, the color for Brinport is tab:orange, which is correct, but the color for Aluna is tab:blue, which is correct. The issue is that the color for Brinport is tab:orange, which is correct, but the color for Aluna is tab:blue, which is correct. Th"
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The chart uses the wrong line colours: Aluna is shown as blue (correct), but Brinport is orange (should be tab:orange), Calder is green (should be tab:green), Dunmore is red (should be tab:red), Eastwick is purple (should be tab:purple), and Farrow is brown (should be tab:brown). The instructions explicitly required specific tab: colours for each city, and the figure uses a different palette."
+        }
+      ]
+    },
+    {
+      "run_id": "city-temps__qwen",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The legend shows six cities, but the plotted lines use incorrect colors: Aluna is blue (correct), Brinport is orange (correct), Calder is green (correct), Dunmore is red (correct), Eastwick is purple (correct), but Farrow is brown (correct). However, the plotted data includes an extra city \"Dunmore\" with a red line, but the task only requested six cities. The figure shows a seventh city \"Dunmore\" with a red line, but the task only requested six cities. Wait, rechecking: the task lists six cities: Aluna, Brinport, Calder, Dunmore, Eastwick, Farrow. The figure has six lines, each with a city nam"
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The legend is placed inside the plotting area in the upper left, overlapping the data lines and partially covering the first few data points."
+        }
+      ]
+    },
+    {
+      "run_id": "fine-totals__glm",
+      "errors": []
+    },
+    {
+      "run_id": "fine-totals__ministral",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The branches are ordered in ascending order of collected fines (Eastside, Northgate, Harborview, Central), violating the requirement that they must be in descending order (largest total leftmost)."
+        }
+      ]
+    },
+    {
+      "run_id": "fine-totals__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "run_id": "sensor-share__glm",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The sites are not ordered alphabetically as requested; the figure shows Dogwood, Cedar, Birch, Alder (top to bottom), but the correct order should be Alder, Birch, Cedar, Dogwood."
+        }
+      ]
+    },
+    {
+      "run_id": "sensor-share__ministral",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The sites are not ordered alphabetically as required; the observed order is Dogwood, Cedar, Birch, Alder, but the expected order is Alder, Birch, Cedar, Dogwood."
+        }
+      ]
+    },
+    {
+      "run_id": "sensor-share__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "run_id": "stage-attendance__glm",
+      "errors": []
+    },
+    {
+      "run_id": "stage-attendance__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "stage-attendance__qwen",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The x tick labels are missing entirely, so the stages are not labeled with their full names as required. Additionally, the bars are plotted in the wrong order: the tallest bar (8900) is at index 4, which corresponds to \"Starlight Terrace\" in the requested order, but in the figure it appears at position 4 (fifth bar), while the actual first bar (index 0) shows 4200, which is correct for \"Whispering Pines Amphitheater\". However, since the labels are missing, the order cannot be verified visually, but the code uses the correct values in the correct order. The key violation is that the x tick labe"
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The x tick labels are missing entirely, violating the requirement to use each stage's full name as the x tick label. Additionally, the title, axis labels, and tick labels are cut off at the edges of the image, violating the requirement that all text must be completely visible."
+        }
+      ]
+    },
+    {
+      "run_id": "weighted-latency__glm",
+      "errors": []
+    },
+    {
+      "run_id": "weighted-latency__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "weighted-latency__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    }
+  ]
+}

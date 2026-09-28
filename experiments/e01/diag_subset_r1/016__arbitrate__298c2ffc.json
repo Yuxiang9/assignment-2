@@ -1,0 +1,50 @@
+{
+ "run_id": "016",
+ "findings_in": [
+  [
+   "wrong_data",
+   "The figure includes versions with shares below 0.5% (e.g., \"Chrome 69.0\" at 0.43%, \"IE 9.0\" at 0.44%), violating the requirement to drop versions with share below 0.5%."
+  ],
+  [
+   "wrong_chart",
+   "The chart does not drop versions with share below 0.5% as required; for example, \"Chrome 69.0\" (0.43%) and \"Chrome 68.0\" (0.2%) are still shown in the outer ring."
+  ],
+  [
+   "hard_to_read",
+   "The title \"Browser Market Share\" is clipped at the top edge of the image, with the last part of the text cut off."
+  ]
+ ],
+ "context_shed": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "ca0b01da4b8253e8",
+ "image": {
+  "present": true,
+  "bytes": 138080,
+  "size": [
+   1100,
+   1100
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 107,
+  "prompt_tokens": 5895,
+  "total_tokens": 6002,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "WRONG_DATA: YES\nWRONG_DATA_EVIDENCE: The figure includes versions with shares below 0.5% (e.g., \"Chrome 69.0\" at 0.43%, \"IE 9.0\" at 0.44%), violating the requirement to drop versions with share below 0.5%.\nWRONG_CHART: NO\nWRONG_CHART_EVIDENCE: none\nHARD_TO_READ: NO\nHARD_TO_READ_EVIDENCE: none",
+ "parsed_verdicts": {
+  "wrong_data": "YES",
+  "wrong_chart": "NO",
+  "hard_to_read": "NO"
+ },
+ "findings_out": [
+  [
+   "wrong_data",
+   "The figure includes versions with shares below 0.5% (e.g., \"Chrome 69.0\" at 0.43%, \"IE 9.0\" at 0.44%), violating the requirement to drop versions with share below 0.5%."
+  ]
+ ],
+ "elapsed_s": 1.82
+}

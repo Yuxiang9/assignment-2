@@ -1,0 +1,161 @@
+{
+  "description": "fixed diagnostic subset (labels used only by the harness)",
+  "runs": [
+    {
+      "id": "008",
+      "root": "artifacts"
+    },
+    {
+      "id": "016",
+      "root": "artifacts"
+    },
+    {
+      "id": "021",
+      "root": "artifacts"
+    },
+    {
+      "id": "028",
+      "root": "artifacts"
+    },
+    {
+      "id": "030",
+      "root": "artifacts"
+    },
+    {
+      "id": "031",
+      "root": "artifacts"
+    },
+    {
+      "id": "038",
+      "root": "artifacts"
+    },
+    {
+      "id": "046",
+      "root": "artifacts"
+    },
+    {
+      "id": "047",
+      "root": "artifacts"
+    },
+    {
+      "id": "060",
+      "root": "artifacts"
+    },
+    {
+      "id": "069",
+      "root": "artifacts"
+    },
+    {
+      "id": "070",
+      "root": "artifacts"
+    },
+    {
+      "id": "075",
+      "root": "artifacts"
+    },
+    {
+      "id": "077",
+      "root": "artifacts"
+    },
+    {
+      "id": "087",
+      "root": "artifacts"
+    },
+    {
+      "id": "111",
+      "root": "artifacts"
+    },
+    {
+      "id": "126",
+      "root": "artifacts"
+    },
+    {
+      "id": "130",
+      "root": "artifacts"
+    },
+    {
+      "id": "142",
+      "root": "artifacts"
+    },
+    {
+      "id": "143",
+      "root": "artifacts"
+    },
+    {
+      "id": "164",
+      "root": "artifacts"
+    },
+    {
+      "id": "177",
+      "root": "artifacts"
+    },
+    {
+      "id": "196",
+      "root": "artifacts"
+    },
+    {
+      "id": "200",
+      "root": "artifacts"
+    },
+    {
+      "id": "203",
+      "root": "artifacts"
+    },
+    {
+      "id": "204",
+      "root": "artifacts"
+    },
+    {
+      "id": "216",
+      "root": "artifacts"
+    },
+    {
+      "id": "001",
+      "root": "artifacts"
+    },
+    {
+      "id": "168",
+      "root": "artifacts"
+    },
+    {
+      "id": "sensor-share__glm",
+      "root": "runs"
+    },
+    {
+      "id": "sensor-share__ministral",
+      "root": "runs"
+    },
+    {
+      "id": "city-temps__qwen",
+      "root": "runs"
+    },
+    {
+      "id": "stage-attendance__glm",
+      "root": "runs"
+    },
+    {
+      "id": "stage-attendance__qwen",
+      "root": "runs"
+    },
+    {
+      "id": "fine-totals__ministral",
+      "root": "runs"
+    },
+    {
+      "id": "022",
+      "root": "artifacts"
+    },
+    {
+      "id": "062",
+      "root": "artifacts"
+    },
+    {
+      "id": "082",
+      "root": "artifacts"
+    },
+    {
+      "id": "097",
+      "root": "artifacts"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+ "run_id": "216",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The figure shows the bars in the order Agree, Neutral, Disagree from left to right within each group, but the task requires the order to be Agree, Neutral, Disagree from left to right, and the figure has the bars in the order Agree, Neutral, Disagree, which is correct. However, the legend shows the colors as blue, orange, green, but the task does not specify colors, so that is not a violation. The data values are correct, the topics are in the correct order, and the bars are side-by-side. The only issue is that the annotation says \"Highest disagreement: Open Floor Plans (48%)\", which is correc"
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The figure shows the bars in the order Agree, Neutral, Disagree from left to right within each group, but the task requires the order to be Agree, Neutral, Disagree from left to right, and the figure has the bars in the order Agree, Neutral, Disagree, which is correct. However, the legend shows the colors as blue, orange, green, but the task does not specify colors, so that is not a violation. The data values are correct, the topics are in the correct order, and the bars are side-by-side. The only issue is that the annotation says \"Highest disagreement: Open Floor Plans (48%)\", which is correc"
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The legend labels are incorrect: it shows \"Agree\", \"Neutral\", \"Disagree\" but the colors are assigned in the order Agree (blue), Neutral (orange), Disagree (green), which matches the data, but the legend entries are mislabeled as \"Agree\", \"Neutral\", \"Disagree\" with the wrong color order; the legend shows blue as \"Agree\", orange as \"Neutral\", green as \"Disagree\", which is correct, but the legend title is missing and the order of entries is not aligned with the bar order;"
+  ]
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "run_id": "130",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": true,
+ "prompt_sha": "fc60551f9e001688",
+ "prompt_chars": 15855,
+ "image": {
+  "present": true,
+  "bytes": 110652,
+  "size": [
+   648,
+   576
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 9017,
+  "total_tokens": 9517,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "REQ 1: \"Create a Python script to generate a 3D scatter plot\" | expected: 3D scatter plot | observed: 3D scatter plot | source: image | status: pass\nREQ 2: \"Plot each car as a point in 3D space using its acceleration time, gas mileage, and power as coordinates.\" | expected: x=acceleration, y=mileage, z=power | observed: x=acceleration, y=mileage, z=power | source: image | status: pass\nREQ 3: \"Point sizes should increase with the engine displacement\" | expected: point size proportional to engine displacement | observed: point size increases with engine displacement | source: image | status: pass\nREQ 4: \"colors should vary from one end of the spectrum (like purple) for smaller engines to the other end (like yellow) for larger engines.\" | expected: color gradient from purple to yellow | observed: color gradient from blue to red | source: image | status: fail\nREQ 5: \"Add flat projections of these points onto the XY, ZX, and YZ planes below and to the sides of the 3D points, colored blue, red, and green, respectively.\" | expected: projections colored blue (XY), red (ZX), green (YZ) | observed: projections colored blue (XY), red (ZX), green (YZ) | source: image | status: pass\nREQ 6: \"Include a color bar to indicate the relationship between color and engine displacement.\" | expected: color bar present | observed: color bar present | source: image | status: pass\nREQ 7: \"Label each axis to show what it represents\" | expected: axis labels present | observed: axis labels present | source: image | status: pass\nREQ 8: \"Use a perceptually uniform colormap such as viridis for the engine displacement.\" | expected: colormap is viridis | observed: colormap is not viridis (it's a rainbow-like gradient) | source: image | status: fail\nREQ 9: \"Give the chart a title.\" | expected: title present | observed: title present | source: image | status: pass\nREQ 10: \"Make the figure 9 by 8 inches.\" | expected: figure size 9x8 inches | observed: figure size 9x8 inches | source: image | status:",
+ "verdict_parsed": false,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 15.49
+}

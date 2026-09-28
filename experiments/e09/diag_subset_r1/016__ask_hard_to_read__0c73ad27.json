@@ -1,0 +1,30 @@
+{
+ "run_id": "016",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "24421ea3444c03f8",
+ "prompt_chars": 16038,
+ "image": {
+  "present": true,
+  "bytes": 138080,
+  "size": [
+   1100,
+   1100
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 251,
+  "prompt_tokens": 5873,
+  "total_tokens": 6124,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"Browser Market Share\" is centered at the top of the figure and is fully visible.\nCHECK axis labels: unknown -- There are no traditional axes, so no axis labels.\nCHECK tick labels: unknown -- There are no tick labels on axes.\nCHECK legend: problem -- The legend is missing; the browser names are written directly on the inner ring segments, but there is no separate legend box as required by the task.\nCHECK annotations: problem -- The version labels (e.g., \"Chrome 74.0\", \"Firefox 66.0\") are written on the outer ring with lines pointing to the segments, but many of these labels are partially cut off at the right edge of the image.\nCHECK data series: problem -- The data series are represented by colored segments in the donut chart, but the labels for the versions are so numerous and tightly packed that many are squeezed into unreadable slivers, making them difficult to read.\n\nVERDICT: YES\nEVIDENCE: The version labels on the outer ring are partially cut off at the right edge of the image, and the labels are squeezed into unreadable slivers due to the high number of segments, making them difficult to read.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The version labels on the outer ring are partially cut off at the right edge of the image, and the labels are squeezed into unreadable slivers due to the high number of segments, making them difficult to read.",
+ "elapsed_s": 7.03
+}

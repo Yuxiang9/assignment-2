@@ -1,0 +1,30 @@
+{
+ "run_id": "164",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "6ca6dbe15b07ba88",
+ "prompt_chars": 7195,
+ "image": {
+  "present": true,
+  "bytes": 19959,
+  "size": [
+   1200,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 143,
+  "prompt_tokens": 2742,
+  "total_tokens": 2885,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: unknown -- no title is present in the figure\nCHECK x-axis label: ok -- \"seconds since start\" is fully visible at the bottom of the plot\nCHECK y-axis tick labels: ok -- \"Bill\" and \"Jim\" are fully visible on the left side\nCHECK legend: unknown -- no legend is present in the figure\nCHECK annotations: problem -- the annotation text \"race interrupted\" is partially cut off at the top edge of the image\nCHECK data series: ok -- all bars are visible and distinguishable by color and position\n\nVERDICT: YES\nEVIDENCE: The annotation text \"race interrupted\" is partially cut off at the top edge of the image.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The annotation text \"race interrupted\" is partially cut off at the top edge of the image.",
+ "elapsed_s": 2.22
+}

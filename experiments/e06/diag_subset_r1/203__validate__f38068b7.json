@@ -1,0 +1,21 @@
+{
+ "run_id": "203",
+ "raw_findings": [
+  [
+   "wrong_chart",
+   "The figure violates the requirement to \"Add a colorbar for the point colours.\" as no colorbar is present in the saved image."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_chart",
+   "The figure violates the requirement to \"Add a colorbar for the point colours.\" as no colorbar is present in the saved image."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The figure violates the requirement to \"Add a colorbar for the point colours.\" as no colorbar is present in the saved image."
+  ]
+ ]
+}

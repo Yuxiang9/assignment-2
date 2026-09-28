@@ -1,0 +1,21 @@
+{
+ "run_id": "097",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The annotation \"Max: 1.000\" is partially covered by the colorbar on the right side of the figure, causing overlap and making it difficult to read."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The annotation \"Max: 1.000\" is partially covered by the colorbar on the right side of the figure, causing overlap and making it difficult to read."
+  ]
+ ],
+ "final": [
+  [
+   "hard_to_read",
+   "The annotation \"Max: 1.000\" is partially covered by the colorbar on the right side of the figure, causing overlap and making it difficult to read."
+  ]
+ ]
+}

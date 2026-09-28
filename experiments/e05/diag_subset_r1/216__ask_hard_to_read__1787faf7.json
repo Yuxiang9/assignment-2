@@ -1,0 +1,30 @@
+{
+ "run_id": "216",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "90f795c153dbb920",
+ "prompt_chars": 5862,
+ "image": {
+  "present": true,
+  "bytes": 32786,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 190,
+  "prompt_tokens": 2111,
+  "total_tokens": 2301,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: problem -- the title \"Survey Agreement Breakdown\" is partially cut off at the top edge of the image  \nCHECK y-axis label: ok -- \"Percent (%)\" is fully visible and readable  \nCHECK x-axis label: ok -- \"Topics\" is fully visible and readable  \nCHECK x-tick labels: ok -- all four topic names are fully visible and readable  \nCHECK legend: problem -- the legend is partially cut off at the right edge of the image  \nCHECK annotation: problem -- the annotation \"Highest disagreement: Open Floor Plans (48%)\" is partially cut off at the top edge of the image  \nCHECK data bars: ok -- all bars are visible, distinct, and readable  \nCHECK horizontal line: ok -- the dashed line at y=50 is fully visible and readable  \n\nVERDICT: YES  \nEVIDENCE: The title, legend, and annotation are all partially cut off at the image edges.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The title, legend, and annotation are all partially cut off at the image edges.",
+ "elapsed_s": 2.98
+}

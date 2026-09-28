@@ -1,0 +1,16 @@
+{
+ "run_id": "038",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The legend in the top-right corner is partially cut off by the image edge."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The legend in the top-right corner is partially cut off by the image edge."
+  ]
+ ],
+ "final": []
+}

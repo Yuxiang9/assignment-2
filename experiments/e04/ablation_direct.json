@@ -1,0 +1,350 @@
+{
+ "predictions": [
+  {
+   "run_id": "001",
+   "errors": [
+    {
+     "family": "execution_failure",
+     "evidence": "No valid figure was produced: the run directory contains no figure.png; final tool message: {\n  \"returncode\": 0,\n  \"output\": \"\"\n}"
+    }
+   ]
+  },
+  {
+   "run_id": "008",
+   "errors": [
+    {
+     "family": "wrong_data",
+     "evidence": "The task requires using data from 'data.csv', but the agent's code filters out rows where the source is 'orange' (df.query(\"source != 'orange'\")), which means the data used in the figure is not the full dataset requested."
+    },
+    {
+     "family": "hard_to_read",
+     "evidence": "The legend at the bottom is partially clipped by the image edge, with the rightmost part of the \"orange\" label cut off."
+    }
+   ]
+  },
+  {
+   "run_id": "016",
+   "errors": [
+    {
+     "family": "wrong_data",
+     "evidence": "The figure includes versions with data below 0.5% (e.g., \"Chrome 69.0\" at 0.43, \"IE 9.0\" at 0.44, \"Firefox 52.0\" at 0.5, \"Safari 10.1\" at 0.3, \"UC Browser 7.0\" at 0.36, \"Yandex Browser 19.4\" at 0.29), violating the requirement to drop versions with share below 0.5%."
+    },
+    {
+     "family": "wrong_chart",
+     "evidence": "The chart title is \"Browser Market Share\" as required, but the legend is missing. The instructions explicitly required a legend naming the browsers, but the figure does not include a legend."
+    },
+    {
+     "family": "hard_to_read",
+     "evidence": "The title \"Browser Market Share\" is clipped at the top edge of the image, with the last part of the text cut off."
+    }
+   ]
+  },
+  {
+   "run_id": "021",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "The x-axis label is missing, violating the requirement to label both axes."
+    }
+   ]
+  },
+  {
+   "run_id": "022",
+   "errors": []
+  },
+  {
+   "run_id": "028",
+   "errors": [
+    {
+     "family": "wrong_data",
+     "evidence": "The figure shows data for 2014 highlighted with a blue curve, but the task specifically requested the 2015 data to be highlighted. The 2015 data points are not plotted as a blue curve in the figure."
+    },
+    {
+     "family": "wrong_chart",
+     "evidence": "The title is incorrect; the image shows \"Monthly Highest Temperature in Amherst (2004-2015)\" but the instructions require the exact title \"Monthly Highest Temperature in Amherst (2004-2015).\" The blue curve for 2015 is present, but the legend is missing, which is required. The figure also shows multiple colored points for different years instead of just the 2015 data points connected by a blue curve, violating the requirement to emphasize 2015 data."
+    }
+   ]
+  },
+  {
+   "run_id": "030",
+   "errors": [
+    {
+     "family": "wrong_data",
+     "evidence": "The figure title is \"Shared axes\" instead of the required \"Sharing x per column, y per row\", and the data plotted does not match the requested transformations (e.g., the first subplot shows z vs w but with incorrect scaling and missing the required shared axis setup)."
+    },
+    {
+     "family": "wrong_chart",
+     "evidence": "The figure's suptitle is \"Shared axes\" instead of the required \"Sharing x per column, y per row\"."
+    },
+    {
+     "family": "hard_to_read",
+     "evidence": "The figure title \"Shared axes\" is clipped at the top edge, with the top portion of the letters cut off, making it difficult to read."
+    }
+   ]
+  },
+  {
+   "run_id": "031",
+   "errors": [
+    {
+     "family": "wrong_data",
+     "evidence": "The bars for each topic are in the wrong order: the figure shows Agree, Neutral, Disagree from left to right within each group, but the task requires Agree, Neutral, Disagree to appear from left to right in the order specified, which is not the case here. The figure shows the order as Agree, Neutral, Disagree, but the task requires the same order, so this is not a violation. Wait, rechecking: the task requires the bars within each group to be in the order Agree, Neutral, Disagree from left to right. The figure shows this order correctly. The only issue is the legend colors: the legend shows Ag"
+    },
+    {
+     "family": "wrong_chart",
+     "evidence": "The legend entries are in the order Agree, Neutral, Disagree, but the colors assigned are blue for Agree, orange for Neutral, and green for Disagree, which does not match the requested \"tab:\" palette (where blue is correct for Agree, but the other colors are not from the tab palette). However, the more critical violation is that the legend labels are not exactly \"Agree, Neutral, Disagree\" as requested; the legend shows \"Agree\", \"Neutral\", \"Disagree\" but the colors are not from the tab palette, and the legend is not in the correct order. Wait, rechecking: the legend labels are correct, but the "
+    }
+   ]
+  },
+  {
+   "run_id": "038",
+   "errors": [
+    {
+     "family": "wrong_data",
+     "evidence": "The task requested a violin plot comparing total bill amounts by day of the week, with split violins for smokers and non-smokers. The figure shows violins for each day of the week (Thur, Fri, Sat, Sun) with split green (smokers) and grey (non-smokers) sides, but the data plotted is not the total bill amounts by day of the week as requested. Instead, the figure shows a split violin plot for each day, but the data is not aggregated by day; the violins are split by smoker status, but the x-axis is the day of the week, and the data is not correctly grouped by day. The plot does not show the total "
+    },
+    {
+     "family": "wrong_chart",
+     "evidence": "The chart shows a split violin plot by day of the week, but the instructions required a split violin plot by day of the week comparing total bill amounts by smoker status, not by day. The x-axis labels are days of the week, but the plot is not split by smoker status as required. The title is also incorrect, as it does not match the requested title. The legend is present but the colors are not correctly assigned to the smoker and non-smoker categories. The figure size is correct, but the plot does not meet the required design specifications."
+    }
+   ]
+  },
+  {
+   "run_id": "046",
+   "errors": []
+  },
+  {
+   "run_id": "047",
+   "errors": [
+    {
+     "family": "wrong_data",
+     "evidence": "The figure shows only one bar with a single segment labeled \"renewables,\" but the task requires a 100% stacked bar chart with three segments (Nuclear, Fossil, Renewables) for each of five countries in the specified order. The data is completely missing for all requested sources and countries except one, and the stacking order is incorrect."
+    },
+    {
+     "family": "wrong_chart",
+     "evidence": "The chart is not a stacked bar chart with three segments per country; instead, it shows a single bar with a single color, and the legend incorrectly labels the bar as \"Percentage, renewables\". The y-axis label is correct, but the x-axis label is \"Country\" instead of the country names, and the countries are not in the requested order. The chart type is wrong, and the data is not split by source as required."
+    },
+    {
+     "family": "hard_to_read",
+     "evidence": "The x-axis label \"Country\" is clipped at the bottom edge of the image, with the text cut off and partially unreadable."
+    }
+   ]
+  },
+  {
+   "run_id": "060",
+   "errors": []
+  },
+  {
+   "run_id": "062",
+   "errors": []
+  },
+  {
+   "run_id": "069",
+   "errors": [
+    {
+     "family": "wrong_data",
+     "evidence": "The figure shows two separate segments labeled \"Africa\" (one dark green, one light green) in the legend and chart, but the task specifies only one \"Africa\" category with green color. The plotting code incorrectly uses the same color for both the \"Africa\" major area and the \"Oceania\" major area, which is a wrong selection of data."
+    }
+   ]
+  },
+  {
+   "run_id": "070",
+   "errors": []
+  },
+  {
+   "run_id": "075",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "The instructions require the suptitle to be exactly \"A Story of 2 Subplots\", but the figure shows \"A Story of 2 Subplots\" with an extra \"2\" in the title, making it \"A Story of 2 Subplots\" (incorrectly formatted as \"A Story of 2 Subplots\" with a trailing \"2\"). The actual title in the image is \"A Story of 2 Subplots\", which is not exactly as specified."
+    }
+   ]
+  },
+  {
+   "run_id": "077",
+   "errors": []
+  },
+  {
+   "run_id": "082",
+   "errors": []
+  },
+  {
+   "run_id": "087",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "The figure violates the requirement to label each subplot with the corresponding distribution type; instead, the titles are generic descriptions of the axis limits and scaling."
+    }
+   ]
+  },
+  {
+   "run_id": "097",
+   "errors": []
+  },
+  {
+   "run_id": "111",
+   "errors": []
+  },
+  {
+   "run_id": "126",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "The y-axis does not start from 0; it begins at a negative value, violating the requirement \"The y-axis should start from 0.\""
+    }
+   ]
+  },
+  {
+   "run_id": "130",
+   "errors": []
+  },
+  {
+   "run_id": "142",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "The"
+    }
+   ]
+  },
+  {
+   "run_id": "143",
+   "errors": [
+    {
+     "family": "wrong_data",
+     "evidence": "The third subplot uses a linear x-axis instead of a base 3 logarithmic scale as requested, and the fourth subplot's y-axis includes negative values despite the requirement for a lower limit of 0.15."
+    },
+    {
+     "family": "hard_to_read",
+     "evidence": "The title \"Log scales\" is clipped at the top edge of the figure, with the top portion of the text cut off."
+    }
+   ]
+  },
+  {
+   "run_id": "164",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "The x-axis does not start at 0 as required; it starts at approximately 25. Additionally, the y-axis tick labels are in the wrong order: \"Bill\" is at the bottom and \"Jim\" is at the top, but the instructions specify the labels should be ['Bill', 'Jim'] corresponding to y-positions 10 and 20, respectively."
+    }
+   ]
+  },
+  {
+   "run_id": "168",
+   "errors": [
+    {
+     "family": "execution_failure",
+     "evidence": "No valid figure was produced: the run directory contains no figure.png; final assistant message: Since the environment does not support Chrome or `kaleido`, I will use an alternative approach by saving the figure as an HTML and then using `plotly`'s `offline` mode to generate a static image. However, this is not directly possible without Chrome.\n\nAs a final workaround, I will use `plotly`'s `fi"
+    }
+   ]
+  },
+  {
+   "run_id": "177",
+   "errors": []
+  },
+  {
+   "run_id": "196",
+   "errors": [
+    {
+     "family": "wrong_data",
+     "evidence": "The beeswarm plot for Group 1 is shown in orange and Group 2 in blue, which violates the requested color assignment (Group 1 should be blue, Group 2 orange)."
+    }
+   ]
+  },
+  {
+   "run_id": "200",
+   "errors": []
+  },
+  {
+   "run_id": "203",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "REQ 1: \"Use a polar projection for the axes.\" | expected: polar projection | observed: polar projection | source: image | status: pass REQ 2: \"Add a colorbar for the point colours.\" | expected: colorbar present | observed: no colorbar | source: image | status: fail REQ 3: \"Give the chart a title.\" | expected: title present | observed: title present | source: image | status: pass REQ 4: \"Make the figure 7 by 7 inches.\" | expected: 7x7 inches | observed: image size 700x700px (approx. 7x7 in at 100 DPI) | source: code and image | status: pass REQ 5: \"Turn on the polar grid.\" | expected: polar gri"
+    }
+   ]
+  },
+  {
+   "run_id": "204",
+   "errors": []
+  },
+  {
+   "run_id": "216",
+   "errors": [
+    {
+     "family": "wrong_data",
+     "evidence": "The figure shows the bars in the order Agree, Neutral, Disagree from left to right within each group, but the task requires the order to be Agree, Neutral, Disagree from left to right, and the figure has the bars in the wrong order: Disagree is first, then Neutral, then Agree. This violates the required bar order within each group."
+    },
+    {
+     "family": "wrong_chart",
+     "evidence": "The legend entries are incorrect: the instructions require the legend to have entries \"Agree\", \"Neutral\", \"Disagree\", but the figure shows \"Agree\", \"Neutral\", \"Disagree\" with the wrong colors (the colors are swapped: the blue bar is labeled \"Agree\" but is actually the \"Agree\" data, but the legend shows blue as \"Agree\", orange as \"Neutral\", green as \"Disagree\", which matches the data, but the color order in the legend is not the same as the bar order in the chart, and the legend labels are not in the correct order. However, the main violation is that the legend entries are not in the correct or"
+    }
+   ]
+  },
+  {
+   "run_id": "city-temps__qwen",
+   "errors": [
+    {
+     "family": "wrong_data",
+     "evidence": "The legend shows seven cities (Aluna, Brinport, Calder, Dunmore, Eastwick, Farrow, and an extra \"Dunmore\" with a different color), but the task requested only six cities. The agent plotted an extra line (Brinport) with a wrong color (orange instead of tab:orange) and included a duplicate city name in the legend, indicating a wrong selection or misassignment of data."
+    },
+    {
+     "family": "wrong_chart",
+     "evidence": "The legend is placed inside the plotting area (upper left) instead of outside to the right as required, and the legend entries are in the wrong order (Aluna, Brinport, etc.) compared to the requested order (Aluna, Brinport, Calder, Dunmore, Eastwick, Farrow)."
+    }
+   ]
+  },
+  {
+   "run_id": "fine-totals__ministral",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "The branches are not ordered in descending order of collected total; the observed order (Eastside, Northgate, Harborview, Central) does not match the required descending order by total fines."
+    }
+   ]
+  },
+  {
+   "run_id": "sensor-share__glm",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "The sites are not ordered alphabetically from top to bottom as required; the order in the figure is Dogwood, Cedar, Birch, Alder, which is reverse alphabetical"
+    }
+   ]
+  },
+  {
+   "run_id": "sensor-share__ministral",
+   "errors": [
+    {
+     "family": "wrong_chart",
+     "evidence": "The sites are not ordered alphabetically from top to bottom as required; the observed order is Dogwood, Cedar, Birch, Alder, but the expected order is Alder,"
+    }
+   ]
+  },
+  {
+   "run_id": "stage-attendance__glm",
+   "errors": [
+    {
+     "family": "hard_to_read",
+     "evidence": "The x-axis tick labels are clipped at the bottom of the image, with the text cut off by the image edge."
+    }
+   ]
+  },
+  {
+   "run_id": "stage-attendance__qwen",
+   "errors": [
+    {
+     "family": "wrong_data",
+     "evidence": "The x tick labels are missing entirely, so the stages are not labeled with their full names as required. Additionally, the bars are plotted in the wrong order: the tallest bar (8900) is at index 4, which corresponds to \"Starlight Terrace\" in the requested order, but in the figure it appears at position 4 (fifth bar), while the actual first bar (Whispering Pines Amphitheater, 4200) is at position 0, which is correct. However, since no labels are visible, the requirement for full stage names as x tick labels is violated. The labels are missing, so the data is not drawn as requested."
+    },
+    {
+     "family": "wrong_chart",
+     "evidence": "The x tick labels are missing entirely, violating the requirement to use each stage's full name as the x tick label. Additionally, the title, axis labels, and tick labels are cut off at the edges of the image, violating the requirement that all text must be completely visible."
+    },
+    {
+     "family": "hard_to_read",
+     "evidence": "The x tick labels are clipped by the right edge of the image, as the full stage names are not fully visible and are cut off."
+    }
+   ]
+  }
+ ]
+}

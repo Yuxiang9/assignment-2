@@ -1,0 +1,30 @@
+{
+ "run_id": "060",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "15a0f29ae136f7e3",
+ "prompt_chars": 14623,
+ "image": {
+  "present": true,
+  "bytes": 66231,
+  "size": [
+   1200,
+   700
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 164,
+  "prompt_tokens": 4765,
+  "total_tokens": 4929,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"Fishbone diagram: Decreased Sales Performance\" is fully visible at the top center of the figure.\nCHECK axis labels: ok -- There are no axis labels; the task required removing them.\nCHECK tick labels: ok -- There are no tick labels; the task required removing them.\nCHECK legend: ok -- There is no legend; the task did not require one.\nCHECK annotations: problem -- The \"Problem\" label at the right end of the diagram is partially cut off by the right edge of the image.\nCHECK data series: ok -- The lines and text for the causes are all visible and readable.\n\nVERDICT: YES\nEVIDENCE: The \"Problem\" label at the right end of the diagram is partially cut off by the right edge of the image.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The \"Problem\" label at the right end of the diagram is partially cut off by the right edge of the image.",
+ "elapsed_s": 2.77
+}

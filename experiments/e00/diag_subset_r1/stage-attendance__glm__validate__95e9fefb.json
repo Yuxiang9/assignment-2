@@ -1,0 +1,21 @@
+{
+ "run_id": "stage-attendance__glm",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The x-axis tick labels are clipped at the bottom of the image, with the text cut off by the image edge."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The x-axis tick labels are clipped at the bottom of the image, with the text cut off by the image edge."
+  ]
+ ],
+ "final": [
+  [
+   "hard_to_read",
+   "The x-axis tick labels are clipped at the bottom of the image, with the text cut off by the image edge."
+  ]
+ ]
+}

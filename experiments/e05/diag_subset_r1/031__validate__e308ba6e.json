@@ -1,0 +1,33 @@
+{
+ "run_id": "031",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The bars for each topic are in the wrong order: the figure shows Agree, Neutral, Disagree from left to right within each group, but the task requires Agree, Neutral, Disagree to appear from left to right, which is not the case here. The figure shows the order as Agree, Neutral, Disagree, but the task specifies that the bars must appear in the order Agree, Neutral, Disagree from left to right, which is not the case here. The figure shows the order as Agree, Neutral, Disagree, but the task specifies that the bars must appear in the order Agree, Neutral, Disagree from left to right, which is not "
+  ],
+  [
+   "hard_to_read",
+   "The legend in the top-right corner and the annotation in the top-center are both partially clipped by the image edge."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The bars for each topic are in the wrong order: the figure shows Agree, Neutral, Disagree from left to right within each group, but the task requires Agree, Neutral, Disagree to appear from left to right, which is not the case here. The figure shows the order as Agree, Neutral, Disagree, but the task specifies that the bars must appear in the order Agree, Neutral, Disagree from left to right, which is not the case here. The figure shows the order as Agree, Neutral, Disagree, but the task specifies that the bars must appear in the order Agree, Neutral, Disagree from left to right, which is not "
+  ],
+  [
+   "hard_to_read",
+   "The legend in the top-right corner and the annotation in the top-center are both partially clipped by the image edge."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The legend uses colors that do not match the requested order; the bars are in the correct order (Agree, Neutral, Disagree) but the legend shows Agree as blue, Neutral as orange, and Disagree as green, which is not the requested color order."
+  ],
+  [
+   "hard_to_read",
+   "The legend in the top-right corner and the annotation in the top-center are both partially clipped by the image edge."
+  ]
+ ]
+}

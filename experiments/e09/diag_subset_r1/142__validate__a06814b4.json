@@ -1,0 +1,29 @@
+{
+ "run_id": "142",
+ "raw_findings": [
+  [
+   "wrong_chart",
+   "REQ 1: \"The bars must be horizontal.\" | expected: horizontal bars | observed: vertical bars | source: image | status: fail REQ 2: \"Set the title to exactly `Favorite Sports by Country`.\" | expected: title \"Favorite Sports by Country\" | observed: title \"Favorite Sports by Country\" | source: image | status: pass REQ 3: \"Show a legend naming the five sports.\" | expected: legend with five sports | observed: legend with five sports | source: image | status: pass REQ 4: \"Do NOT use the jet, rainbow or hsv colormaps.\" | expected: not jet, rainbow, or hsv | observed: RdYlGn colormap | source: image | "
+  ],
+  [
+   "hard_to_read",
+   "The legend is partially cut off by the image edge at the top-left corner."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_chart",
+   "REQ 1: \"The bars must be horizontal.\" | expected: horizontal bars | observed: vertical bars | source: image | status: fail REQ 2: \"Set the title to exactly `Favorite Sports by Country`.\" | expected: title \"Favorite Sports by Country\" | observed: title \"Favorite Sports by Country\" | source: image | status: pass REQ 3: \"Show a legend naming the five sports.\" | expected: legend with five sports | observed: legend with five sports | source: image | status: pass REQ 4: \"Do NOT use the jet, rainbow or hsv colormaps.\" | expected: not jet, rainbow, or hsv | observed: RdYlGn colormap | source: image | "
+  ],
+  [
+   "hard_to_read",
+   "The legend is partially cut off by the image edge at the top-left corner."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "REQ 1: \"The bars must be horizontal.\" | expected: horizontal bars | observed: vertical bars | source: image | status: fail REQ 2: \"Set the title to exactly `Favorite Sports by Country`.\" | expected: title \"Favorite Sports by Country\" | observed: title \"Favorite Sports by Country\" | source: image | status: pass REQ 3: \"Show a legend naming the five sports.\" | expected: legend with five sports | observed: legend with five sports | source: image | status: pass REQ 4: \"Do NOT use the jet, rainbow or hsv colormaps.\" | expected: not jet, rainbow, or hsv | observed: RdYlGn colormap | source: image | "
+  ]
+ ]
+}

@@ -1,0 +1,16 @@
+{
+ "run_id": "city-temps__glm",
+ "raw_findings": [
+  [
+   "wrong_chart",
+   "The chart uses the wrong line colours: Aluna is shown in tab:blue (correct), but Brinport is tab:orange (correct), Calder is tab:green (correct), Dunmore is tab:red (correct), Eastwick is tab:purple (correct), and Farrow is tab:brown (correct). However, the legend shows the colours correctly assigned to the cities, but the actual lines in the plot do not match the requested colours. The line for Aluna is tab:blue, Brinport is tab:orange, Calder is tab:green, Dunmore is tab:red, Eastwick is tab:purple, and Farrow is tab:brown. The colours are correct, so there is no violation. Wait, the colours"
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_chart",
+   "The line for Aluna is tab:blue, Brinport is tab:orange, Calder is tab:green, Dunmore is tab:red, Eastwick is tab:purple, and Farrow is tab:brown. Wait, the colours"
+  ]
+ ],
+ "final": []
+}

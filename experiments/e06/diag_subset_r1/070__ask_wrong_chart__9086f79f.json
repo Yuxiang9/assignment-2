@@ -1,0 +1,30 @@
+{
+ "run_id": "070",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "7fd021329736dab4",
+ "prompt_chars": 10009,
+ "image": {
+  "present": true,
+  "bytes": 96474,
+  "size": [
+   900,
+   500
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 496,
+  "prompt_tokens": 3413,
+  "total_tokens": 3909,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "REQ 1: \"Set the title to exactly 'ggplot' style sheet\" | expected: title text \"'ggplot' style sheet\" | observed: title text \"'ggplot' style sheet\" | source: image | status: pass\nREQ 2: \"Show a legend naming the six lines\" | expected: legend with six entries | observed: legend with six entries | source: image | status: pass\nREQ 3: \"Label the x axis\" | expected: x-axis label | observed: x-axis label \"y\" | source: image | status: pass\nREQ 4: \"Set the x axis limits to -5..5\" | expected: x-axis limits from -5 to 5 | observed: x-axis limits from -5 to 5 | source: image | status: pass\nREQ 5: \"Make the figure 9 by 5 inches\" | expected: figure size 9x5 inches | observed: figure size 900x500 pixels (9x5 at 100 DPI) | source: image | status: pass\nREQ 6: \"Generate a plot with six distinct lines\" | expected: six lines | observed: six lines | source: image | status: pass\nREQ 7: \"Use the 'ggplot' style sheet\" | expected: ggplot style | observed: ggplot style | source: image | status: pass\nREQ 8: \"Save the figure as figure.png\" | expected: file named figure.png | observed: file named figure.png | source: code | status: pass\nREQ 9: \"Set the random seed to 123456789\" | expected: seed set | observed: seed set | source: code | status: pass\nREQ 10: \"The lines should vary based on the following conditions\" | expected: six specific functions | observed: six specific functions | source: code | status: pass\nREQ 11: \"Label the y axis\" | expected: y-axis label | observed: y-axis label \"value\" | source: image | status: pass\nREQ 12: \"The x axis label should be 'y'\" | expected: x-axis label \"y\" | observed: x-axis label \"y\" | source: image | status: pass\n\nVERDICT: NO\nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 6.55
+}

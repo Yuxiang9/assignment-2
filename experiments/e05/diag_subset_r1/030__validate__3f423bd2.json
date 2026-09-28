@@ -1,0 +1,33 @@
+{
+ "run_id": "030",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The figure title is \"Shared axes\" instead of the required \"Sharing x per column, y per row\", and the data plotted does not match the requested transformations (e.g., the first subplot shows z vs w but with incorrect scaling and missing the required shared axis setup)."
+  ],
+  [
+   "hard_to_read",
+   "The title \"Shared axes\" is clipped at the top edge, the x-axis label \"w\" in the bottom-right subplot is clipped at the right edge, and the white data series in the bottom-right subplot is indistinguishable from the background due to low contrast."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The figure title is \"Shared axes\" instead of the required \"Sharing x per column, y per row\", and the data plotted does not match the requested transformations (e.g., the first subplot shows z vs w but with incorrect scaling and missing the required shared axis setup)."
+  ],
+  [
+   "hard_to_read",
+   "The title \"Shared axes\" is clipped at the top edge, the x-axis label \"w\" in the bottom-right subplot is clipped at the right edge, and the white data series in the bottom-right subplot is indistinguishable from the background due to low contrast."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The figure title is \"Shared axes\" instead of the required \"Sharing x per column, y per row\"."
+  ],
+  [
+   "hard_to_read",
+   "The title \"Shared axes\" is clipped at the top edge, the x-axis label \"w\" in the bottom-right subplot is clipped at the right edge, and the white data series in the bottom-right subplot is indistinguishable from the background due to low contrast."
+  ]
+ ]
+}

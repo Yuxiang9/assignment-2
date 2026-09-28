@@ -1,0 +1,30 @@
+{
+ "run_id": "177",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "574770702281a5e0",
+ "prompt_chars": 12208,
+ "image": {
+  "present": true,
+  "bytes": 22712,
+  "size": [
+   900,
+   500
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 264,
+  "prompt_tokens": 3864,
+  "total_tokens": 4128,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: problem -- The title \"Fruit basket\" is partially cut off at the top edge of the left subplot.  \nCHECK title: problem -- The title \"Age of apple lovers\" is partially cut off at the top edge of the right subplot.  \nCHECK legend: problem -- The legend on the right subplot is overlapping the stacked bar chart, covering the data labels for \"Over 50\" and \"30-50\".  \nCHECK data series: problem -- The stacked bar chart has indistinguishable data series due to nearly identical colors (light blue shades) that merge values that should look different.  \nCHECK axis labels: problem -- The x-axis label \"Apples\" is partially cut off at the bottom edge of the left subplot.  \nCHECK tick labels: problem -- The x-axis label \"Oranges\" is partially cut off at the bottom edge of the left subplot.  \nCHECK tick labels: problem -- The x-axis label \"Bananas\" is partially cut off at the bottom edge of the left subplot.  \n\nVERDICT: YES  \nEVIDENCE: The figure has multiple rendering problems: titles are clipped at the top, the legend overlaps data on the right subplot, the stacked bar chart uses indistinguishable colors, and x-axis labels are clipped at the bottom.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The figure has multiple rendering problems: titles are clipped at the top, the legend overlaps data on the right subplot, the stacked bar chart uses indistinguishable colors, and x-axis labels are clipped at the bottom.",
+ "elapsed_s": 4.69
+}

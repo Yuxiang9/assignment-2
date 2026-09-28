@@ -1,0 +1,30 @@
+{
+ "run_id": "030",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "85e3850cfad8266e",
+ "prompt_chars": 8893,
+ "image": {
+  "present": true,
+  "bytes": 46210,
+  "size": [
+   800,
+   800
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 225,
+  "prompt_tokens": 3376,
+  "total_tokens": 3601,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: problem -- The title \"Shared axes\" is clipped at the top edge of the image, with the top of the text cut off.\nCHECK axis labels: problem -- The x-axis label \"w\" in the bottom row is clipped at the right edge of the image, with the rightmost part of the label cut off.\nCHECK tick labels: problem -- The tick labels on the x-axis of the bottom row are squeezed into a sliver, making them unreadable due to overlapping and compression.\nCHECK data series: problem -- The data series in the bottom-right subplot (white line) is indistinguishable from the background due to low contrast, making it invisible.\nCHECK legend: unknown -- No legend is present in the figure.\n\nVERDICT: YES\nEVIDENCE: The title \"Shared axes\" is clipped at the top edge, the x-axis label \"w\" in the bottom-right subplot is clipped at the right edge, the x-axis tick labels in the bottom row are squeezed into a sliver, and the white data series in the bottom-right subplot is invisible due to low contrast.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The title \"Shared axes\" is clipped at the top edge, the x-axis label \"w\" in the bottom-right subplot is clipped at the right edge, the x-axis tick labels in the bottom row are squeezed into a sliver, and the white data series in the bottom-right subplot is invisible due to low contrast.",
+ "elapsed_s": 3.92
+}

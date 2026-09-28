@@ -1,0 +1,21 @@
+{
+ "run_id": "060",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The \"Problem\" label at the right end of the diagram is partially cut off by the right edge of the image."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The \"Problem\" label at the right end of the diagram is partially cut off by the right edge of the image."
+  ]
+ ],
+ "final": [
+  [
+   "hard_to_read",
+   "The \"Problem\" label at the right end of the diagram is partially cut off by the right edge of the image."
+  ]
+ ]
+}

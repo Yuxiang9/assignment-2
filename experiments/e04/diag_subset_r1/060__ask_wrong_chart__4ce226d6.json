@@ -1,0 +1,30 @@
+{
+ "run_id": "060",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "008575631f23af82",
+ "prompt_chars": 15232,
+ "image": {
+  "present": true,
+  "bytes": 66231,
+  "size": [
+   1200,
+   700
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 458,
+  "prompt_tokens": 4880,
+  "total_tokens": 5338,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "REQ 1: \"Give the chart a title.\" | expected: title present | observed: title present | source: image | status: pass  \nREQ 2: \"Set the title to exactly `Fishbone diagram: Decreased Sales Performance`.\" | expected: exact title text | observed: \"Fishbone diagram: Decreased Sales Performance\" | source: image | status: pass  \nREQ 3: \"Make the figure 12 by 7 inches.\" | expected: 12x7 inches | observed: 1200x700 pixels (12x7 at 100 dpi) | source: image | status: pass  \nREQ 4: \"Save the figure at 120 dpi.\" | expected: 120 dpi | observed: 120 dpi | source: image | status: pass  \nREQ 5: \"Remove the y ticks and the x ticks entirely.\" | expected: no x or y ticks | observed: no x or y ticks | source: image | status: pass  \nREQ 6: \"Save the figure as figure.png.\" | expected: file named figure.png | observed: file named figure.png | source: code | status: pass  \nREQ 7: \"Main Problem: 'Problem' at the head of the diagram.\" | expected: \"Problem\" at head | observed: \"Problem\" at head | source: image | status: pass  \nREQ 8: \"Six Key Categories branching off from the main spine, each with its own specific causes.\" | expected: six categories with causes | observed: six categories with causes | source: image | status: pass  \nREQ 9: \"Arrange these categories and their causes at specific locations and angles on the diagram, emanating from the central spine.\" | expected: arranged at specific locations and angles | observed: arranged at specific locations and angles | source: image | status: pass  \nREQ 10: \"The diagram should have a clear and organized layout, reflecting the relationship between the main problem and its potential causes.\" | expected: clear and organized layout | observed: clear and organized layout | source: image | status: pass  \n\nVERDICT: NO  \nEVIDENCE: none",
+ "verdict_parsed": true,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 6.27
+}

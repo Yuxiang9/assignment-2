@@ -1,0 +1,21 @@
+{
+ "run_id": "077",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The annotation text \"Peak: 3452.7 TAF (week 17)\" is partially cut off at the top right edge of the image."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The annotation text \"Peak: 3452.7 TAF (week 17)\" is partially cut off at the top right edge of the image."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_data",
+   "the instructions give the series [1842.3, 1889.7, 1961.4, 2054.8, 2178.2, 2310.6, 2402.9, 2551.3, 2698.7, 2814.1, 2946.5, 3057.8, 3188.2, 3271.6, 3346.9, 3421.4, 3452.7, 3418.5, 3352.1, 3260.4, 3147.8, 3021.6, 2896.3, 2758.9, 2617.2, 2483.5] in a fixed order, but the plotting code uses the same numbers re-ordered as [1842.3, 1889.7, 1961.4, 2054.8, 2178.2, 2310.6, 2402.9, 2551.3, 2698.7, 2814.1, 2946.5, 3057.8, 3188.2, 3271.6, 3346.9, 3421.4, 3452.7, 3418.5, 3352.1, 3260.4, 3147.8, 3021.6, 2896.3, 2758.9, 2483.5, 2617.2]"
+  ]
+ ]
+}

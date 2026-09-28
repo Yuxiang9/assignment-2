@@ -1,0 +1,21 @@
+{
+ "run_id": "142",
+ "raw_findings": [
+  [
+   "wrong_chart",
+   "The chart type is wrong: the instructions required a horizontal stacked bar chart, but the figure shows a vertical stacked bar chart."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_chart",
+   "The chart type is wrong: the instructions required a horizontal stacked bar chart, but the figure shows a vertical stacked bar chart."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The chart type is wrong: the instructions required a horizontal stacked bar chart, but the figure shows a vertical stacked bar chart."
+  ]
+ ]
+}

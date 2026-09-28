@@ -1,0 +1,21 @@
+{
+ "run_id": "021",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The x-axis label \"auth\" is partially cut off at the bottom-left edge of the image."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The x-axis label \"auth\" is partially cut off at the bottom-left edge of the image."
+  ]
+ ],
+ "final": [
+  [
+   "hard_to_read",
+   "The x-axis label \"auth\" is partially cut off at the bottom-left edge of the image."
+  ]
+ ]
+}

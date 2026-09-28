@@ -1,0 +1,45 @@
+{
+ "run_id": "047",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The figure shows only one bar with a single segment labeled \"renewables,\" but the task requires a 100% stacked bar chart with three segments (Nuclear, Fossil, Renewables) for each of five countries in the specified order. The data is completely missing for all requested sources and countries except one, and the stacking order is incorrect."
+  ],
+  [
+   "wrong_chart",
+   "The chart is not a stacked bar chart with three segments per country; instead, it shows a single bar with a single color, and the legend incorrectly labels the bar as \"Percentage, renewables\". The y-axis label is correct, but the x-axis label is \"Country\" instead of the country names, and the countries are not in the requested order. The chart type is wrong, and the data is not split by source as required."
+  ],
+  [
+   "hard_to_read",
+   "The x-axis label \"Country\" is clipped at the bottom edge of the image, with the text cut off and partially unreadable."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The figure shows only one bar with a single segment labeled \"renewables,\" but the task requires a 100% stacked bar chart with three segments (Nuclear, Fossil, Renewables) for each of five countries in the specified order. The data is completely missing for all requested sources and countries except one, and the stacking order is incorrect."
+  ],
+  [
+   "wrong_chart",
+   "The chart is not a stacked bar chart with three segments per country; instead, it shows a single bar with a single color, and the legend incorrectly labels the bar as \"Percentage, renewables\". The y-axis label is correct, but the x-axis label is \"Country\" instead of the country names, and the countries are not in the requested order. The chart type is wrong, and the data is not split by source as required."
+  ],
+  [
+   "hard_to_read",
+   "The x-axis label \"Country\" is clipped at the bottom edge of the image, with the text cut off and partially unreadable."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_data",
+   "The figure shows only one bar with a single segment labeled \"renewables,\" but the task requires a 100% stacked bar chart with three segments (Nuclear, Fossil, Renewables) for each of five countries in the specified order. The data is completely missing for all requested sources and countries except one, and the stacking order is incorrect."
+  ],
+  [
+   "wrong_chart",
+   "The chart is not a stacked bar chart with three segments per country; instead, it shows a single bar with a single color, and the legend incorrectly labels the bar as \"Percentage, renewables\". The y-axis label is correct, but the x-axis label is \"Country\" instead of the country names, and the countries are not in the requested order. The chart type is wrong, and the data is not split by source as required."
+  ],
+  [
+   "hard_to_read",
+   "The x-axis label \"Country\" is clipped at the bottom edge of the image, with the text cut off and partially unreadable."
+  ]
+ ]
+}

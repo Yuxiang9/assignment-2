@@ -1,0 +1,391 @@
+{
+  "labels": [
+    {
+      "run_id": "008",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "the value labels are drawn in near-white grey (#f4f4f4) on a white background and cannot be read"
+        },
+        {
+          "family": "wrong_data",
+          "evidence": "the requested series 'orange (source node)' is not plotted"
+        }
+      ]
+    },
+    {
+      "run_id": "016",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "the instructions ask for dropping versions with a share below 0.5%; the plotted data ignores it (versions such as IE 9.0 (0.44%), UC Browser 7.0 (0.36%) and Chrome 65.0 (0.25%) are drawn)"
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions ask for a legend, but the figure has none"
+        }
+      ]
+    },
+    {
+      "run_id": "021",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "axes 0 is missing xlabel"
+        }
+      ]
+    },
+    {
+      "run_id": "028",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "the instructions ask for the blue curve to connect the points of the year 2015; the plotted data ignores it (the curve connects the 2014 points instead)"
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions ask for a legend, but the figure has none"
+        }
+      ]
+    },
+    {
+      "run_id": "030",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "the series 'z against -w (white)' is drawn in the background colour and is invisible"
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions ask for the exact text 'Sharing x per column, y per row'; the figure shows 'Shared axes' instead"
+        }
+      ]
+    },
+    {
+      "run_id": "031",
+      "errors": []
+    },
+    {
+      "run_id": "038",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "the series 'Non-smoker' is drawn in the background colour and is invisible"
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions ask for x tick labels rotated by 30 degrees, but they are horizontal"
+        }
+      ]
+    },
+    {
+      "run_id": "046",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "the top of the chain is cut off by the top edge of the saved image: the segments labelled 33 and 34 and their labels are only partly visible"
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "(1) the instructions ask for 120 dpi, but the figure was saved at 100 dpi (2) the title lands entirely outside the saved image, so the figure shows no title although the instructions ask for one"
+        }
+      ]
+    },
+    {
+      "run_id": "047",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "missing categories"
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "missing stacked bars, etc."
+        }
+      ]
+    },
+    {
+      "run_id": "060",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "the annotations are drawn on top of each other and cannot be read"
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions ask for 120 dpi, but the figure was saved at 100 dpi"
+        }
+      ]
+    },
+    {
+      "run_id": "069",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "the instructions ask for treating 'NA' in the Regions column as a string (the North America region); the plotted data ignores it (the NA rows are read as missing values and dropped, so North America is absent)"
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "the value labels are drawn in light grey on a white background and cannot be read"
+        }
+      ]
+    },
+    {
+      "run_id": "070",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "(1) the legend box sits on top of the plotted data (2) the series 'cos(y) + y' and 'cos(y) + y/3' share the same colour and line style and cannot be told apart"
+        }
+      ]
+    },
+    {
+      "run_id": "075",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "the series 'g(s)' and 'g(s + 0.1)' share the same colour and line style and cannot be told apart"
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions ask for gridlines, but no grid is drawn"
+        }
+      ]
+    },
+    {
+      "run_id": "077",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "the line series 'Oroville' holds [1842.3, 1889.7, 1961.4, 2054.8, 2178.2, 2310.6, 2402.9, 2551.3, 2698.7, 2814.1, 2946.5, 3057.8, 3188.2, 3271.6, 3346.9, 3421.4, 3452.7, 3418.5, 3352.1, 3260.4, 3147.8, 3021.6, 2896.3, 2758.9, 2483.5, 2617.2]; the request asks for [1842.3, 1889.7, 1961.4, 2054.8, 2178.2, 2310.6, 2402.9, 2551.3, 2698.7, 2814.1, 2946.5, 3057.8, 3188.2, 3271.6, 3346.9, 3421.4, 3452.7, 3418.5, 3352.1, 3260.4, 3147.8, 3021.6, 2896.3, 2758.9, 2617.2, 2483.5]"
+        }
+      ]
+    },
+    {
+      "run_id": "087",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions ask for a logarithmic y axis, but it is linear"
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "the series 'Normal' and 'Laplace' share the same colour and line style and cannot be told apart"
+        }
+      ]
+    },
+    {
+      "run_id": "111",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The x-axis tick labels for all 30 x values (0 to 29) are printed at every integer and run into each other along the rotated 3D axis, rendering as an unreadable string such as '910111213141516...'."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "the z axis carries no label"
+        }
+      ]
+    },
+    {
+      "run_id": "126",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions require the y axis to start at 0, but it starts at about -110"
+        },
+        {
+          "family": "wrong_data",
+          "evidence": "the series 'curve' is plotted as (x-4)(x-6)(x-8)+60, not the requested (x-4)(x-6)(x-8)+90"
+        }
+      ]
+    },
+    {
+      "run_id": "130",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "(1) the instructions ask for a perceptually uniform colormap, but the figure uses jet (2) the instructions ask for 120 dpi, but the figure was saved at 72 dpi"
+        }
+      ]
+    },
+    {
+      "run_id": "142",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions ask for horizontal bars, but the bars are vertical"
+        },
+        {
+          "family": "wrong_data",
+          "evidence": "the requested series 'Tennis' is not plotted"
+        }
+      ]
+    },
+    {
+      "run_id": "143",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "(1) the instructions ask for a logarithmic y axis, but it is linear (2) the instructions ask for a 2x2 grid, but the figure has 4 panels"
+        }
+      ]
+    },
+    {
+      "run_id": "164",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions require the x axis to start at 0, but it starts at 5"
+        },
+        {
+          "family": "wrong_data",
+          "evidence": "the plotted values segments (8, 46), (132, 15), (99, 22) with the green and red colours swapped are the requested values in a different order (requested (8, 46), (99, 22), (132, 15) coloured orange, green, red)"
+        }
+      ]
+    },
+    {
+      "run_id": "177",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions ask for a pie chart, but the figure draws a bar chart"
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "the legend box sits on top of the plotted data"
+        }
+      ]
+    },
+    {
+      "run_id": "196",
+      "errors": []
+    },
+    {
+      "run_id": "200",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "the series 'Group 2' is drawn in the background colour and is invisible"
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions require the y axis to start at 0, but it starts at 20"
+        }
+      ]
+    },
+    {
+      "run_id": "203",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "(1) the instructions ask for a polar projection, but the axes are rectilinear (2) the instructions ask for a colorbar, but the figure has none"
+        }
+      ]
+    },
+    {
+      "run_id": "204",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "the line series holds [42.1, 55.4, 61.8, 49.7, 58.2]; the request asks for [42.1, 55.4, 61.8, 58.2, 49.7]"
+        }
+      ]
+    },
+    {
+      "run_id": "216",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "the bar series 'Agree' holds [62.0, 71.0, 28.0, 45.0]; the request asks for [62, 71, 45, 28]"
+        }
+      ]
+    },
+    {
+      "run_id": "001",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "no figure went through Matplotlib, so nothing about one can be read"
+        }
+      ]
+    },
+    {
+      "run_id": "168",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "the run saved no figure, so nothing about one can be read"
+        }
+      ]
+    },
+    {
+      "run_id": "sensor-share__glm",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "the instructions require the sites in alphabetical order from top to bottom (Alder at the top, Dogwood at the bottom), but the chart draws Dogwood at the top and Alder at the bottom"
+        }
+      ]
+    },
+    {
+      "run_id": "sensor-share__ministral",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "the instructions require the sites in alphabetical order from top to bottom (Alder at the top, Dogwood at the bottom), but the chart draws Dogwood at the top and Alder at the bottom"
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions require the y axis labeled 'Site'; the script does call ax.set_ylabel('Site'), but the label lies entirely outside the saved image, so the figure shows no y-axis label (a required text element entirely outside the image counts as missing)"
+        }
+      ]
+    },
+    {
+      "run_id": "city-temps__qwen",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions require the legend outside the plotting area to the right of the axes, but the legend is drawn inside the axes at the upper left"
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "the upper-left legend box sits on top of the Farrow and Dunmore lines, hiding their January and February points"
+        }
+      ]
+    },
+    {
+      "run_id": "stage-attendance__glm",
+      "errors": []
+    },
+    {
+      "run_id": "stage-attendance__qwen",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "the instructions require each stage's full name as its x tick label, but the x tick labels are the integers 0 through 11; no stage name appears in the figure"
+        }
+      ]
+    },
+    {
+      "run_id": "fine-totals__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "022",
+      "errors": []
+    },
+    {
+      "run_id": "062",
+      "errors": []
+    },
+    {
+      "run_id": "082",
+      "errors": []
+    },
+    {
+      "run_id": "097",
+      "errors": []
+    }
+  ]
+}

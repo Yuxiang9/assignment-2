@@ -1,0 +1,43 @@
+{
+  "execution_failure": {
+    "tp": 12,
+    "tn": 98,
+    "fp": 0,
+    "fn": 0,
+    "positive_support": 12,
+    "negative_support": 98,
+    "insufficient_support": false,
+    "mcc": 1.0
+  },
+  "wrong_data": {
+    "tp": 11,
+    "tn": 65,
+    "fp": 8,
+    "fn": 14,
+    "positive_support": 25,
+    "negative_support": 73,
+    "insufficient_support": false,
+    "mcc": 0.3643305015182794
+  },
+  "wrong_chart": {
+    "tp": 21,
+    "tn": 21,
+    "fp": 6,
+    "fn": 50,
+    "positive_support": 71,
+    "negative_support": 27,
+    "insufficient_support": false,
+    "mcc": 0.07355242566510173
+  },
+  "hard_to_read": {
+    "tp": 12,
+    "tn": 55,
+    "fp": 4,
+    "fn": 27,
+    "positive_support": 39,
+    "negative_support": 59,
+    "insufficient_support": false,
+    "mcc": 0.31769753917333793
+  },
+  "macro_mcc": 0.4388951165891798
+}

@@ -1,0 +1,30 @@
+{
+ "run_id": "046",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "3b5dd9b5a5b8e1d3",
+ "prompt_chars": 6210,
+ "image": {
+  "present": true,
+  "bytes": 126150,
+  "size": [
+   1000,
+   800
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 227,
+  "prompt_tokens": 2342,
+  "total_tokens": 2569,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: problem -- the title \"This might seem unnecessary, but it's possible!\" is clipped at the top edge of the image, with the top portion of the text cut off.\nCHECK axis labels: ok -- there are no axis labels present.\nCHECK tick labels: ok -- there are no tick labels present.\nCHECK legend: ok -- there is no legend present.\nCHECK annotations: problem -- the patch labels (e.g., \"0\", \"1\", \"2\", etc.) are small text labels on the Sankey flows; many are partially obscured by the flow lines or are too small to read clearly, especially in the dense central area, making them difficult to read.\nCHECK data series: problem -- the data series are indistinguishable in some areas due to overlapping flows and small, crowded labels, particularly in the center of the diagram where multiple flows converge and the labels are squeezed together.\n\nVERDICT: YES\nEVIDENCE: The title is clipped at the top edge, and the patch labels on the Sankey flows are too small and crowded to be read clearly, with many overlapping the flow lines.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The title is clipped at the top edge, and the patch labels on the Sankey flows are too small and crowded to be read clearly, with many overlapping the flow lines.",
+ "elapsed_s": 3.37
+}

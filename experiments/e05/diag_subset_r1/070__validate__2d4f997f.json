@@ -1,0 +1,21 @@
+{
+ "run_id": "070",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The legend in the lower right quadrant is partially covered by the orange data line \"cos(y) - 3y\", making some of the legend text difficult to read."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The legend in the lower right quadrant is partially covered by the orange data line \"cos(y) - 3y\", making some of the legend text difficult to read."
+  ]
+ ],
+ "final": [
+  [
+   "hard_to_read",
+   "The legend in the lower right quadrant is partially covered by the orange data line \"cos(y) - 3y\", making some of the legend text difficult to read."
+  ]
+ ]
+}

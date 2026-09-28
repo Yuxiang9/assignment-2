@@ -1,0 +1,30 @@
+{
+ "run_id": "142",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "03ecd24520684cb7",
+ "prompt_chars": 13509,
+ "image": {
+  "present": true,
+  "bytes": 34635,
+  "size": [
+   1080,
+   600
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 4668,
+  "total_tokens": 5168,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "REQ 1: \"The bars must be horizontal.\" | expected: horizontal bars | observed: vertical bars | source: image | status: fail  \nREQ 2: \"Set the title to exactly `Favorite Sports by Country`.\" | expected: title \"Favorite Sports by Country\" | observed: title \"Favorite Sports by Country\" | source: image | status: pass  \nREQ 3: \"Show a legend naming the five sports.\" | expected: legend with five sports | observed: legend with five sports | source: image | status: pass  \nREQ 4: \"Do NOT use the jet, rainbow or hsv colormaps.\" | expected: not jet, rainbow, or hsv | observed: RdYlGn colormap | source: image | status: pass  \nREQ 5: \"Save the figure at 120 dpi.\" | expected: 120 dpi | observed: unknown (cannot verify from image) | source: code | status: unknown  \nREQ 6: \"Make the figure 9 by 5 inches.\" | expected: 9x5 inches | observed: unknown (cannot verify from image) | source: code | status: unknown  \nREQ 7: \"Save the figure as figure.png.\" | expected: file named figure.png | observed: file named figure.png | source: code | status: pass  \nREQ 8: \"Color the different categories using category_colors = plt.colormaps['RdYlGn'](...)\" | expected: RdYlGn colormap | observed: RdYlGn colormap | source: image | status: pass  \nREQ 9: \"Each country is represented by a category on the y-axis\" | expected: countries on y-axis | observed: countries on x-axis | source: image | status: fail  \nREQ 10: \"The length of each bar represents the number of responses for each sport.\" | expected: bar length = responses | observed: bar length = responses | source: image | status: pass  \nREQ 11: \"Label each stacked bar with their respective data.\" | expected: data labels on bars | observed: data labels on bars | source: image | status: pass  \nREQ 12: \"The horizontal stacked bar chart represents the result of a survey...\" | expected: horizontal stacked bar chart | observed: vertical stacked bar chart | source: image | status: fail  \n\nVERDICT: YES  \nE",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "REQ 1: \"The bars must be horizontal.\" | expected: horizontal bars | observed: vertical bars | source: image | status: fail REQ 2: \"Set the title to exactly `Favorite Sports by Country`.\" | expected: title \"Favorite Sports by Country\" | observed: title \"Favorite Sports by Country\" | source: image | status: pass REQ 3: \"Show a legend naming the five sports.\" | expected: legend with five sports | observed: legend with five sports | source: image | status: pass REQ 4: \"Do NOT use the jet, rainbow or hsv colormaps.\" | expected: not jet, rainbow, or hsv | observed: RdYlGn colormap | source: image | ",
+ "elapsed_s": 7.81
+}

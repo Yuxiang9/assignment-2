@@ -1,0 +1,30 @@
+{
+ "run_id": "sensor-share__glm",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "78c48ae366bbb0b9",
+ "prompt_chars": 8437,
+ "image": {
+  "present": true,
+  "bytes": 22427,
+  "size": [
+   790,
+   590
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 2729,
+  "total_tokens": 3229,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "REQ 1: \"draw a horizontal bar chart\" | expected: horizontal bar chart | observed: horizontal bar chart | source: image | status: pass  \nREQ 2: \"one horizontal bar per site on a single set of axes\" | expected: one bar per site, single axes | observed: one bar per site, single axes | source: image | status: pass  \nREQ 3: \"sites ordered ALPHABETICALLY from top to bottom (Alder at the top, then Birch, Cedar, Dogwood below it)\" | expected: alphabetical order (Alder, Birch, Cedar, Dogwood) | observed: Dogwood, Cedar, Birch, Alder (reverse alphabetical) | source: image | status: fail  \nREQ 4: \"x axis must start at zero\" | expected: x-axis starts at 0 | observed: x-axis starts at 0 | source: image | status: pass  \nREQ 5: \"x axis labeled exactly 'Share of total readings (%)'\" | expected: exact label text | observed: label matches exactly | source: image | status: pass  \nREQ 6: \"y axis labeled 'Site'\" | expected: y-axis label | observed: y-axis label is \"Site\" | source: image | status: pass  \nREQ 7: \"title to exactly 'Share of readings by site'\" | expected: exact title text | observed: title is \"Share of readings by site\" | source: image | status: pass  \nREQ 8: \"each bar's percentage at the end of the bar, formatted with exactly one decimal place followed by a percent sign\" | expected: percentage labels with one decimal and % | observed: labels match format (e.g., 30.0%, 31.5%) | source: image | status: pass  \nREQ 9: \"the four percentages must add up to 100\" | expected: sum to 100 | observed: sum is 100 (17.5 + 21.0 + 31.5 + 30.0) | source: code | status: pass  \nREQ 10: \"the figure must be saved as figure.png\" | expected: saved as figure.png | observed: file exists | source: code | status: pass  \n\nVERDICT: YES  \nEVIDENCE: The sites are not ordered alphabetically as required;",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The sites are not ordered alphabetically as required;",
+ "elapsed_s": 7.33
+}

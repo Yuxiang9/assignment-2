@@ -1,0 +1,30 @@
+{
+ "run_id": "stage-attendance__qwen",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "3fcf4e44e0101d76",
+ "prompt_chars": 5645,
+ "image": {
+  "present": true,
+  "bytes": 20961,
+  "size": [
+   1400,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 188,
+  "prompt_tokens": 2312,
+  "total_tokens": 2500,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"Peak attendance by stage\" is fully visible at the top of the figure.\nCHECK x-axis label: ok -- The label \"Stage\" is fully visible at the bottom center of the figure.\nCHECK y-axis label: ok -- The label \"Peak attendance\" is fully visible along the left side of the figure.\nCHECK tick labels: problem -- The x tick labels are partially cut off at the bottom edge of the image; specifically, the rightmost labels (e.g., \"Sunset Dunes Beach Stage\") are clipped by the image boundary.\nCHECK legend: ok -- There is no legend in the figure, so no issue.\nCHECK data series: ok -- All bars are visible and distinguishable; no data is covered or indistinguishable.\n\nVERDICT: YES\nEVIDENCE: The x tick labels at the bottom right of the figure are partially cut off by the image edge.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The x tick labels at the bottom right of the figure are partially cut off by the image edge.",
+ "elapsed_s": 3.14
+}

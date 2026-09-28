@@ -1,0 +1,21 @@
+{
+ "run_id": "203",
+ "raw_findings": [
+  [
+   "wrong_chart",
+   "The figure violates"
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_chart",
+   "The figure violates"
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The figure violates"
+  ]
+ ]
+}

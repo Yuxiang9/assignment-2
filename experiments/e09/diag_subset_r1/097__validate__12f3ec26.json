@@ -1,0 +1,16 @@
+{
+ "run_id": "097",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The annotation \"Max: 1.000\" is partially clipped at the top edge of the image."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The annotation \"Max: 1.000\" is partially clipped at the top edge of the image."
+  ]
+ ],
+ "final": []
+}

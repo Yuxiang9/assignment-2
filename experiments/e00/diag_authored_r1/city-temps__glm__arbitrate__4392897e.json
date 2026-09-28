@@ -1,0 +1,42 @@
+{
+ "run_id": "city-temps__glm",
+ "findings_in": [
+  [
+   "wrong_chart",
+   "The line for Aluna is tab:blue, Brinport is tab:orange, Calder is tab:green, Dunmore is tab:red, Eastwick is tab:purple, and Farrow is tab:brown. Wait, the colours"
+  ]
+ ],
+ "context_shed": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "76662d1b6cf12a39",
+ "image": {
+  "present": true,
+  "bytes": 162080,
+  "size": [
+   1785,
+   881
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 79,
+  "prompt_tokens": 3564,
+  "total_tokens": 3643,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "WRONG_DATA: NO\nWRONG_DATA_EVIDENCE: none\nWRONG_CHART: YES\nWRONG_CHART_EVIDENCE: The line for Brinport is tab:orange, but the line for Farrow is also tab:orange, violating the requested distinct colours for each city.\nHARD_TO_READ: NO\nHARD_TO_READ_EVIDENCE: none",
+ "parsed_verdicts": {
+  "wrong_data": "NO",
+  "wrong_chart": "YES",
+  "hard_to_read": "NO"
+ },
+ "findings_out": [
+  [
+   "wrong_chart",
+   "The line for Brinport is tab:orange, but the line for Farrow is also tab:orange, violating the requested distinct colours for each city."
+  ]
+ ],
+ "elapsed_s": 1.37
+}

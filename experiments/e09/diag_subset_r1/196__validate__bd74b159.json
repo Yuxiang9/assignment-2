@@ -1,0 +1,29 @@
+{
+ "run_id": "196",
+ "raw_findings": [
+  [
+   "wrong_data",
+   "The beeswarm plot for Group 1 is shown in orange and Group 2 in blue, which violates the requested color assignment (Group 1 should be blue, Group 2 orange)."
+  ],
+  [
+   "hard_to_read",
+   "The legend in the top-right corner is partially clipped by the image edge, with the rightmost part of the legend box and the text \"Group 2\" cut off."
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_data",
+   "The beeswarm plot for Group 1 is shown in orange and Group 2 in blue, which violates the requested color assignment (Group 1 should be blue, Group 2 orange)."
+  ],
+  [
+   "hard_to_read",
+   "The legend in the top-right corner is partially clipped by the image edge, with the rightmost part of the legend box and the text \"Group 2\" cut off."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_data",
+   "The beeswarm plot for Group 1 is shown in orange and Group 2 in blue, which violates the requested color assignment (Group 1 should be blue, Group 2 orange)."
+  ]
+ ]
+}

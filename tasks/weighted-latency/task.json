@@ -1,0 +1,6 @@
+{
+  "task_id": "weighted-latency",
+  "task_class": "derived-value aggregation",
+  "instructions": "Using matplotlib, draw a vertical bar chart of the request-weighted mean latency of four backend services. Each service serves two regions; for each region you are given the number of requests and that region's mean latency in milliseconds:\n  auth:     region A 100 requests at 120 ms, region B 300 requests at 80 ms\n  search:   region A 250 requests at 60 ms,  region B 250 requests at 100 ms\n  checkout: region A 50 requests at 200 ms,  region B 450 requests at 40 ms\n  media:    region A 400 requests at 150 ms, region B 100 requests at 50 ms\nFor each service compute the REQUEST-WEIGHTED mean latency: multiply each region's latency by its request count, add the two products, and divide by the service's total request count. Do not use the plain average of the two regional latencies.\nDraw one vertical bar per service on a single set of axes, in exactly this order from left to right: auth, search, checkout, media. Write each bar's value above the bar, formatted with exactly one decimal place (for example \"90.0\"). The y axis must start at zero. Set the title to exactly \"Request-weighted mean latency by service\", label the x axis \"Service\", and label the y axis \"Latency (ms)\". Save the figure as figure.png.",
+  "inputs": []
+}

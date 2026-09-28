@@ -1,0 +1,107 @@
+{
+  "predictions": [
+    {
+      "run_id": "city-temps__glm",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The plotted data uses the wrong colors for the cities; for example, Aluna is shown in blue but should be tab:blue, Brinport is orange but should be tab:orange, and so on, with the colors not matching the specified mapping."
+        }
+      ]
+    },
+    {
+      "run_id": "city-temps__ministral",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The figure uses incorrect colors for the cities; for example, Aluna is shown in blue instead of tab:blue, Brinport in orange instead of tab:orange, and so on, violating the specified color mapping."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "The chart uses the wrong line colours; for example, Aluna is shown in blue but should be \"tab:blue\" (which is correct), but Brinport is shown in orange instead of \"tab:orange\" (which is correct), however, the actual issue is that the legend shows a brown line for Farrow, but the line in the plot is actually a different color (brown is not used for Farrow in the plot, and the actual line for Farrow is green, which is incorrect). The correct colour for Farrow is \"tab:brown\", but the plot shows it as green, which is the colour for Calder. This is a clear violation of the specified colour mapping."
+        }
+      ]
+    },
+    {
+      "run_id": "city-temps__qwen",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The legend and plot lines show incorrect city names and colors: \"Aluna\" is blue (correct), but \"Brinport\" is orange (should be tab:orange, but the color is wrong), \"Calder\" is green (correct), \"Dunmore\" is red (correct), \"Eastwick\" is purple (correct), and \"Farrow\" is brown (correct). However, the legend labels are mismatched: the legend shows \"Aluna\", \"Brinport\", \"Calder\", \"Dunmore\", \"Eastwick\", \"Farrow\" but the colors are not matching the requested ones. Specifically, \"Brinport\" is shown in orange, which is correct, but the plot shows \"Brinport\" as a red line, which is incorrect. The actual "
+        }
+      ]
+    },
+    {
+      "run_id": "fine-totals__glm",
+      "errors": []
+    },
+    {
+      "run_id": "fine-totals__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "fine-totals__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "run_id": "sensor-share__glm",
+      "errors": []
+    },
+    {
+      "run_id": "sensor-share__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "sensor-share__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "run_id": "stage-attendance__glm",
+      "errors": []
+    },
+    {
+      "run_id": "stage-attendance__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "stage-attendance__qwen",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "The x tick labels are missing entirely, so the stages are not labeled with their full names as required. Additionally, the bars are plotted in the wrong order compared to the specified sequence."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The x tick labels are clipped at the bottom of the image, as the full stage names are cut off by the image edge."
+        }
+      ]
+    },
+    {
+      "run_id": "weighted-latency__glm",
+      "errors": []
+    },
+    {
+      "run_id": "weighted-latency__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "weighted-latency__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No valid figure was produced: the run directory contains no figure.png; final exit message: LimitsExceeded"
+        }
+      ]
+    }
+  ]
+}

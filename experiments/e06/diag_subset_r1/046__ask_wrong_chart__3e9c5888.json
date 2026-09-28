@@ -1,0 +1,30 @@
+{
+ "run_id": "046",
+ "family": "wrong_chart",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": true,
+ "prompt_sha": "6f83f39b4139a341",
+ "prompt_chars": 6819,
+ "image": {
+  "present": true,
+  "bytes": 126150,
+  "size": [
+   1000,
+   800
+  ]
+ },
+ "finish_reason": "length",
+ "usage": {
+  "completion_tokens": 500,
+  "prompt_tokens": 2457,
+  "total_tokens": 2957,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "REQ 1: \"Create a Sankey diagram\" | expected: Sankey diagram | observed: Sankey diagram | source: image | status: pass  \nREQ 2: \"The script should use a suitable library for creating visualizations.\" | expected: suitable library | observed: matplotlib.sankey | source: code | status: pass  \nREQ 3: \"Implement a function named 'branch' that creates a side chain on the diagram.\" | expected: function 'branch' | observed: function 'side' used | source: code | status: fail  \nREQ 4: \"Implement another function named 'turn' to generate a corner link in the diagram.\" | expected: function 'turn' | observed: function 'corner' used | source: code | status: fail  \nREQ 5: \"The diagram should have 8 chains on each side, created using the 'branch' function.\" | expected: 8 chains per side using 'branch' | observed: 8 chains per side using 'side' | source: image | status: fail  \nREQ 6: \"The overall plot should have the title 'This might seem unnecessary, but it's possible!'\" | expected: title text | observed: title text matches | source: image | status: pass  \nREQ 7: \"Make the figure 10 by 8 inches.\" | expected: 10x8 inches | observed: 10x8 inches | source: code | status: pass  \nREQ 8: \"Save the figure at 120 dpi.\" | expected: 120 dpi | observed: not verifiable from image | source: code | status: unknown  \nREQ 9: \"Save the figure as figure.png.\" | expected: file name | observed: file name matches | source: code | status: pass  \nREQ 10: \"The initial flow in the flowchart should be set up with orientations [0, 1], patch label '0', face color red, and rotation 60 degrees.\" | expected: orientations [0,1], label '0', red, rotation 60 | observed: orientations [0,1], label '0', red, rotation 60 | source: image | status: pass  \nREQ 11: \"Use the 'branch' and 'turn' functions in a specified sequence to construct the final flowchart diagram.\" | expected: use 'branch' and",
+ "verdict_parsed": false,
+ "positive": false,
+ "evidence": null,
+ "elapsed_s": 12.51
+}

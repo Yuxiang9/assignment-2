@@ -1,0 +1,21 @@
+{
+ "run_id": "sensor-share__ministral",
+ "raw_findings": [
+  [
+   "wrong_chart",
+   "The sites are not ordered alphabetically from top to bottom as required; the observed order is Dogwood, Cedar, Birch, Alder, but the expected order is Alder,"
+  ]
+ ],
+ "after_filter": [
+  [
+   "wrong_chart",
+   "The sites are not ordered alphabetically from top to bottom as required; the observed order is Dogwood, Cedar, Birch, Alder, but the expected order is Alder,"
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "The sites are not ordered alphabetically from top to bottom; the observed order is Dogwood, Cedar, Birch, Alder, but the expected order is Alder, Birch, Cedar, Dogwood."
+  ]
+ ]
+}

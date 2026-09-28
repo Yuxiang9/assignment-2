@@ -1,0 +1,25 @@
+{
+ "run_id": "046",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The title is clipped at the top edge, and the patch labels are overlapping and crowded, making them difficult to read."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The title is clipped at the top edge, and the patch labels are overlapping and crowded, making them difficult to read."
+  ]
+ ],
+ "final": [
+  [
+   "hard_to_read",
+   "The title is clipped at the top edge, and the patch labels are overlapping and crowded, making them difficult to read."
+  ],
+  [
+   "wrong_chart",
+   "the instructions ask for 120 dpi, but figure.png's metadata records about 100 dpi"
+  ]
+ ]
+}

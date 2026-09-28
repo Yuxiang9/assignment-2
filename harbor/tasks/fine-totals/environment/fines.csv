@@ -1,0 +1,15 @@
+branch,weekday,amount,waived
+Central,Mon,12.50,no
+Northgate,Mon,28.75,no
+Eastside,Tue,22.00,no
+Harborview,Tue,8.00,no
+Central,Wed,40.00,yes
+Harborview,Wed,5.50,no
+Eastside,Thu,31.50,no
+Northgate,Thu,30.00,yes
+Central,Fri,9.25,no
+Harborview,Fri,12.25,no
+Eastside,Sat,2.25,yes
+Northgate,Sat,20.25,no
+Central,Sat,15.75,no
+Harborview,Sun,16.75,no

@@ -1,0 +1,8 @@
+{
+  "task_id": "sensor-share",
+  "task_class": "derived-value aggregation",
+  "instructions": "Using matplotlib, read readings.csv and draw a horizontal bar chart showing each site's share of all readings, as a percentage. The file has a header row and the columns site, reading; a site appears on several rows. Compute the shares like this:\n1. Sum the reading column within each site.\n2. Divide each site's sum by the grand total of all readings and multiply by 100 to get a percentage. The four percentages must add up to 100.\nDraw one horizontal bar per site on a single set of axes, with the sites ordered ALPHABETICALLY from top to bottom (Alder at the top, then Birch, Cedar, Dogwood below it). The x axis must start at zero and be labeled exactly \"Share of total readings (%)\". Label the y axis \"Site\". Write each bar's percentage at the end of the bar, formatted with exactly one decimal place followed by a percent sign (for example \"17.5%\"). Set the title to exactly \"Share of readings by site\". Save the figure as figure.png.",
+  "inputs": [
+    {"name": "readings.csv", "path": "inputs/readings.csv"}
+  ]
+}

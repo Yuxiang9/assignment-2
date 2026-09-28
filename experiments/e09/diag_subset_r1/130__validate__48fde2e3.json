@@ -1,0 +1,21 @@
+{
+ "run_id": "130",
+ "raw_findings": [
+  [
+   "hard_to_read",
+   "The colorbar, which serves as a legend for engine displacement, is partially cut off at the right edge of the image."
+  ]
+ ],
+ "after_filter": [
+  [
+   "hard_to_read",
+   "The colorbar, which serves as a legend for engine displacement, is partially cut off at the right edge of the image."
+  ]
+ ],
+ "final": [
+  [
+   "wrong_chart",
+   "the instructions ask for 120 dpi, but figure.png's metadata records about 72 dpi"
+  ]
+ ]
+}

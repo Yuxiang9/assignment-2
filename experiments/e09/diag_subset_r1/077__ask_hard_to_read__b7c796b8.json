@@ -1,0 +1,30 @@
+{
+ "run_id": "077",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "0de1b23510b18bfc",
+ "prompt_chars": 7289,
+ "image": {
+  "present": true,
+  "bytes": 42060,
+  "size": [
+   640,
+   480
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 248,
+  "prompt_tokens": 2740,
+  "total_tokens": 2988,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title is fully visible at the top of the plot and is not clipped or obscured.\nCHECK x-axis label: ok -- The label \"Week\" is fully visible at the bottom of the plot and is not clipped or obscured.\nCHECK y-axis label: ok -- The label \"Water Storage (TAF)\" is fully visible on the left side of the plot and is not clipped or obscured.\nCHECK tick labels: ok -- All tick labels on both axes are fully visible and readable.\nCHECK legend: ok -- The legend is fully visible in the upper left corner and does not overlap other elements.\nCHECK data series: ok -- Both lines (Oroville and Shasta) are clearly visible and distinguishable.\nCHECK annotation: problem -- The annotation \"Peak: 3452.7 TAF (week 17)\" is partially cut off at the top right edge of the image.\nCHECK marker: ok -- The red marker for the peak is fully visible and not clipped.\n\nVERDICT: YES\nEVIDENCE: The annotation text \"Peak: 3452.7 TAF (week 17)\" is partially cut off at the top right edge of the image.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The annotation text \"Peak: 3452.7 TAF (week 17)\" is partially cut off at the top right edge of the image.",
+ "elapsed_s": 4.34
+}

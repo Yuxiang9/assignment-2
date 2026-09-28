@@ -1,0 +1,30 @@
+{
+ "run_id": "070",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "d22fe6b26da8d9bb",
+ "prompt_chars": 9400,
+ "image": {
+  "present": true,
+  "bytes": 96474,
+  "size": [
+   900,
+   500
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 222,
+  "prompt_tokens": 3298,
+  "total_tokens": 3520,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: ok -- The title \"'ggplot' style sheet\" is fully visible at the top center of the plot.\nCHECK x-axis label: ok -- The label \"y\" is fully visible at the bottom center of the plot.\nCHECK y-axis label: ok -- The label \"value\" is fully visible on the left side of the plot.\nCHECK tick labels: ok -- All x-axis and y-axis tick labels are fully visible and readable.\nCHECK legend: problem -- The legend is located in the lower right quadrant and is partially covered by the data lines, specifically the orange line \"cos(y) - 3y\" overlaps the legend box, making some of the legend text difficult to read.\nCHECK data series: ok -- All six data series are distinguishable by their unique colors and line styles, and none are squeezed into a sliver or covered by other elements.\nVERDICT: YES\nEVIDENCE: The legend in the lower right quadrant is partially covered by the orange data line \"cos(y) - 3y\", making some of the legend text difficult to read.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The legend in the lower right quadrant is partially covered by the orange data line \"cos(y) - 3y\", making some of the legend text difficult to read.",
+ "elapsed_s": 3.32
+}

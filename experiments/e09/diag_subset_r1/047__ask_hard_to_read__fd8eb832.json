@@ -1,0 +1,30 @@
+{
+ "run_id": "047",
+ "family": "hard_to_read",
+ "compacted": false,
+ "downscale_retries": 0,
+ "truncation_reask": false,
+ "prompt_sha": "7edcb8bc3bf25d22",
+ "prompt_chars": 7982,
+ "image": {
+  "present": true,
+  "bytes": 24594,
+  "size": [
+   1000,
+   600
+  ]
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 190,
+  "prompt_tokens": 2657,
+  "total_tokens": 2847,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "raw_answer": "CHECK title: problem -- title is partially cut off at the top edge of the image  \nCHECK y-axis label: problem -- \"Percentage Share (%)\" is partially cut off at the left edge of the image  \nCHECK x-axis label: problem -- \"Country\" is partially cut off at the bottom edge of the image  \nCHECK x-axis tick labels: problem -- the tick label \"47.9\" is partially cut off at the bottom edge of the image  \nCHECK legend: problem -- the legend is partially cut off at the right edge of the image  \nCHECK data series: unknown -- the data series are visible and appear to be distinguishable, but the bars are not clearly labeled with percentages  \nCHECK annotations: unknown -- no visible annotations  \n\nVERDICT: YES  \nEVIDENCE: The title, y-axis label, x-axis label, x-axis tick label, and legend are all partially cut off at the edges of the image.",
+ "verdict_parsed": true,
+ "positive": true,
+ "evidence": "The title, y-axis label, x-axis label, x-axis tick label, and legend are all partially cut off at the edges of the image.",
+ "elapsed_s": 3.18
+}
